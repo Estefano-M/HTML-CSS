@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Semântica e Formatação -&#x1f440</title>
+    <style> mark {background-color: yellow;} </style>
+    
+</head>
+<body>
+     <h1>IREMOS FALAR SOBRE SEMÂNTICA E FORMATAÇÃO DE TEXTOS  - Aula 08 - 1/4</h1>
+    <p>Semântica é o que tras o <strong><mark>SIGNIFICADO E NÃO A FORMA</mark></strong> por exemplo: "H1"(que é o título) é o significado e se fosse por exemplo no HTML4, eu poderia na mesma página do <strong><mark>INDEX.HTML</mark></strong>, colocar o background de azul mas isso hoje em dia é somente a <strong><mark>FORMA QUE FAZ ISSO.</mark></strong></p>
+    <p>HTML5 não foca mais em FORMA, agora foca em SEMÂNTICA(significado) isso quer dize que a <strong><mark>ESTILIZAÇÃO(CSSs) agora são feitas no CSS3</mark></strong></p>
+    <p>RESUMINDO: <STRONG><MARK>HTML5 = SEMÂNTICA E CSS3 = FORMA.</MARK></STRONG></p>
+    <p>Caso queira colocar um endereço use a tag <strong>ADDRESS</strong> e ela vai ficar assim: <address>RUA DAS LARANJEIRAS, 221 - GUARULHOS.</address></p>
+    <hr>
+    <h1>FORMATAÇÃO DE TEXTOS 2/4</h1>
+    <h2>Principais formatações</h2>
+    <h3>Negrito / Destaque</h3>
+    <p>Nesta frase temos um <b>termo em negrito</b> usando a tag <STRONG><MARK>&lt;B&gt;</MARK></STRONG> mas ela não é <strong>SEMÂNTICA</strong>. Aqui está em <b>Negrito</b>.</p> 
+    <p>Nesta frase temos um  <strong>termo em negrito</strong> e aqui eu vou usar a tag <strong><mark>&lt;STRONG&gt;</mark></strong> e agora ela é <strong>SEMÂNTICA</strong>. Aqui está em <strong>Destaque</strong></p>
+    <p>Ambas tem a mesma <mark>APARÊNCIA</mark> mas uma é semântica e a outra é não semântica(forma e com o nome diferente também) se reparar mas ao falarem "coloca em negrito" você vai saber o que fazer.</p>
+    <h3>Itálico / Ênfase</h3>
+    <p>Nesta frase temos um <i>termo em Itálico</i> usando a tag <STRONG><MARK>&lt;I&gt;</MARK></STRONG> (não semântica).</p>
+    <p>Nesta frase temos um <em>termo em ênfase</em> (semântica) usando a tag <strong><mark>&lt;EM&gt;.</mark></strong> Ambos estão em negrito mas só a tag EM é semântica.</p>
+    <p> resumindo: <strong><mark>NÃO USAR a tag B e a tag I! </mark></strong> pois elas podem parar de funcionar muito em breve!</p>
+    <p>Podemos <strong><em>usar o negrito e o itálico ao mesmo tempo!!(como estou fazendo agora)</em></strong></p>
+    <hr>
+    <h1>FORMATAÇÕES ADICIONAIS 3/4</h1>
+    <h2>Texto marcado</h2>
+    <p>Podemos cirar também <mark>um texto marcado</mark> usando a tag <strong><mark>&lt;MARK&gt;</mark></strong> e em casos <strong><mark>ESPECÍFICOS A GENTE PODE USAR A TAG STYLE DENTRO DO HTML COMO POR EXEMPLO PARA MUDAR A COR DESSE TEXTO MARCADO AO INVÉS DE IR NO CSS FAZER ISSO.</mark></strong></p>
+    <p>Exemplo: <mark>texto marcado</mark> e agora vou usar a tag STYLE dentro da tag MARK e mudar a cor do background dele: <mark style="background-color: lime;" >olha eu aqui</mark>. ESSA É A <STRONG><MARK>PRIMEIRA MANEIRA DE FAZER ISSO</MARK></STRONG></p>
+    <p>Caso tenha diversas tags de MARK pelo site e você queira mudar a cor de todas de uma vez ao invés de ir uma-por-uma tem a <strong><mark>SEGUNDA OPÇÃO</mark></strong></p>
+    <p>A segunda maneira de fazer isso é indo lá no <strong><mark>HEAD</mark></strong> da strutura de HTMLveja no VSCODE para mais detalhes.</p>
+    <p>Existe uma <strong><mark>TERCEIRA FORMA</mark></strong> que é através de um LINK EXTERNO mas só mais pra frente vamos aprender sobre.</p>
+    <h2>Texto grande e pequeno</h2>
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small> nessa parágrafo.</p>
+    <p>A tag BIG já está obsoleto por isso nem mais se preocupe em usar isso mas caso seja realmente necessário, podemos fazer isso no CSS. Já a tag <strong><mark>&lt;SMALL&gt;</mark></strong> ela continua em uso pois um exemplo disso é que nos contratos/termos sempre tem umas letras pequenas então pode usar tranquilamente.</p>
+    
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar <del>um texto como excluído</del> para indicar que ele deve ser lido mas não considerado. Aqui usei a tag <strong><mark>&lt;DEL&gt;</mark></strong></p>
+    
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> (semântico)para dar uma ênfase e indicar que ele foi adicionado depois. Aqui usei a tag <strong><mark>&lt;INS&gt;</mark></strong></p>
+    
+    <h2>Texto sobrescrito</h2>
+    <p>Para inserir coisa do tipo x<sup>20</sup>+3. Aqui eu usei a tag <strong><mark>&lt;SUP&gt;(em cima)</mark></strong></p>
+    <h2>Texto subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>O. Aqui eu usei a tag <strong><mark>&lt;SUB&gt;(em baixo)</mark></strong></p>
+    <hr>
+    
+    <h1>CITAÇÕES E CÓDIGOS 4/4</h1>
+    <h2>Código-fonte / Pré-Formatação</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript</p>
+    <p>Se você reparar no <strong>FORMATO DA LETRA</strong> das palavras acima, vai perceber que estão com o mesmo espaçamento o que facilita a sua leitura e identificação que é um <strong><mark>CÓDIGO-FONTE</mark></strong>. Para isso eu usei a tag <STRONG><MARK>&lt;CODE&gt;</MARK></STRONG></p>
+    <p>O código a seguir, ele vai estar na linguagem de Python e vai ter dois exemplos; 1 - ele vai estar somente com a tag <strong>CODE</strong> isso vai fazer que na hora que ele for exibido na webpage vai aparecer simplesmente ele de forma linear e <strong>NÃO VAI ESTAR IDENTADO(organizado/Pseudo-Código)</strong></p>
+    <p>Veja o exemplo a seguir:</p>
+    <code>num = int (input('Digite um número'))
+        if num % 2 == 0:
+            print(f' O número {num} é PAR')
+        else:
+            print(f' O número {num} é IMPAR')
+        print('Fim do programa')
+    </code>
+    <p><strong>VIU?!</strong></p>
+    <p>Agora vou pegar o mesmo código e usar a tag <strong><mark>&lt;PRE&gt;</mark></strong> isso vai fazer com que o pseudo-código fique indentado. Essa tag considera os 'espaços/separação ou (as Tabs) e as utiliza para serem mostradas da forma correta. Veja exemplo:</p>
+    <pre>
+        <code>num = int (input('Digite um número'))
+            if num % 2 == 0:
+                print(f' O número {num} é PAR')
+            else:
+                print(f' O número {num} é IMPAR')
+            print('Fim do programa')
+        </code>
+    </pre>
+    <p><strong>VIU?!</strong></p>
+    <p></p>
+    
+    
+    <h2>Citações Simples</h2>
+    <p>Como diria o pai de um amigo: <q>o computador é um burro muito rápido</q>.</p>
+    <p>Nesse exemplo, usei a tag <strong><mark>&lt;Q&gt;</mark></strong> para fazer uma <STRONG>CITAÇÃO</STRONG> e você pode se perguntar:"UÉ, não é mais fácil eu sóm colocar os aspas?" Mas a resposta para isso está no <strong>SIGNIFICADO/SEMÂNTICA/CITAÇÃO</strong> sempre quando for citar algo que alguém disse, colocar a tag <strong>Q</strong>.</p>
+    
+    
+    <h2>Citações Completas</h2>
+    <p>Segundo Jeff Noble, no seu livro HTML for Dummies:</p>
+    <blockquote cite="https://www.google.com.br/books/edition/HTML_4_For_Dummies/KgY5NOK_yZEC?hl=pt-BR&gbpv=1&dq=HTML+FOR+DUMMIES&pg=PA16&printsec=frontcover" >When you put an X in front of HTML to get XHTML, you get a new, improvised version of HTML based on the eXtensible Markup Language(XML). XML is designed to work and behave well with computers, software and the internet.</blockquote>
+    <p>No exemplo a cima, eu fiz uma citação de um trecho de um livro, seu altor e de onde busquei a informação para que quando o pessoal <strong>SEO</strong>  dê uma olhada no site, esteja tudo em ordem. A tag usada foi <STRONG><MARK>&lt;BLOCKQUOTE CITE&gt;</MARK></STRONG>. Note que o texto ficou um pouco mais para a direita(identado para a direita).</p>
+    
+    
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> <abbr title="Cascading Style Sheets">CSS</abbr>. Estou gostando muito!</p>
+    <p>No exemplo acima, ao digitarmos uma <strong>SIGLA(abreviation)</strong> temos que colocar o significado para o usuário ver o que ela significa e também o pessoal do mecanismos de busca (SEO). Aqui usei a tag <strong><mark>&lt;ABBR&gt;</mark></strong>.</p>
+    
+    
+</body>
+</html>

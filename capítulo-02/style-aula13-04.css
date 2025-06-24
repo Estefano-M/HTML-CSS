@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/** Ao invés de usar o a tag "*" global, só colocar a tag "html,body" e colocar a altura 100%.*/
+html, body{
+    background-image: linear-gradient(-45deg, #D83F37, #F4DFC0, #F18274);
+    height: 100%;   /** Não sei porquê ainda(guanabara vai explicar depois ou só colocar no chatgpt) mas para quando eu colocar a tag "TO TOP" as cores não ficarem quebrando*/
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-shadow: 01px 01px 02px #f18374fa;
+}
+
+p{
+    text-align: justify; /** Isso vai fazer com que o texto não passe da caixa de diálogo tipo assim: "bblablabla- próxima linha -blablabla"*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;    /** Faz com que a borda do conteúdo, fique levemente curvado dependendo dos pixels que você coloca*/
+    width: 900px;           /** É o tamanho do conteúdo*/
+    padding: 10px;          /** Vai deixar uma pequena borda na hora em que a letra for chegar na borda para não ficar muito em cima do canto da "caixa"*/
+    margin: auto;           /** Idependente do tamanho da tela, vai sempre deixar o conteúdo no meio da tela*/
+    box-shadow: 05px 05px 05px #681e1a2a;  /** Como já diz o próprio nome, vai deixar uma sombra na "caixa" do conteúdo. O primeiro "05px" é a linha horizontal da sombra, o segundo "05px" é a linha vertical e o terceiro "05px" é o espalhamento da sombra.*/
+}
+
+h1{
+    color: #D83F37;
+}
+
+h2{ color: #F2B53B;
+    text-shadow: 1px 1px 2px #f2b53b17; /** Como diz o próprio nome, vai deixar uma sombra no texto que posso usar o palete de cores para deixar mais transparente e ficar melhor ainda. Mesmo formato que o BOX-SHADOW = horizontal, vertical e o espalhamento de sombra.*/
+
+}

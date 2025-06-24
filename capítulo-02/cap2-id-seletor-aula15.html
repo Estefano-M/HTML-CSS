@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Seletores Personalizados - &#x1f440</title>
+    <link rel="stylesheet" href="style-aula15-id-seletores-01.css">
+</head>
+<body>
+    <h1 id="titulo">Criando sites em HTML e CSS</h1>
+    <h1>Aprendendo HTML</h1>
+    <h2 class="basico">HTML básico</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ad quae consequuntur obcaecati odit minus sed in commodi. Eveniet dolorem beatae mollitia sed adipisci velit labore nisi praesentium inventore atque.</p>
+    <h2 class="intermediario">HTML intermediário</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque maiores amet soluta quod facilis deleniti neque exercitationem veniam cupiditate nemo, aspernatur, perferendis ab voluptatem aliquam nam quos assumenda harum maxime.</p>
+    <h2 class="avancado">HTML avançado</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nam necessitatibus mollitia error id quia itaque repellat? Distinctio vel, nobis iure aliquam dolorum inventore, iusto aperiam nisi cumque, debitis accusamus?</p>
+
+    <h1>Aprendendo CSS</h1>
+    <h2 class="basico">CSS básico</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum tenetur, quam sint maxime tempore, itaque accusantium, eaque repellendus dolor temporibus sed delectus possimus. Est consequuntur, id corrupti dolore fuga eaque?</p>
+    <h2 class="intermediario">CSS intermediário</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem possimus accusantium quae tempora? Vitae quos laudantium, accusamus consequatur, provident esse perspiciatis rerum enim earum amet dolorem velit ipsa rem! Tenetur.</p>
+    <h2 class="avancado">CSS avançado</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eaque fugit quis unde totam corrupti provident voluptatum voluptates aliquid consequatur ipsam minima, nihil atque vero. Beatae maiores corporis recusandae voluptates?</p>
+    <hr>
+
+    <p>Aqui nessa aula 15 01/04, falamos sobre os <STRONG><MARK>SELETORES PERSONALIZADOS</MARK></STRONG>.</p>
+    <p>Eles nos permite <strong><mark>IDENTIFICAR UMA TAG</mark></strong> por exemplo o h1 do título dessa página <q>Criando Sites em HTML e CSS</q> para caso eu queira usar mais de uma tag h1 mas que eu consiga realizar uma configuração somente nela <strong><mark>COMO SE FOSSE O CSS INLINE</mark></strong> mas como já sabemos, só para casos bem específicos como no exemplo de colocar a <q>próxima página</q> no lado direito da tela.</p>
+    <p>Para isso, eu sei a tag <STRONG><MARK>&lt;ID&gt;</MARK></STRONG> dentro da tag <strong><mark>&lt;h1&gt;</mark></strong> e depois fui no CSS e usei o <mark><strong><q>h1#nome-do-id-que-voce-criou</q></strong></mark> e assim, consegui fazer um style específico para ele. Veja como ficou: &downarrow;</p>
+
+    <pre>
+        <code>
+
+            /** Tudo em HTML que for "ID" e tudo em CSS é "#" */
+            /** Tudo em HTML que for "class", em CSS é "."    */
+            /** O nome dessa configuração que fizemos aqui em baixo se chama "Seletor Personalizado" */
+
+            h1#titulo{
+                text-align: center;
+                background-color: rgb(61, 119, 61);
+                color: white;
+            }
+
+        </code>
+    </pre>
+
+    <p>Viu como ficou? Posso colocar qualquer nome dentro do <q><strong><mark>ID</mark></strong></q> para <strong><MARK>identifica-lo</MARK></strong>como já diz o próprio nome da tag.</p>
+    <p>Mas para aplicar esse ID no CSS, temos que usar o <q><mark><strong>#</strong></mark></q> como mostra o exemplo.</p>
+    <h3><mark>DENTRO DE UM MESMO DOCUMENTO HTML SÓ PODE TER UM ELEMENTO COM O MESMO <Q>ID</Q></mark>. Por exemplo, não pode ter dois ID com o nome principal. Posso criar outro ID mas com outro nome, entendeu?</h3>
+        <p>Posso usar somente em outra página(documento). FUNCIONA mas está ERRADO. A regra do W3C diz para somente usar 1 por documento caso a gente queira estar dentro do padrão de buscas do SEO.</p>
+    <hr>
+
+    <h1>FALANDO SOBRE A TAG <q>CLASS</q></h1>
+        <p>Caso eu queira usar um style no HTML básico e no CSS básico dessa página usando a mesma tag, eu posso usar a tag <strong><mark>CLASS</mark></strong> e assim conseguir configurar os dois h2.</p>
+        <p>Você pode classificar algo e não precisa usar a tag <q><strong><mark>H1 ou outra tag</mark></strong></q> no CSS, simplesmente coloque o <q><strong><mark>.e-o-nome-da-classificação-que-você-fez</mark></strong></q> e assim, todas as classificações que você fez, você consegue configura-las todas de uma vez. Veja exemplo: &downarrow;</p>
+
+        <pre>
+            <code>
+                /** Quando se trata da tag "CLASS", não precisa colocar o "h1,h2,h3"...ou outra tag alem do ponto e sua classificação como por exemplo aqui que o nome da classificação foi basico e SEMPRE USAR SEM ACENTUAÇÃO!*/
+                /** Class também é um Seletor Personalizado*/
+
+                .basico{
+                    color: rgba(32, 80, 32, 0.973);
+                    
+                    
+                }
+
+                .intermediario{
+                    color: rgb(221, 221, 45);
+                    
+                    
+                }
+
+                .avancado{
+                    color: rgb(209, 73, 73);
+                    
+                }
+            </code>
+        </pre>
+        <p>Viu?!</p>
+        <p>Também consigo aplicar <strong><mark>MAIS DE UMA CLASS NO MESMO ELEMENTO</mark></strong>! É só separar ela com um espaço e aplicar o nome da nova class por exemplo:</p>
+        <pre>
+            <code>
+                h1 class="avancado destaque">Falando sobre a tag h1>
+            </code>
+        </pre>
+        <p>Viu?! <mark>Tem duas classes dentro da tag H1</mark>.</p>
+        <p>Posso usar UM <q>ID</q> E UMA <q>CLASS</q> juntas mas o ID vai sobrepor a class.</p>
+</body>
+</html>

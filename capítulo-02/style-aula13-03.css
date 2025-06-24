@@ -1,0 +1,18 @@
+@charset "UTF-8"; 
+
+/** Não esqueça de colocar sempre o @CHARSET "UTF-8" para evitar problemas de acentuação! */
+
+/** Posso usar a tag "70DEG" por exemplo para poder mudar a ANGULAÇÃO das cores que vai aparecer no site!!! Veja exemplo a baixo*/
+
+/** No "background-attachment: fixed;" isso vai fazer que a imagem fique fixa no tela sem se mover juntamente com o conteúdo do site.*/
+
+/** "background-size: cover;" Faz com que a imagem de fundo cubra completamente o elemento, sem distorcer a imagem, Ela mantém a proporção da imagem, mas pode cortar as bordas para garantir que todo o fundo fique preenchido*/
+
+/** "background-position: center;" Alinha a imagem de fundo ao centro do elemento, tanto horizontalmente quanto verticalmente*/
+
+body {
+    background-image: linear-gradient(75deg, #E95845, #C02B8F, #755DD6, #FDBA59, #F5722C);
+    background-attachment: fixed; 
+    background-size: cover;
+    background-position: center;
+}

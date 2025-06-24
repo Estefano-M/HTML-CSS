@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Grouping Tags - &#x1f440</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font: normal 1em 'Montserrat', Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            margin: 0px;
+            text-align: justify;
+        }
+
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav{
+            background-color: green;
+            padding: 3px;
+            box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.534);
+        }
+
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+           
+        }
+
+        nav > a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+        article{
+            background-color: lightgrey;
+            padding: 05px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 3px 9px 0px rgba(0, 0, 0, 0.295);
+        }
+
+        article > aside{
+            background-color: grey;
+            color: white;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p{
+            margin: 0px;
+        }
+
+        #bola{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%; /* Podemos usar porcentagem ao dar valor no border-radius para criar uma bola por exemplo */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#" target="_blank" rel="external">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Evangelismo Santificação Salvação</p>
+        </section>
+
+        <section id="noticias">
+            <article>
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis rem sed praesentium nam suscipit hic quaerat at, est deserunt officiis excepturi consequatur sint fugiat. Necessitatibus expedita dignissimos alias ducimus labore. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis nobis, eius ratione voluptate nihil assumenda molestiae labore iusto. A, sint. Ipsa laborum facilis assumenda, rerum recusandae cupiditate enim nam eum?</p>
+                <aside>
+                    <p>Artigo escrito por EDM da IPDA</p>
+                </aside>
+            </article>
+                <h2>Dicas Box-Shadow</h2>
+                <p>Caso a gente queira usar o <strong>&lt;box-shadow&gt;</strong>, a gente pode colocar um valor na CSS, depois abrir o Dev Tools, ir na tag onde está o local em que queremos por o box-shadow e dentro do Dev Tools, a gente pode configurar a forma que a gente quiser e depois só pegar o resultado e colar no CSS. Eis aqui a imagem que mostra:</p>
+                <img src="imagens-cap02/dev-tool-box-shadow.png" alt="dev-tool">
+                <p>Veja no exempo acima &uparrow; que a janela que foi aberta ao clicar na aquela caixinha rosa dentro do <strong>box-shadow</strong>. <br> Outra coisa, ao configurarmos o <mark>box-shadow, ele também tem shorthand</mark> e para configurar é assim:</p>
+                <pre>
+                    <code>
+                       box-shadow: 1px 1px 1px 0px black; 
+                    </code>
+                </pre>
+                <p>As configurações dentro do <strong>box-shadow</strong> são: <mark>linha horizontal > linha vertical > blur(embaçamento) > spread(espalhamento) e por fim, a cor(black)</mark>. Ou seja, <strong>há duas formas de aplicar as configurações do box-shadow</strong>. Manualmente ou indo no dev tool.</p>
+                <p>Temos a tag <strong><mark>&lt;inset&gt;</mark></strong> que vai fazer a sombra ficar dentro do box(caixa). Então caso queira usa-la é só colocar a tag <strong>inset</strong> depois que abrir a tag <q>box-shadow: inset</q>.</p>
+            <article>
+                <h2>Caixas com Vértices Arredondados</h2>
+                <p>Como já tínhamos visto anteriormente brevemente sobre o <strong><mark>&lt;border-radius&gt;</mark></strong>, agora iremos falar um pouco mais sobre. Como deve ter percebido, essa tag <strong>article</strong> está com a borda arredondada e para isso, usamos a seguinte configuração:</p>
+            </article>
+                <pre>
+                    <code>
+                        border-radius: 10px 10px 10px 10px;
+                    </code>
+                </pre>
+                <p>Cada valor dado ao <strong>border-radius</strong> significa uma ponta da borda(são 4 obviamente). E aqui também posso utilizar o shorthand para caso eu queira que todas as pontas estejam em conformidade(harmonia) posso colocar da seguinte forma>:</p>
+                <pre>
+                    <code>
+                        border-radius: 10px;
+                    </code>
+                </pre>
+                <p>Isso vai dar valor as quatro pontas do border-radius. Veja a imagem abaixo:</p>
+                <img src="imagens-cap02/border-radius.png" alt="border-radius" width="600px">
+                <p>Aqui usamos o Dev Tool e conforme consegue ver na imagem acima &uparrow;, eis o que representa cada valor digitado: <mark>topo-esquerdo > topo-direito > inferior-direito > inferior-esquerdo</mark>. <br>Podemos usar também o esquema de <strong>dois valores</strong> que vão alterar somente as bordas <strong>topo-esquerdo e inferior-direito</strong>. Eis o código:</p>
+                <pre>
+                    <code>
+                        border-radius: 10px 0px;
+                    </code>
+                </pre>
+                <p>Isso vai fazer que somente as bordas top-left-radius e a bottom-right-radius sejam afetadas. Vou fazer isso aqui no começo desse <strong>article</strong> repare.</p>
+                <p>Podemos usar <strong>porcentagem</strong> ao darmos valor na tag border-radius. Irei fazer uma bola no footer desse documento e olhe aqui o código utilizado. &downarrow;</p>
+                <img src="imagens-cap02/bola-border-radius.png" alt="bola-made-by-border-radius">
+        </section>
+    </main>
+        <aside>
+            <p>Caso queira ir para a outra página que fala sobre box, <a href="cap2-caixas-box-border-aula16.html" target="_self" rel="prev">clique aqui</a></p>
+        </aside>
+    <footer>
+        <p>Desenvolvido por EDM</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

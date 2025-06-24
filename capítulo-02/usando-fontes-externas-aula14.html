@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Usando Fontes Externas - &#x1f440</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        /* Com essa Regra(@font-face), que conseguimos colocar a font externa no nosso site*/
+        @font-face {
+            font-family: 'Super';
+            src: url('../capítulo-02/fonts/Super Crown.ttf') format('truetype'), url('../capítulo-02/fonts/Super Crown.ttf') format('opentype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*  Tipos de Format()
+        - opentype (otf)
+        - truetype (ttf)
+        - embedded-opentype
+        - truetype-aat (Apple Advanced Typography)
+        - svg        
+        */
+        
+        body{
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif ;
+            text-align: justify;
+        }
+        
+        h2{
+            font-family: 'Super', Arial, Helvetica, serif;
+            font-size: 3em;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> - Usando Fontes Externas Baixadas - Aula 14 07/10</h1>
+    <h2> - Título - </h2>
+        <p>Caso o cliente não queira nenhuma fonte que tenha no <a href="https://fonts.google.com/" target="_blank" rel="external" hreflang="en">fonts.google.com</a>, ou queira pegar uma fonte mais tematizada, tem um outro site que se chama <a href="https://www.dafont.com/pt/" target="_blank" rel="external" hreflang="en">dafont.com</a> e pode pegar lá.</p>
+        
+        <p><mark>Tomar cuidado ao pegar uma fonte pois você precisa saber se ela tem acentuação e se ela tem letras minúsculas</mark>. Ao escolher a fonte que você ou seu cliente deseja, desce a barra para saber se tem os <strong>glifos</strong>(letras) com acentuação.</p>
+        <p>Para adicionar essas novas <mark>fontes externas que você baixou</mark>, após você ter entrado no site e baixado elas, elas podem vir com alguns formatos diferentes.</p>
+
+        <p>Usamos a <strong><mark>REGRA = @FONT-FACE</mark></strong> no <strong>STYLE ou no CSS se for ter mais de um documento(página)</strong> e assim, vai abrir um campo com duas <strong>declarações</strong> que são <strong><mark>FONT-FAMILY: '  ' ;</mark></strong> e <strong><mark>SRC: URL ( );</mark></strong>. Mas vai ficar faltando a declaração(TAG) <strong><mark>FORMAT(' ');</mark></strong>. Veja como ficou o código &downarrow;.</p>
+
+        <pre>
+            <code>
+                @font-face{
+                    font-family: 'Super';
+                    src: ulr( 'fonts/Super Crown.ttf') format('truetype');
+                    font-size: normal;
+                    font-style: normal;
+                }
+            </code>
+        </pre>
+
+        <h3>Decompondo o código:</h3>
+        <p>Ali no <strong><mark>Font-Family</mark></strong>, você vai colocar um <q>nickname</q> pois se você observar, ele não tem o mesmo nome do arquivo que está na declaração <strong>src: url(' Super Crown.ttf')</strong> então isso significa que você pode escolher. Mas minha orientação é <strong>deixe o nome parecido para ficar fácil de identificar/se lembrar</strong>.</p>
+
+        <p><strong><mark>../FONTS/</mark></strong> é o caminho(local) que se encontra o(s) arquivo(s). Mesma coisa quando se está pegando uma imagem. Se estiver na mesma pasta <strong><mark>somente usar o font/</mark></strong>.</p>
+
+        <p><strong><mark>SRC: URL (' Super Crown.ttf')</mark></strong>, é onde a gente coloca o <mark>NOME EXATO QUE VEIO NO ARQUIVO AO BAIXA-LO</mark> junto com o ponto. Como diz o nome da própria tag(declaração), ali ele vai buscar o <strong><mark>nome da fonte</mark></strong> para poder colocar no seu documento.</p>
+
+        <p><strong><mark>FORMAT('truetype');</mark></strong> como o nome da declaração já diz, aqui é onde a gente vai colocar o formato do arquivo de fonte que nós estamos pegando. A mesma coisa que acontece quando a gente coloca um vídeo no nosso site, se lembra? Outra coisa, essa declaração não vem quando você coloca a regra @font-face. Tem que adiciona-la manualmente.</p>
+
+        <p>Os outros dois você já conhece. Iremos falar agora sobre os formatos de fonte: &downarrow;</p>
+        <ul>
+            <li>Formatos de Fonte</li>
+                <ul style="list-style-type: square;">
+                    <li>opentype (otf)</li> /
+                    <li>truetype (ttf)</li>
+                    <li>embedded-opentype</li>
+                    <li>truetype-aat (Apple Advanced Typography)</li>
+                    <li>svg</li>
+                </ul>
+        </ul>
+        <p><strong>A GENTE NÃO DEIXA OS ARQUIVOS FONT JOGADOS NA PASTA PRINCIPAL, A GENTE CRIA UMA PASTA CHAMADA "FONTES"! E OBSERVE QUE COLOQUEI MAIS DE UM FORMATO PARA FUNCIONAR DEPENDENDO DO NAVEGADOR QUE NEM OS VÍDEOS/PICTURES/ÁUDIO!</strong></p>
+        <p>OFT e TTF geralmente funciona em todos os navegadores.</p>
+        
+        <p>Veja como ficou o do Guanaraba:</p>
+        <img src="imagens-cap02/fontes-guanabara.png" alt="curso-em-video-image">
+        <hr>
+
+    <h1> - Detectando Fontes dentro de Imagens - Aula 14 09/10</h1>
+        <p>Guanaraba apresentou 3 sites para faicilitar no reconhecimento de fontes dentro de imagens. Somente dois funcionam e já deixei como favorito.</p>
+        <a href="https://www.whatfontis.com/#google_vignette" target="_blank" rel="external" hreflang="en">whatfontis.com</a>
+        <p><a href="https://www.myfonts.com/pages/whatthefont" target="_blank" rel="external" hreflang="en">myfonts.com</a></p>
+
+
+        <p>Voltar para o outro documento que também fala sobre fontes <a href="usando-google-fonts-aula14.html" target="_self" rel="prev">Clique aqui</a>.</p>
+
+
+</body>
+</html>

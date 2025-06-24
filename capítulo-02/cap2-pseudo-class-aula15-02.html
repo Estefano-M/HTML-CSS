@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/HTML-CSS/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - :HOVER Aula 15 - &#x1f440 </title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        div:hover{
+            color: red;
+        }       
+            
+        /* Aqui como você pode ver, tem a class DIV, a pseudo-class :HOVER e o "CHILD" P(parágrafo). Na página anterior, podemos ver lá falando sobre o child dentro da PSEUDO-CLASS. É como você está vendo aqui, é um parágrafo DENTRO DA CLASS DIV por isso se chama child. "O que está dentro".*/
+        div > p{
+            display: none;
+            color: white;
+            background-color: red;
+            width: 156px;
+        }
+        
+        /* Aqui como você consegue ver, quando queremos quem um "CHILD" tenha um certo comportamento, veja como fica o código. Aqui vai fazer que quando o mouse passar em cima do texto, vai mostrar o texto escondido dentro da DIV.*/
+        div:hover > p{
+            display: block;
+            
+        }
+
+        #paginaanterior{
+            color: blue;
+        }
+
+        /* Para não esquecer: Seletores Personalizados
+        
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = children
+        
+        */
+
+        a{
+            color: red;
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        a:active{
+            color: orange;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .a1::before{
+            content: '♬';
+        }
+        .a1::after{
+            content: '♬';
+        }
+
+        .caixinha:empty{
+            background-color: lightblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Exemplo de :HOVER</h1>
+        <p>Passe o mouse em cima para revelar seu segredo!</p>
+
+        <div>Passe o mouse aqui
+            <p>TEXTO ESCONDIDO</p>
+        </div>
+        <p>Fim do Exemplo</p>
+        <p>Como pode perceber aqui nesse exemplo, fizemos que ao passar o mouse em cima do texto, um texto escondido fosse exibido.</p>
+        <p>Veja aqui como ficou o código &downarrow; ou veja no VS CODE.</p>
+    <pre>
+        <code>
+            div:hover{
+                color: red;
+            }       
+
+            div > p{
+            display: none;
+            color: white;
+            background-color: red;
+            width: 156px;
+            }
+
+            div:hover > p{
+            display: block;
+            
+            }
+            </code>
+    </pre>
+        <p>Eis aqui um exemplo de <strong><mark><q>CHILD</q></mark></strong>, ou seja, é uma <strong><mark>TAG DENTRO DA CLASS DIV</mark></strong> e sua forma de representar é um um sinal de <mark><strong>">"</strong></mark>.</p>
+        <p>Quando quisermos que algo dentro da class div tenha um comportamento, iremos usar a forma child. E para saber mais, veja no VSCODE.</p>
+    <h1> - Personalização de Links usando Pseudo-Classes - </h1>
+    <h2>Personalizando Links</h2>
+        <ul>
+            <li><a href="https://www.youtube.com/c/IgrejaDeus%C3%A9amoroficial" target="_blank" rel="external" class="a1">Canal no Youtube</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="external">FaceBook</a></li>
+            <li><a href="https://ipda.com.br/" target="_blank" rel="external" class="destaque">Página Deus é Amor</a></li>
+        </ul>
+        <p>Veja o código usado:</p>
+    <pre>
+        <code>
+            a{
+                color: red;
+                text-decoration: none;
+            }
+
+            a:visited{
+                color: green;
+            }
+
+            a:active{
+                color: orange;
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+        </code>
+    </pre>
+    <h3>Decompondo a pseudo-class do link</h3>
+        <p><strong><mark>&lt;A&gt;</mark></strong> já sabemos para que serve(para criar um link). E como pode ver, usamos a sua tag para fazer uma personalização dentro da tag <strong><mark>&lt;STYLE&gt;</mark></strong> mas o cenário melhor mesmo é ter um documento CSS para isso. Mas aqui é só um exemplo então está tudo bem.</p>
+        <p><strong><mark>&lt;:VISITED&gt;</mark></strong> como diz o próprio nome, quando a gente visita um link, ele por padrão muda de cor, né? Aqui a gente mudou a cor que fica após você clicar em um link.</p>
+        <p><STRONG><MARK>&LT;:ACTIVE&GT;</MARK></STRONG> como também já diz o próprio nome, no instante que você clica em um link, ele muda de cor, como fizemos nesse exemplo aqui. Mas podemos fazer muito mais.</p>
+        <p><strong>:HOVER</strong> a essa altura nós já sabemos para que serve seu propósito mas só para não deixar batido: Há um comportamento quando você passa o mouse por cima do texto ou do conteúdo.</p>
+    <h1>Pseudo-Elementos</h1>
+        <p>Pseudos-Elementos são como efeitos especiais que você adiciona com CSS em partes específicas de um elemento(Uma tag <strong>P, A, h2, etc</strong> por exemplo) sem precisar mudar nada no código HMLT.</p>
+    <h3>Tipos de pseudo-elementos:</h3>
+    <ul>
+        <li><strong>::before</strong></li>
+            <ul>Use <q>::before</q> para colocar algo no começo do texto, bloco ou alguma outra tag</ul>
+        <li><strong>::after</strong></li>
+            <ul>Use <q>::after</q> no final do conteúdo</ul>
+        <li><strong>::first-line</strong></li>
+            <ul>Use <q>::first-line</q> para mudar somente a primeira linha do texto</ul>
+        <li><strong>::first-letter</strong></li>
+            <ul>Use <q>first-letter</q> para mudar somente a primeira letra (tipo deixar a primeira letra gigante como nos jornais)</ul>
+    </ul>
+        <p>Veja como ficou ao colocar o pseudo-element nos link externos:</p>
+    <pre>
+        <code>
+            .a1::before{
+                content: '♬';
+            }
+
+            .a1::after{
+                content: '♬';
+            }
+        </code>
+    </pre>
+        <p>Os pseudo-elementos começam com <strong><mark>&lt;::&gt; e ajudam a deixar o site mais bonito e arrumado.</mark></strong></p>
+        <p><strong>Irei usar o exemplo dos links ali em cima</strong>. &uparrow;</p>
+    <h2>Seletores Personalizados que vimos até agora:</h2>
+        <ul>
+            <p># = id</p>
+            <p>. = class</p>
+            <p>: = pseudo-class</p>
+            <p>:: = pseudo-element</p>
+            <p>> = children</p>
+        </ul>
+
+
+        <a href="cap2-pseudo-class-aula15.html" target="_self" rel="prev" id="paginaanterior">Página Anterior</a>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>Links e Âncoras &#x1f440 </title>
+</head>
+<body>
+    <h1>Links e Âncoras Aula 10 1/3</h1>
+    
+    <h2>Usando Links Externos</h2>
+    <p>Você pode acessar <a href="https://www.youtube.com/watch?v=MX-iaTDEyGI&t=6665s">esse link</a> para ouvir um som e ir estudar. Estou gostando de estudar ouvindo um song tranquilo de fundo. Usei aqui a tag <strong><mark>&lt;<code>A href="url do site</code>"&gt;</mark></strong>.</p>
+    <p>O problema do link acima é que ele <ins><strong>SUBSTITUI</strong></ins> a sua página e a probabilidade de o usuário voltar para a sua página é pequena.</p>
+    <p>O que vou fazer aqui agora é gerar um novo link mas quando o usuário usá-lo, vai abrir uma nova aba e não vai perder sua webpage de vista. Segue video abaixo: </p>
+    
+    <p><a href="https://www.youtube.com/shorts/9KwMumut_gc" hreflang="pt-br" target="_blank" rel="external">Eis aqui o exemplo</a>.</p>
+    <p>NOW, LET ME BREAK IT TO YOU: Nesse novo link eu usei a mesma tag só que usei mais duas tags e ficou assim o link para um site externo: <strong><mark>&lt;<code>A href="url do site" target="_blank" rel="external</code>"&gt;</mark></strong>.</p>
+    
+    
+    <p>O <strong><mark><code>TARGET="_BLANK"</code></mark></strong> <ins>é para abrir uma nova aba (o alvo é a nova aba)</ins>.</p>
+    <p>o <strong><mark><code>TARGET=""</code></mark></strong> suporta os seguintes valores:</p>
+    <p><code><strong><mark>_BLANK</mark></strong></code> e vai abrir o link em uma nova janela em branco.</p>
+    <p><code><strong><mark>_SELF</mark></strong></code> e vai abrir um link na janela ou frame atual.</p>
+    <p><code><strong><mark>_TOP</mark></strong></code> vai desfazer todos os frames e abrir o destino no navegador completo.</p>
+    <p><code><strong><mark>_PARENT</mark></strong></code> similar ao uso do _top em uma referência á janela mãe.</p>
+    <p><code><strong><mark>NOME-DO-FRAME</mark></strong></code> caso esteja usando frames, indicar o nome da janela a abrir.</p>
+
+
+    <p>O <strong><mark><code>REL="EXTERNAL"</code></mark></strong> <ins>é pra deixar claro para os SEO(Search Engine Optimization) que ele é um link para um site externo</ins>.</p>
+    <p>Outra coisa, na tag <strong>&lt;A&gt; a gente pode adicionar a tag <strong><mark><code>hreflang="en"</code></mark></strong></strong> que permite indicar qual é o idioma principal do site para onde o link está desviando o fluxo de navegação. Isso <strong>permite avisar para os navegadores e softwares</strong> de tradução como lidar caso o usuário opte por traduzir automaticamente os conteúdos.</p>
+    
+    <p><strong>SEMPRE QUE FOR ABRIR UM SITE QUE NÃO É SEU, USAR TARGET significando uma nova aba E REL significando que é um site externo</strong></p>
+    <p><strong>IMPORTANTE: SEMPRE DEIXAR AS TAGS EM LETRAS MINÚSCULAS</strong></p>
+    <br>
+    <hr>
+    
+    <h2>Links Internos Aula 10 2/3</h2>
+    <p>Está é a minha primeira página.</p>
+    <p>Vou criar um <mark>LINK INTERNO</mark> que vai redirecionar para uma outra página <mark>MINHA</mark> que está no mesmo servidor.</p>
+    <p>Para ir para a segunda página <a href="links-âncoras02.html" rel="next">clique aqui</a> e encontrar novos conteúdos.</p> <!--O REL=NEXT aqui serve para indicar que irá para a próxima página, e caso eu crie um link interno para VOLTAR, tenho que colocar no REL="PREV" (de PREVIOUS)-->
+    
+    <p>Usei a tag <strong><mark>&lt;<code>A href="index-da-pág-2" rel ="next"</code>&gt;</mark></strong> o <strong>REL="NEXT"</strong> indica para o SEO que aquele link que o usuário vai clicar vai levar para a próxima página. E nas próximas páginas que irei criar e o usuário queira voltar, o outro index vai ter o <strong>REL="PREV"</strong> (de previous).</p>
+    <p><STRONG>QUANDO EU FAÇO UM LINK INTERNO, EU NÃO PRECISO DA URL INTEIRA</STRONG>.</p>
+    <p>Quando estou navegando dentro do meu próprio site, na hora de utilizar a tag <strong><mark>&lt;<code>a href="index-pag-3" target="_blank" rel="next"</code>&gt;</mark></strong>, eu posso mudar a tag TARGET para <strong>TARGET="_SELF"</strong> para indicar ao SEO que essa página é minha e não precisa abrir em uma nova guia. Mesmo que eu deixe somente TARGET="_BLANK" vai funcionar normalmente mas como nós queremos estar em um <STRONG>NÍVEL PROFISSIONAL</STRONG>, por isso temos que fazer assim.</p>
+    <hr>
+    
+    
+    <h2>Links para Downloads Aula 10 3/3</h2>
+    <ul>
+        
+        <li type="circle"><a href="link-download-aula10/10 - Ligações em toda parte.pdf" download="link-download-aula10" type="application/pdf">Baixar o livro em PDF</a></li> <!--Ao ter uma tag A vazia, de BOAS PRÁTICAS é bom colocar um "rashtag" deixar deixa-lo marcado-->
+        
+        <li type="circle"><a href="link-download-aula10/meulivro.zip" download="meulivro" type="application/zip">Livro compactado em ZIP</a></li>
+
+    </ul>
+   
+    <p>Para conseguir criar esse link-download em PDF na primeira lista, eu usei a tag <strong><mark>&lt;<code>a href="pasta-onde-esta-o-arquivo-para-download-selecionei-o-arquivo" download="coloquei-o-nome-do-arquivo-para-download" type="application/pdf"</code>&gt;</mark></strong></p>
+    <p>A tag <strong><mark>DOWNLOAD="arquivo-a-ser-baixado"</mark></strong> é o arquivo a ser baixado que estava dentro do endereço(pasta) do <strong>A HREF</strong>.</p>
+    <p>A tag <strong><mark>TYPE="application/pdf"</mark></strong> é o formato do arquivo que você está criando um link-download.</p>
+    <p>Tem um site que eu ja deixei salvo no navegador que mostra os <strong>TYPE</strong> que tem que colocar <strong>para cada tipo de arquivo</strong>. Eis aqui o <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank" rel="external"><ins>site</ins></a>.</p>
+
+    <p>Para o item da segunda lista, <strong><mark>eu usei a mesma tag</mark></strong> só mudou o arquivo (ZIP) e o nome do <strong>APPLICATION/ZIP</strong>.</p>
+    <p>Testando 1...2...3...<a href="/10 - Ligações em toda parte.pdf" download="Aula 10 - Links" type="application/pdf">Baixe aqui a Aula 10</a></p>
+    
+    <h3>Aqui vão alguns <q><em>media types</em></q> bem usados no nosso dia-a-dia:</h3>
+
+    
+    <ul type="circle">
+        <li>Application/zip</li>
+        <li>text/html</li>
+        <li>text/css</li>
+        <li>text/javascript</li>
+        <li>video/mp4</li>
+        <li>video/H264</li>
+        <li>video/JPEG</li>
+        <li>audio/aac</li>
+        <li>audio/mpeg</li>
+        <li>font/ttf</li>
+        <li>image/jpeg</li>
+        <li>image/png</li>
+    </ul>
+    
+    
+</body>
+</html>

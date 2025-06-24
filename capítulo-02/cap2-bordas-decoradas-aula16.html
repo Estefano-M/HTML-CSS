@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Bordas Decoradas - &#x1f440</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font: normal 1em 'Montserrat', Arial, Helvetica, sans-serif;
+
+        }
+
+        h1{
+            border: 10px solid black;
+            padding: 10px;
+            border-image-source: url(imagens-cap02/border.png);
+            border-image-slice: 37;
+            border-image-repeat: repeat;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bordas Personalizadas</h1>
+        <p>Guanabara não gasta de usar esse método mas é como ele disse, vai que um dia será preciso colocar esse tipo de borda em um projeto.</p>
+        <p>Veja o código como ele é sem shorthand: &downarrow;</p>
+        <pre>
+            <code>
+                border: 10px solid black;
+                padding: 10px;
+                border-image-source: url(imagens-cap02/border.png);
+                border-image-slice: 37;
+                border-image-repeat: repeat;
+            </code>
+        </pre>
+        <p>Com shorthand:</p>
+        <pre>
+            <code>
+                border-image: url(imagens-cap02/border.png) 37 repeat;
+            </code>
+        </pre>
+        <p>A ORDEM É: <strong><mark>border-image-source: url('') > border-image-slice: > border-image-repeat</mark></strong>.</p>
+        <p>Outra coisa, não podemos tirar a tag <strong><mark>&lt;border&gt;</mark></strong> porque se tirarmos, vai deixar de ser uma borda. A tag <strong><mark>&lt;border-image&gt;</mark></strong> é como diz o nome, ela vai configurar a IMAGEM que você colocar nela para PERSONALIZAR A BORDA e não criar a borda em si.</p>
+        <p>Caso o navegador não suporte o <q>black</q> quando você cria a tag borda, pode colocar a tag <strong>transparent</strong>. Exemplo:</p>
+        <pre>
+            <code>
+                border: 10px solid transparent;
+            </code>
+        </pre>
+        <p>E é isso.</p>
+</body>
+</html>

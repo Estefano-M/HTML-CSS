@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/HTML-CSS/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Tipografia/Fontes 01 - &#x1f440 </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            
+            /* 
+            Medidas Absolutas:
+            cm, mm, in, px 
+            
+            Medidas Relativas:
+            em, ex, rem, vw, vh, % // 
+            
+            em = Altura M maiúscula de uma fonte. A que mais usamos no dia-a-dia e representa o tamanho da letra normalmente. SEMPRE usar ele. 
+            ex = Altura X de uma fonte. 
+            rem = Relativo a fonte ROOT (que está configurada no BODY). 
+            vw = Relativo ao tamanho da tela do seu dispositivo e usa uma porcentagem da tela. 
+
+            W3CSchools recomenda que para o uso do FONT-SIZE utilizar SOMENTE "em" e "px".
+
+            FONT-SIZE: 16px É O TAMANHO PADRÃO DA FONTE.
+
+            16px geralmente é "1em". Se eu colocar "2em" no font-size, vai ficar o DOBRO DO TAMANHO pois cada "em" vale 16px.
+            */
+            font-size: 1em;
+            
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        h2{
+            font: 'Times New Roman', Times, serif;
+            text-align: left;
+        }
+
+        /*Esse text-indent ele vai justamente INDENTAR como se a gente fosse escrever em uma papel onde a gente coloca o ínicio do texto um pouco mais para a direita*/
+        p{
+            text-align: justify;
+            text-indent: 30px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1> - Tipografia/Fontes em CSS- Aula 14 3/10</h1> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolorem necessitatibus dicta impedit, sapiente iure sequi maiores, a autem ullam animi cupiditate omnis. Ipsum ducimus vel sapiente repellat reprehenderit dignissimos!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nisi nam exercitationem iusto error eum perspiciatis? Totam tenetur odit, maiores sunt ipsa in omnis. Perferendis alias dolores nisi dolorum consequuntur?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus eos debitis consequatur soluta neque incidunt? Omnis harum impedit incidunt repudiandae quas corporis consectetur hic odio eum amet, facilis voluptatum ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aliquam id error assumenda exercitationem odit, aliquid ad cupiditate eligendi autem eum repellat iste necessitatibus excepturi. Aperiam quae cupiditate consequuntur aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis vel amet et dolores, quas expedita dignissimos labore quia sapiente sed rerum error sequi dicta molestias explicabo, sunt qui at debitis.</p>
+    <h2>Subtítulo do Exercício</h2>
+        <p>Ao usar a tag <strong><mark>&lt;font-family:&gt;</mark></strong> vão aparecer 3 opções uma ao lado da outra. Por exemplo:</p>
+        <pre>
+            <code>
+                  
+               font-family: Arial, Helvetica, sans-serif
+                 
+            </code>
+        </pre>
+        <p>Como você pode observar, apareceram 3 palavras <ins>
+            <mark>(duas fontes e a terceira está em francês e está dizendo sem serifa)</mark>
+        </ins> ao digitar a tag <mark><strong>font-family</strong></mark> e isso significa que o site vai tentar encontrar uma fonte no dispositivo da pessoa e caso não consiga encontrar, ele vai tentar a segunda opção(Helvetica). Mas por que isso acontece? Isso acontece porquê dependendo do dispositivo que a pessoa possa estar usando, não tenha essa fonte e não ira conseguir carregar o texto.</p>
+        <p>Para saber mais sobre a as fontes mais <q>seguras</q> para se usar, visite: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.php" target="_blank" rel="external" hreflang="en"><strong><mark>Web Safe Fonts</mark></strong></a>. Um bom esquema é usar um título serifado que nem neste exemplo que eu fiz. Olhe no VS Code e verá que h1 e h2 está com serife e o body está sem. Ou só os parágrafos. Você que vai escolher.</p>
+
+    <hr>
+    
+    <h1 style="font-family: sans-serif;"> - Tamanho de Fontes e suas Medidas - Aula 14 04/10</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus praesentium debitis fugiat! Consectetur voluptatibus necessitatibus in, libero voluptatum, doloribus ut maiores hic natus minima ullam, quia praesentium repellendus. Sapiente, tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laborum eum distinctio, aspernatur corporis repellendus sequi, atque obcaecati excepturi non debitis aliquam soluta ex consequatur earum tenetur enim, nulla quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta corrupti, veritatis ipsam voluptate sequi tempore dolor facere pariatur magnam quis aperiam molestias itaque deleniti excepturi et at ducimus necessitatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi architecto numquam neque exercitationem placeat natus cumque laboriosam nobis illo dolores dolore assumenda minima et cupiditate, sit aut voluptates? Minima, quae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolor odio vero ullam ipsam quibusdam repellendus veritatis corrupti explicabo autem inventore vitae at sapiente, tempore dolorem eligendi, harum fugit iure!</p>
+        <p>Falamos aqui sobre as <strong><mark><q>Medidas Absolutas</q></mark></strong> e <q><strong><mark>Medidas Relativas</mark></strong></q>.</p>
+        <ul>
+            <li><strong>Medidas Absolutas</strong></li>
+                <ul>
+                    <li>cm</li>
+                    <li>mm</li>
+                    <li>in</li>
+                    <li style="color: orange;">px</li>
+                        <ul>
+                            <li><q>16px</q> é o tamanho padrão da letra. Medida que sempre que possível usar. Recomendada pela W3CSchools.</li>
+                        </ul>
+                </ul>
+            <li><strong>Medidas Relativas</strong></li>
+                <ul>
+                    <li style="color: orange;">em</li>
+                        <ul>
+                            <li>Essa medida ela equivale á 16px. Ou seja, <q>1em</q> é a mesma coisa que <q>16px</q>. Vou usar sempre. Recomendada pela <a href="https://www.w3schools.com/cssref/pr_font_font-size.php" target="_blank" rel="external" hreflang="en">W3CSchools</a>.</li>
+                        </ul>
+                    <li>ex</li>
+                    <li style="color: orange;">rem</li>
+                        <ul>
+                            <li>Relativo a fonte ROOT (que está configurada no BODY).</li>
+                        </ul>
+                    <li style="color: orange;">vw</li>
+                        <ul>
+                            <li>vw = Relativo ao tamanho da tela do seu dispositivo e usa uma porcentagem da tela.</li>
+                        </ul>
+                    <li>vh</li>
+                    <li>%</li>
+                </ul>
+        </ul>
+        <p>O restante quase não irei usar. Só essas que estão com a cor laranja. Mas mais pra frente irei dar uma pesquisada mais afundo no site da W3CSchools.</p>
+    <hr>
+
+    <h1> - Peso, Estilo e Shorthand Font - Aula 14 05/10</h1>
+        <p>O <q>peso</q> da fonte está se referindo a <q>largura</q> das letras e a tag respectiva dela é: <strong><mark>&lt;font-weight="lighter/normal/bold/bolder or 100 - 900&gt;</mark></strong>.</p>
+        <p>Irei usar <mark><ins>um exemplo aqui abaixo</ins></mark> &downarrow;:</p>
+
+        <!--* Para a font-weight, temos lighter, normal, bold e bolder. Também conseguimos fazer isso ao colocar numeros de 100 á 900 e quando maior for o numero, maior vai ser a expessura dela (mais bolder/negrito).-->
+        <!--* Não esquecer de colocar o @import dentro do <style> na tag <head> antes de tentar isso.-->
+        <!--* Não esquecer que nem toda fonte suporta adicionar essas tags aqui em baixo.-->
+
+        <p style="font-weight: 300; font-family: 'Work Sans', Arial, Helvetica, sans-serif;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+        <p style="font-weight: 100; font-family: 'Work Sans';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+        <p style="font-weight: 300; font-family: 'Work Sans';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+        <p style="font-weight: 500; font-family: 'Work Sans';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+        <p style="font-weight: 800; font-family: 'Work Sans';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+        <p style="font-weight: 900; font-family: 'Work Sans';">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolor, harum natus mollitia nulla numquam dolorum placeat sit. Numquam iusto ipsum placeat, facere porro corporis totam odio dignissimos fugiat earum?</p>
+
+        <p>Está vendo como ele muda de <q>expessura</q> ou ficando mais <q>bold</q>(negrito)?. <mark>Ele está ficando que nem essa imagem aqui</mark> &downarrow;:</p>
+        <img src="imagens-cap02/normal-bold-bolder.jpeg" alt="font-weight-image">
+        <p>Ou seja, a tag <mark><strong>&lt;font-weight=bolder;&gt;</strong></mark> vai mudar o <strong><mark>tom de negrito do texto.</mark></strong></p>
+
+        <p><strong><mark>&lt;font-style=italic;&gt;</mark></strong> =  Como já diz o próprio nome, ele vai mudar a fonte e deixa-la <ins><em>italico</em></ins>.</p> 
+        <p><strong><mark>&lt;text-decoration=underline;</mark></strong>  = Como diz o próprio nome, vai deixar o texto <ins>sublinhado</ins></p>
+        <p>Essas tags que usamos agora o Guanabara diz que a gente vai usar e muito. E por isso ele tem uma tag que <q>encurta</q> essas linhas de códigos. Eis aqui ela normal:&downarrow;</p>
+
+        <pre> 
+            <code>
+                h1 {
+                    font-style: italic;                         
+                    text-weight: bolder;
+                    text-size: 1em;
+                    text-family: 'Work Sans', sans-serif;           
+                }
+            </code>
+        </pre>
+        <p>Código com <strong><mark>shorthand</mark></strong>: &downarrow;</p>
+
+        <!--* SEMPRE seguir a ordem para poder usar essa shorthand: font-style > font-size > font-weight > font-family.-->
+        <pre>
+            <code>
+                h1{
+                    font: italic bolder 1em 'Work Sans, sans-serif;'
+                }
+            </code>
+        </pre>
+        <p>Veja a imagem a seguir:</p>
+        <img src="imagens-cap02/font-font-family-tags.png" alt="font-font-family-tag">
+
+        <p>Nesse shorthand a gente coloca <strong><mark>NA ORDEM CERTA SEMPRE</mark></strong> que é: <br>
+        <strong><mark>font-style &rightarrow; font-weight &rightarrow; font-size &rightarrow; font-family</mark></strong>.</p>
+
+        <p>O nome dessa <q>mãozinha</q> aqui em cima &uparrow;se chama <strong><mark>SHORTHAND</mark></strong>. Literalmente isso, uma <q>mãozinha</q>.</p>
+        <p>Também dá pra usar o shorthand deixando alguma <q>tag</q> que eu não queira, como por exemplo esse aqui:</p>
+
+        <pre>
+            <code>
+                h2{
+                    font: bold 2em 'Work Sans, sans-serif;'
+                }
+            </code>
+        </pre>
+        <p>Nesse exemplo acima, eu não coloquei o valor da tag <mark><strong>&lt;font-style&gt;</strong></mark> e funciona também do mesmo jeito.</p>
+        <hr>
+
+        <h1> - Usando o Google Fonts - Aula 14 07/10</h1>
+            <p style="text-align: right;"><a href="usando-google-fonts-aula14.html" target="_self" rel="next">ir para o documento</a></p>
+        <hr>
+
+        <h1> - Alinhamento de Textos com CSS - Aula 14 10/10</h1>
+        <h2>Subtítulo</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti laborum quos beatae, explicabo, eius nulla quod quam cupiditate deserunt vel in, similique provident facilis modi at repudiandae voluptatum minus. Nostrum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint ad placeat voluptate aliquid, possimus odit labore tenetur a incidunt nam doloremque, expedita porro sequi ea aliquam velit? Quam, sint nemo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, magnam, reprehenderit non natus ex quisquam omnis sunt architecto deserunt fugit quae rerum sit repellat pariatur sint incidunt id blanditiis dignissimos?</p>
+            <p>Nunca alinhe utilizando HTML que são os <mark><strong>INLINE</strong></mark> que a gente aprendeu para fazer <strong><mark>style pontuais</mark></strong>. Sempre utilize as CSS para fazer alinhamentos. A não ser que seja algo bem pontual que nem eu estou fazendo com a <q>Próxima Página</q> que estou colocando para a direita.</p>  
+            <p>Aprendi também que para <strong>identar</strong> = deixar parecendo quando a gente vai escrever em um papel deixando a primeira letra mais pra direita devo usar a tag <strong><mark>&lt;text-indent: 30px&gt;</mark></strong>.</p>
+            <hr>
+            
+</body>
+</html>

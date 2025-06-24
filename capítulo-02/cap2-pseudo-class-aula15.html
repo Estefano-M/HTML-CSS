@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Pseudo-Classes - &#x1f440</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        p{
+            font: normal 1em 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        div{
+            background-color: lightgrey;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        
+        /* PSEUDO-CLASS vai fazer com que eu "DÊ UM ESTADO" a classe. */
+        /* DIV:HOVER vai fazer que quando eu passar o mouse em cima da DIV, ela vai ficar vermelha */
+        
+        div:hover{
+            background-color: red;
+        }
+       
+        .testando:hover {
+            background-color: red;
+            width: 130px;               /* Aqui eu usei do width para diminuir o tamanho da listra horizontal vermelha para não pegar a página toda*/
+         
+        }
+
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+    <h1> - Pseudo-Classes - Aula 15 03/04</h1>
+        <p>Aprendemos aqui sobre as <strong><mark>PSEUDO-CLASSES</mark></strong>. Pense nelas como se fossem <STRONG><MARK>REGRAS ESPECIAIS QUE SÓ ACONTECEM EM SITUAÇÕES ESPECÍFICAS</MARK></STRONG>.</p>
+        <pre>
+            <code>
+                div:hover{
+                    background-color: red;
+                }
+            </code>
+        </pre>
+        <p>Vamos observar esse exemplo aqui de cima. Quando você PASSA O MOUSE EM CIMA, ele tem um comportamento. Eis o código dele: &uparrow;</p>
+        
+        <p>Exemplo: Imagine que você tem um botão e você quer que ele mude de cor <strong><mark>SÓ QUANDO VOCÊ PASSAR O MOUSE POR CIMA</mark></strong>. Olhe o código para entender &downarrow;</p>
+        <pre>
+            <code>
+                button: hover{
+                    background-color: red;
+                }
+            </code>
+        </pre>
+        <p>Isso quer dizer: <q>Quando alguém passar o mouse por cima do botão, ele vai ficar vermelho</q>.</p>
+        <p><STRONG>PSEUDO-CLASSE = COMPORTAMENTO QUE É ATRIBUIDO EM SITUAÇÕES ESPECÍFICAS</STRONG></p>
+        <p>Lista de Pseudo-Classe:</p>
+        <ul>
+            <li>:hover</li>
+                <ul style="list-style-type: circle;">
+                    <li>Quando o mouse está em cima do elemento</li>
+                </ul>
+            <li>:active</li>
+                <ul style="list-style-type: circle;">
+                    <li>Quando você está clicando no elemento</li>
+                </ul>
+            <li>:focus</li>
+                <ul style="list-style-type: circle;">
+                    <li>Quando um campo de texto está sendo usado</li>
+                </ul>
+            <li>:first-child</li>
+                <ul style="list-style-type: circle;">
+                    <li>Seleciona o <q>primeiro filho</q>(veja no style que vai ter um exemplo) de uma lista ou grupo</li>
+                </ul>
+            <li>:last-child</li>
+                <ul style="list-style-type: circle;">
+                    <li>Seleciona <q>o último filho</q></li>
+                </ul>
+        </ul>
+        <p><mark><strong>&lt;#&gt;</strong></mark> é um <q>ID</q>, <strong><mark>&lt;.&gt;</mark></strong> é uma classe e <strong><mark>&lt;:&gt;</mark></strong> é uma pseudo-class.</p>
+        <p>Posso usar a <strong>pseudo-class em outros elementos além do DIV</strong> como nesse exemplo no começo da página. Olha esse exemplo aqui: &downarrow;.</p>
+        <p class="testando">Testando 1,2 e 3</p>
+        <p>Olha o que dá pra fazer também: &downarrow;</p>
+        <pre>
+            <code>
+                #d1:hover{
+                    background-color: blue;
+                }
+                #d2:hover{
+                    background-color: yellow;
+                }
+            </code>
+        </pre>
+        <p>Aqui em cima, ao passar o mouse em cima do elemento <mark><strong>&lt;ID="d1"&gt;</strong></mark>, vai ficar com a cor blue e no outro exemplo, com a cor amarela.</p>
+        <p><strong>Para mais exemplo de :HOVER</strong>, vá para a nossa próxima página/documento</p>
+        <p style="text-align: right"> <a href="cap2-pseudo-class-aula15-02.html" target="_self" rel="next">Próxima Página</a></p>
+</body>
+</html>  

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Modelos de Caixas - &#x1f440</title>
+    
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body{
+            font: normal 1em 'Montserrat', Arial, Helvetica, sans-serif;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        #titulo{
+            text-align: center;
+            background-color: orange;
+            color: green;
+            text-shadow: 1px 1px 2px black;
+            
+        }
+
+        .h1exemplo{ /* BOX-LEVEL*/
+
+            height: 300px; /* Altura da caixa do texto*/
+            width: 300px;   /* Largura da caixa do texto*/
+            text-align: center;  /*  Alinhar o texto no centro*/
+            background-color: red;  /** Cor de fundo do texto*/
+            color: white;   /* Cor do texto*/
+            border-width: 10px;    /* Tamanho da borda*/
+            border-style: solid;    /* Vai deixar a caixa sólida (uma caixa com linha)*/
+            border-color: lightgray;    /* Cor da borda*/
+            padding: 10px 10px 10px 10px;    /* Espaço entre a caixa do h1 até a border --- 10px top, 10px right, 10px bottom e 10px left */
+            margin: auto; /* Vai fazer com que a caixa fique no meio da tela ao usar o "auto" */
+            
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+            outline-width: 10px;
+            outline-style: dotted;
+            outline-color: blue;
+            
+        }
+
+        #exemplo{
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            background-color: lightgrey;
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            padding: 10px 10px 40px 10px;
+            outline-width: 21px;
+            outline-style: solid;
+            outline-color: blue;
+            margin: 50px;
+            box-sizing: border-box;
+                 
+        }
+        
+        a{ /* INLINE-LEVEL*/
+            border: 10px solid blueviolet; /* Quando coloca o shorthand olha como fica bem mais bonito e simples */
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo"> - Modelos de Caixas - Aula 16 2/8</h1>
+    <h1 class="h1exemplo">Exemplo de Box-Level</h1>
+    <br>
+        <p>Parágrafos também são exemplos de <strong>box-level</strong> mas os <a href="#" target="_self" rel="next">links são exemplos de caixas INLINE-LEVEL</a>. Vamos ver como tudo isso funciona.</p>
+        <br>
+
+        <img src="imagens-cap02/box-anatomy.png" alt="anatomia de uma caixa">
+        <hr>
+
+        <h2 id="exemplo">Exemplo de Caixa</h2>
+
+        <p>Eis o código para deixar desse jeito acima &uparrow;:</p>
+
+        <img src="imagens-cap02/making-a-box.png" alt="making a box from scratch">
+        <img src="imagens-cap02/box-example.png" alt="example from the box made from scratch">
+        <p><strong><mark>SHORTHAND:</mark></strong></p>
+
+        <img src="imagens-cap02/simplifiying boxes using shorthand.png" alt="shorthand for the box that was made from scratch">
+        <img src="imagens-cap02/more-box-shorthand.png" alt="more shorthand for the boxes">        
+        <hr>
+
+
+        <p>Caso eu queira colocar o H1 como inline, posso usar o style <strong><mark>&lt;display:inline;&gt;</mark></strong> e ele vai ficar que nem o exemplo da âncora aqui <q><strong><mark>a</mark></strong></q>. E quando coloca o inline, <strong>NÃO SE PODE COLOCAR O WIDTH E NEM O HEIGHT! E POSSO FAZER O CONTRÁRIO COM A ÂNCORA TAMBÉM <Q>a</Q>. Colocando ela como um block.</strong></p>
+        <p>Só colocar o <strong>DISPLAY</strong> para mudar uma característica padrão de um elemento.</p>
+        <p>Podemos usar o <strong>shorthand</strong> para o <strong><MARK>&lt;border&gt;</MARK></strong> também para simplificar. Eis o exemplo: &downarrow;</p>
+        <pre>
+            <code>
+                border: 10px solid darkslategray;
+            </code>
+        </pre>
+        <p>SEMPRE seguir a regra para dar certo. E a regra é: <strong><q>border-width > border-style > border-color</q></strong>.</p>
+        <p>A mesma coisa posso fazer com o <strong><mark>&lt;padding&gt;</mark></strong>:</p>
+        <pre>
+            <code>
+                padding: 10px 10px 10px 10px;
+            </code>
+        </pre>
+        <p>ORDEM CERTA do padding:<strong><q> paddin-top > padding-right > padding-bottom > padding-left</q></strong></p>
+        <p><strong><mark>MAS, SE COLOCAR SOMENTE "10px" uma só vez, ele vai contar como os 4 (top, right, bottom e left)</mark></strong>!!! Exemplo:</p>
+        <pre>
+            <code>
+                padding:10px;
+            </code>
+        </pre>
+        <p>Nós também podemos colocar dois valores. Olhe esse exemplo: &downarrow;</p>
+        <pre>
+            <code>
+                padding:10px 20px;
+            </code>
+        </pre>
+        <p>Ao fazermos isso, o primeiro valor(10px) vai configurar o <strong><mark>top e o bottom</mark></strong>. O segundo valor, vai configurar o <strong><mark>right e o left</mark></strong>! Olhe o exemplo a seguir.</p>
+        <img src="imagens-cap02/padding.png" alt="padding-valores">
+        <p>Posso fazer a mesma coisa com o <strong><mark>&lt;margin&gt;</mark></strong>. Eis o exemplo em que uso o shorthand:</p>
+        <pre>
+            <code>
+                margin: 20px 20px 20px 20px;
+            </code>
+        </pre>
+        <p><strong>Ela segue o mesmo padrão do padding</strong>(top > right > bottom > left).</p>
+        <p>Caso eu queira deixar minha <strong>BOX-LEVEL</strong> centralizada, posso usar essa configuração no <strong>margin</strong>:</p>
+        <pre>
+            <code>
+                margin: 20px auto 20px auto;
+            </code>
+        </pre>
+        <p>Como você pode ver ai no código, deixei a <strong>margen direita e a margen esquerda</strong> no <q>auto</q> que significa que vai deixar o BOX-LEVEL centralizado independentemente do tamanho da tela do cliente/usuário.</p>
+        <p>O<strong><mark>&lt;outline&gt;</mark></strong> também tem uma shorthand. Eis aqui o exemplo e a ORDEM:</p>
+        <pre>
+            <code>
+                outline: 10px dotted blue;
+            </code>
+        </pre>
+        <p>ORDEM CERTA do outline: outline-width > outline-style > outline-color</p>
+        <p>Para saber mais sobre <strong><mark>BOX-SHADOW</mark></strong>, <a href="cap2-grouping-tags-aula16.html" target="_self" rel="next">Clique aqui</a> </p>
+</body>
+</html>

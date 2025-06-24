@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> Listas OL/UL &#x1f440 </title>
+</head>
+<body>
+    <h1>LISTAS <MARK> OL e UL </MARK> Aula 09 1/2 </h1>
+    <h2>Listas Ordenadas</h2>
+     <ol>
+        <li>Acordar</li>
+        <li>Orar</li>
+        <li>Ouvir louvores</li>
+        <li>Tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Estudar</li>
+        <li>Orar novamente</li>
+        <li>Estudar</li>
+        <li>Almoçar</li>
+        <li>Estudar</li>
+     </ol>
+    <p>Conforme podemos ver as <strong>listas estão ordenadas</strong>. Primeiro eu tenho uma tag que <strong>ORDENA(numera)</strong> e isso ocorre porquê eu coloquei uma tag <strong><mark>&lt;OL&gt;</mark></strong> que significa que se trata de uma <strong>LISTA ORDENADA/ORDERED LIST</strong> e dentro dessa tag <strong><mark>&lt;OL&gt;</mark></strong> eu tenho outra tag que se chama <strong><mark>&lt;LI&gt;</mark></strong> e é nela que eu faço a minha lista. Ou seja <strong><ins>UMA SERVE PARA ORDENAR(organizar/OL) E OUTRA PARA LISTAR(fazer a lista/LI)</ins></strong>.</p> 
+    <p>Existe uma tag dentro da tag <strong><mark>&lt;OL&gt;</mark></strong> que se chama <strong><mark>&lt;TYPE&gt;</mark></strong>e nela tem algumas opções que posso mudar o formato da minha lista. Por exemplo, nesse caso aqui em cima eu fiz com uma numeração 1 até 10. Mas posso usar a tag <strong><mark>&lt;TYPE&gt;</mark></strong> para alterar o formato dela conforme o exemplo a seguir:</p>
+    <ol type="I"> <!-- Opções disponíveis: A, a, I, i-->
+        <li>Fui para o culto</li>
+        <li>Ao chegar, orei</li>
+        <li>Louvei</li>
+        <li>Dei minha oferta de agradecimento</li>
+        <li>Lemos a Palavra</li>
+        <li>Prestei atenção na Palavra</li>
+        <li>Recebi minha benção</li>
+        <li>Prestamos atenção nas revelações</li>
+        <li>Agradecemos pelo culto</li>
+        <li>Fui para casa</li>
+    </ol>
+    <p><strong>VIU?!</strong> eis ai o exemplo.</p>
+    <h2>Listas não Ordenadas</h2>
+    <ul type="square"> <!-- Opções disponíveis: square, circle and disc-->
+        <li>Pão</li>
+        <li>Café</li>
+        <li>Leite em pó</li>
+        <li>Mistura</li>
+        <li>Legumes</li>
+        <li>Farinha Lactea</li>
+        <li>Banana</li>
+        <li>Leite em Caixa</li>
+    </ul>
+    <p>Como já diz o sub-título acima, essas listas aqui <strong><ins>NÃO SEGUEM UMA ORDEM</ins></strong> e a tag usada foi a <strong><mark>&lt;UL&gt;</mark></strong> e ela também possui um <strong><mark>&lt;TYPE&gt;</mark></strong>. NO VS CODE DEIXEI UM COMENTÁRIO EM CADA UMA DAS OPÇÕES DE TYPE DISPONÍVEIS</p>
+    <hr>
+    <h1>AULA 09 2/2</h1>
+    <h2>Linguagens favoritas do Guanabara</h2>
+    <ol>
+        <li>Linguagens Antigas</li>
+            <ol>
+                <li>Cipper</li>
+                <li>Visual Basic</li>
+                <li>Fortran</li>
+                <li>Delphi</li>
+            </ol>
+        <li>Linguagens Novas</li>
+            <ol> <!-- Aqui eu poderia usar a tag START="" para dar continuidade com a contagem da lista de cima mas o Guanabara falou que é só por questões de curiosidade-->
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Kotlin</li>
+            </ol>
+    </ol>
+    <P>Como pode perceber, tem uma tag <strong><mark>&lt;OL&gt;</mark></strong> aberta depois vem uma tag <strong><mark>&lt;LI&gt;</mark></strong> depois dentro da tag <mark>LI</mark> vem outra tag <mark>OL</mark> e por fim, dentro do <mark>OL</mark> tem outra tag <mark>LI</mark>.</P>
+    <p>Não se esqueça que podemos adicionar a tag <strong><mark>&lt;TYPE&gt;</mark></strong> se quisermos para mudar o formado da listagem e tem também a tag <strong><mark>&lt;START="5"&gt;</mark></strong> se quisermos que a lista de baixo(<q>linguagens novas</q>) de continuidade com a de cima e por isso a tag tem o nome <mark>START=""</mark> (começe a partir de:). Por exmeplo, a tag <strong>
+        <mark>&lt;ol type="I" start = "5"&gt;</mark>
+    </strong> vai gerar itens numerados como V, VI,VII,VIII, IX,...</p>
+    <h2>Jogos favoritos do Guanabara</h2>
+    <ol>
+        <li>NES</li>
+            <ul type="disc">
+                <li>Mario Bros</li>
+                <li>Ninja Gaiden</li>
+            </ul type="disc">
+        <li>SNES</li>
+            <ul type="disc">
+                <li>Mario</li>
+                <li>Donkey Kong</li>
+            </ul type="disc">
+        <li>PlayStation</li>
+            <ul type="disc">
+                <li>Final Fantasy</li>
+                <li>Castlevania</li>
+            </ul type="disc">
+    </ol>
+    <p>Para ficar assim, primeiro veio a tag <strong><mark>&lt;OL&gt;</mark></strong> &RightArrow; <strong><mark>&lt;LI&gt;</mark></strong> &rightarrow; <strong><mark>&lt;UL&gt;</mark></strong> &rightarrow; <strong><mark>&lt;LI&gt;</mark></strong>. Ou seja OL=Númeração, depois LI=Lista dos Consoles, depois UL=Type="Disc"(as bolinhas) e então LI=Jogos.</p>
+    <h2>Lista de Definições</h2>
+    <dl> <!-- Até pra ficar mais fácil pra "pegar" DL= Definition List que vai criar o "bloco" para colocarmos as outras tags-->
+        <dt>HTML</dt> <!-- DT= Definition Term-->
+        <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!-- DD= Definition Description-->
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para a criação do design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criaçao de interatividade de um site.</dd>
+    </dl> 
+    <p>É como se fosse um <mark>Dicionário</mark>, temos os termos e as suas descrições. É uma lista sem demarcadores mas bem útil em alguns casos.</p>
+    <p>Aqui com essa Lista de Definições (nome deixa bem claro o seu propósito) usamos a tag <strong><mark>&lt;DL&gt;</mark></strong> (Definition List = que vai criar o "bloco" para colocarmos as outras tags) depois vem a tag <strong><mark>&lt;DT&gt;</mark></strong> (Definition Term = o termo que irei usar "HTML" nesse caso aqui) e a tag <strong><mark>&lt;DD&gt;</mark></strong> (Definition Description = a descrição daquele termo)</p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Imagens Dinâmicas - Aula 11 1/7</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas - Audio e Videos - Aula 11</h1>
+    
+    <p><strong>NÃO SE ESQUECER DO PESO DAS IMAGENS</strong> ao coloca-las no seu site. </p>
+    
+    <p>Nessa primeira aula nós criamos 3 imagens com tamanhos diferentes (P, M e G) que significam <strong><mark>P</mark></strong> para celular, <strong><mark>M</mark></strong> para tablets e <strong><mark>G</mark></strong> para desktop/notebook/Tvs. E a importância de ter um tamanho de imagem diferente para cada dispositivo que irá acessar o site.</p>
+
+    <hr>
+
+    <h1>Imagens que se adaptam sozinhas - Aula 11 2/7</h1>
+    <p>Tomar muito cuidado com o tamanho das imagens que você carrega no seu site pois se a imagem não foi o tamanho ideal para cada dispositivo que estiver acessando o seu site, a imagem pode ficar tão grande que ele tenha que <q>rolar</q> pro lado a imagem e isso vai fazer com que ele saia do seu site. Até mesmo você já deve ter saido de um site ou não gastado ao ver uma imagem assim.</p>
+    
+    <p>O google tem uma <strong>MÉTRICA</strong> que se chama <strong><mark>BOUNCE RATE</mark></strong> que identifica a <strong><mark>TAXA DE REJEIÇÃO</mark></strong> e essa métrica de rejeição é uma medida para dar <strong><mark>VALOR OU DESVALORIZAR O SEU SITE</mark></strong>. Um <strong>ALTO BOUNCE RATE</strong> é visto como um site ruim e isso <strong><mark>VAI FAZER COM QUE O GOOGLE PARE DE INDICAR O SEU SITE PARA OUTRAS PESSOAS</mark></strong>.</p>
+
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens-dinamicas-aula11/foto-p.png" type="image/png"> <!--Ideal tela pequena(celulares)-->
+        <source media="(max-width: 1050px)" srcset="imagens-dinamicas-aula11/foto-m.png" type="image/png"> <!--Guanabara falou que esse tamanho aqui é o ideal para uma tela grande-->
+        <img src="imagens-dinamicas-aula11/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <p>Essa tag ficou assim:</p>
+
+    <pre>
+        <code>
+            picture
+                source media="(min-width: 750px)" srcset="caminho-da-imagem" type="image/png" &leftarrow; aqui é a imagem <strong><mark>P</mark></strong>
+                source media="(min-width: 1050px)" srcset="caminho-da-imagem" type="image/png" &leftarrow; aqui é a imagem <strong><mark>M</mark></strong>
+                img src="caminhho-da-imagem" alt="Imagem flexível"           
+            /picture
+        </code>
+    </pre>
+
+    <p>Essa tag <strong><mark>&lt;PICTURE&gt;</mark></strong> é uma tag de imagens e ela permite que a gente coloque várias <strong><mark>&lt;SOURCE:MEDIA:TYPE &gt;</mark></strong> dentro dela e assim, mudarmos os tamanhos das imagens conforme o tamanho da tela do dispositivo do usuário.</p>
+
+    <p><strong><mark>SEMPRE COLOCAR OS <Q>SOURCE:MEDIA:TYPE</Q> EM CIMA DA TAG IMG (olhe o exemplo no VS CODE)</mark></strong>.</p>
+    <p>A <strong><mark>BASE da imagem G(img src) é o tamanho padrão que você quer carregar e acima dela você vai colocando os SOURCES na ORDEM</mark></strong>. Ou seja, caso haja ainda um outro dispositivo com uma tela manor, você ainda pode adicionar mais uma outra imagem pequena na ORDEM(<em>maior</em>: em baixo e <em>menor</em>: em cima).</p>
+
+    <hr>
+
+    <h1>Colocando Áudio no Site - Aula 11 3/7</h1>
+
+    <h2>Vamos aprender a reproduzir Áudios em HTML5</h2>
+
+    <p>Lembrando que todos os direitos autorais que tivemos na aula 6, vale também para sons/musicas, imagens e videos.</p>
+    <p>Lembrando também que o <strong><mark>tamanho(peso)</mark></strong> serve para a áudio, video e imagem. </p>
+    <p><strong><mark>NÃO ESQUEÇA DE SEMPRE CRIAR PASTAS E ARQUIVOS COM LETRAS MINUSCULAS E SEM ACENTOS</mark></strong>. Continuando...</p>
+
+    <p>Tipos de formatos padrão para um site carregar os arquivos de áudio: <strong><mark>MP3</mark></strong>, <strong><mark>WAV</mark></strong> e <strong><mark>OGG</mark></strong>.</p>
+    <p>Tem duas formas de colocar um arquivo de áudio no site a primeira e mais simples:</p>
+
+    <pre>
+        <code>
+            audio src="caminho-do-audio-.mp3" controls autoplay /audio 
+        </code>
+    </pre>
+    <audio src="imagens-dinamicas-aula11/midia/the-girl .mp3" controls></audio> <!--Posso colocar aqui a tag AUTOPLAY mas pode não ser bom para o usuário.-->
+    <p>Nesse exemplo aqui &uparrow;, posso colocar uma tag <strong><mark>AUTOPLAY</mark></strong> que como já diz o nome, posso fazer o áudio tocar automaticamente mas não creio que isso seja bom para o usuário pois quando isso acontece comigo eu já logo clico no MUTE.</p>
+    <p>E também:</p>
+
+
+    <audio preload="metadata" controls> <!--Caso, quisesse, poderia por a tag AUTOPLAY aqui mas não creio que seja uma boa opção.-->
+        <source src="./imagens-dinamicas-aula11/midia/the-girl .mp3" type="audio/mpeg"> <!--Essa opção é melhor pois o navegador vai testando outras opções para reproduzir o áudio-->
+        <source src="./imagens-dinamicas-aula11/midia/the-girl.ogg" type="audio/ogg">
+        <source src="./imagens-dinamicas-aula11/midia/the-girl.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="imagens-dinamicas-aula11/midia/the-girl .mp3" download="" type="application/mpeg">Clique aqui para fazer o download do .MP3</a>.</p>
+    </audio>
+
+    <p>Caso não consiga reproduzir o áudio, <strong>nós podemos falar para o usuário baixar o mp3(mpeg)</strong> e assim, conseguir. Exemplo: Infelizmente seu navegador não consegue reproduzir áudio. <a href="imagens-dinamicas-aula11/midia/the-girl .mp3" download="/imagens-dinamicas-aula11/midia/the-girl.mp3" type="application/mpeg">Clique aqui para fazer o download do .MP3</a>.</p>
+    
+    <pre>
+        <code>
+            audio preload="metadata" controls loop>
+                source:src="selecione-o-áudio-" type="audio/mpeg"
+                source:src="selecione-o-áudio-" type="audio/ogg"
+                source:src="selecione-o-áudio-" type="audio/wav"
+                p> Infelizmente seu navegador não consegue reproduzir áudio. < a href="selecione-o-arquivo.mp3"> Clique aqui para fazer o download do MP3 /a> /p>
+            /audio>
+        </code>
+    </pre>
+
+    <h3>PRELOAD=""</h3>
+
+    <p><strong>AUTO</strong> = Ele vem por padrão. Ele só vai considerar que o site terminou de carregar depois de carregar todo o áudio também e isso é um perigo pois dependendo do tamanho do arquivo de áudio, vai deixar o site lento e não é o que queremos.</p>
+    
+    <p><strong>METADATA</strong> = Ele vai carregar apenas as informações básicas como por exemplo: duração, o nome do arquivo e data. Aparentemente a melhor opção das 3.</p>
+    
+    <p><Strong>NONE</Strong> = Ele não vai carregar nada. Só vai carregar quando o usuário dar play nos controles(sinalzinho de play)</p>
+
+    <h3>CONTROLS</h3>
+    <p>Vai fazer com que apareça o símbolo de <strong>PLAY, DURAÇÃO. VOLUME e OPÇOES</strong>.</p>
+
+    <h3>LOOP</h3>
+    <p>Vai fazer com que quando o áudio terminar, ele recomece.</p>
+
+    <p>Aqui a <strong>ORDEM É DE CIMA PARA BAIXO</strong>. Ou seja, primeiro vai tentar carregar o .MPEG(MP3), depois o .OGG e por último o .WAV.</p>
+    
+    <p>Faça o <strong><mark>MÁXIMO DO POSSÍVEL PARA NÃO USAR O .WAV</mark></strong> pois ele é muito pesado. Foque nos <mark>.MPEG e .OGG</mark> pois são mais compactos e a <q>leveza</q> do seu site é essencial.</p>
+    
+    <p>Arquivos, Imagens, Áudios TOP são arquivos para <strong><mark>download</mark></strong> e não para navegação.</p>
+
+    <hr>
+
+    <h1>Formatos de Videos - Aula 11 4/7</h1>
+
+    <p>Caso o cliente queira no site dele um video hospedado no próprio sistema, podemos baixar uma ferramenta para mudar o formato e diminuir o tamanho dele. Nome dessa ferramenta que você instalou se chama HANDBRAKE.</p>
+    <p>Esse software <strong>CONVERTE</strong> os vídeos para outros tipos de arquivos WEB mais leves. Para baixar vídeos sem direitos-autorais <a href="https://www.pexels.com/pt-br/videos/" target="_blank" rel="external">pode clicar aqui</a>.</p> <!--Você salvou em meus favoritos o site-->
+    <p>Videos <strong>ACIMA DE 1080P</strong> não hospedar dentro do próprio site por causa do seu tamanho.</p>
+    <p><strong><mark>NÃO SE ESQUECER DE TER OS VÍDEOS E MUSICAS EM FORMATOS DIFERENTES POIS DEPENDENDO DO NAVEGADOR, NÃO TEM COMPATIBILIDADE</mark></strong></p>
+    
+    <hr>
+
+    <h1>Vídeos em hospedagem própria - Aula 11 5/7</h1>
+    <h2>Inserindo vídeos hospedados localmente</h2>
+
+    <p>Este vídeo está hospedado no meu próprio servidor:</p>
+
+    <video src="imagens-dinamicas-aula11/video/meu-video.mp4" width="750" controls loop></video> <!--WIDTH aqui mudamos o tamanho da "visualização na tela" mas não o tamanho(peso) dele-->
+
+    <p>Tag abaixo &downarrow; do vídeo acima &uparrow;.</p>
+
+    <pre>
+        <code>
+            video src="selecione-o-arquivo-" width="750-nesse-exemplo" controls> /video
+        </code>
+    </pre>
+
+    <p>Essa tag aqui em cima &uparrow; ela é uma <strong>TAG SIMPLES</strong> ou seja, é só quando se trata de um <strong>FORMATO APENAS</strong> mas como a gente já sabe que o ideal é ter alguns formatos na mesma tag para que abra em diversos navegadores. <strong>NÃO É SÓ PORQUE ABRIU NO MEU NAVEGADOR QUE VAI ABRIR NO DE TODOS.</strong></p>
+
+    <video width="750" poster="./imagens-dinamicas-aula11/limoes-capa.png" controls loop> <!--Poster aqui é literalmente como diz o próprio nome-->
+        <source src="imagens-dinamicas-aula11/video/meu-video.mp4" type="video/mp4"> <!--Esse MP4 está com o tamanho de 1280 x 720-->
+        <source src="imagens-dinamicas-aula11/video/meu-Video.mkv" type="video/mkv">
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeos.</p>
+    </video>
+    <p>Eis aqui o <em><strong>CODE</strong></em> da <strong>TAG</strong> &downarrow;:</p>
+
+    <pre>
+        <code>
+            video width="750-exemplo-acima" poster"selecione-a-imagem-para-virar-o-poster" controls loop > 
+                source:src="-selecione-o-video" type="video/mp4" >
+                source:src="selecione-o-mesmo-video-mas-em-outro-formato" type="video/webm"
+                source:src="selecione-o-mesmo-video-mas-em-outro-formato" type="video/ogg"
+                p Seu navegador não tem compatibilidade com reprodução de vídeos /p 
+            /video     
+        </code>
+    </pre>
+
+    <p>A <STRONG><MARK>POSTER</MARK></STRONG> já está no nome. É a capa do vídeo antes de você clicar no play.</p>
+    
+    <p>Posso colocar também o <strong><mark>LOOP e AUTOPLAY</mark></strong> mas na minha opinião, não creio que seja interessante colocar o <strong>autoplay</strong>. De vez em quando quando está no autoplay a gente acaba perdendo conteúdo e tem que voltar novamente o ínicio do vídeo então acho melhor deixar sem e pode ser que o usuário esteja nos dados moveis e não queira gastar os dados.</p>
+    
+    <p>É a mesma coisa que com o áudio e <STRONG><MARK>TEM QUE ESTAR EM ORDEM DE CIMA PARA BAIXO</MARK></STRONG>. É como se fossem prioridades.</p>
+    
+    <p><STRONG><MARK>CASO SEU CLIENTE PEÇA PARA HOSPEDAR OS VIDEOS NO PRÓPRIO SERVIDOR, NÃO ESQUECER DE AVISA-LO QUE VIDEOS HOSPEDADOS NO SEU PRÓPRIO SITE VÃO TER UM CUSTO DE TRAFEGO DE BANDA ALTA E CUSTA DINHEIRO.</MARK></STRONG></p>
+    
+    <hr>
+
+    <h1>Incorporação de Vídeos Externos - Aula 11 6/7</h1>
+    
+    <h2>Inserindo vídeos do YouTube</h2>
+
+    <!--IMPORTANTISSÍMO avisar ao cliente que a melhor escolha seja pegar um vídeo que está hospedado no YOUTUBE ou no VIMO para não precisar ficar usando o servidor dele mas caso seja um vídeo que ele não deseja que esteja em outras plataformas além do site dele, não tem pra onde correr então.-->
+    <iframe width="750" height="500" src="https://www.youtube.com/embed/rx8EhkXk9zs?si=LZOE_QeOhwAAjb52" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2>Inserindo Vídeos do Vimeo</h2>
+
+    <iframe title="vimeo-player" src="https://player.vimeo.com/video/185871317?h=a63f42bf1b" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+    
+</body>
+</html>
