@@ -70,6 +70,7 @@ header p{
     font: normal normal 1.2em var(--fonte-padrao);
     padding: 0px 10px 0px 10px;
     text-shadow: 02px 03px 02px rgba(0, 0, 0, 0.568);
+    margin: auto;
     
 }
 
@@ -93,8 +94,6 @@ nav > a:hover{
     border-radius: 04px;
     transition-duration: 0.5s;
 }
-
-
 
 main{
     background-color: white;
