@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Background Image 001 - &#x1f440</title>
+
+    <!--* Essas são três maneiras de configurar o background de um div(um bloco). A última "background-color: url('')", não tem significado semântico e serve somente para ser algo VISUAL e imagens grandes não ficam bons dentro desse div.-->
+
+    <style>
+        /** Aqui no "background-image: url('')", posso usar um link externo mesmo e colocar no URL mas estamos refem pois não sabemos até quando aquela imagem pode ficar naquele outro local que você pegou ele. */
+        body{
+            background-image: url(Images-cap03/wallpaper006.jpg);
+        }
+
+        div.quadrado{
+            border: 3px solid black;
+            border-radius: 10px;
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+            display: inline-block;
+
+        }
+
+        div#q1{
+            background-color: skyblue;
+
+        }
+
+        div#q2{
+            background-image: linear-gradient(to bottom, yellow, orange);
+        }
+
+        div#q3{
+            background-image: url(Images-cap03/pattern001.png);
+        }
+
+        p a{
+            text-decoration: none;
+        }
+        
+        p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado" id="q1"></div>
+    <div class="quadrado" id="q2"></div>
+    <div class="quadrado" id="q3"></div>
+    
+    <p>Aqui são as três formas de colocar uma imagem dentro de uma <strong><mark>&lt;DIV&gt;</mark></strong>:</p>
+    <code>
+        <ul>
+            <li>Background-color: skyblue;</li>
+            <li>Background-image: linear-gradiente(to bottom, yellow, orange);</li>
+            <li>Background-image: url("site-ou-local-que-você-tem-a-imagem.jpg");</li>
+        </ul>
+    </code>
+    <p>A tag <strong><mark>&lt;background-image: url('')&gt;</mark></strong>, ela <strong>NÃO</strong> é semântica. Ou seja, ela não tem significado. Ela é uma <strong>FORMA</strong> para mostrar uma imagem.</p>
+    
+    <p>Caso queira ir para a página 2 que fala sobre a personalização do brackground, <a href="background002.html" target="_self" rel="next">clique aqui</a></p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>Background Personalização - &#x1f440</title>
+
+    <!--* A imagem que está no background da página do documento, independentemente do tamanho do DISPLAYPORT (tamanho da tela do usuário), não vai mudar o tamanho das imagens ao aumentar ou diminuir as telas. Isso ocorre porque colocamos ali na tag "background-size" o tamanho FIXO que será a imagem.-->
+
+    <!--* A REPETIÇÃO das imagens SEMPRE vai acontecer ao usarmos o "background-image: url('')"!! -->
+    <!--* MASSS usamos uma propriedade para fazer com que a imagem NÃO SE REPITA várias vezes na tela. Ela se chama "background-repeat:"! -->
+    <style>
+        body{
+            background-image: url(https://gustavoguanabara.github.io/html-css/imagens/mascote.png);
+            background-size: 100px 100px;
+            background-repeat: repeat-x;
+        }
+
+        h1{
+            background-color: white;
+            width: 400px;
+            height: 50px;
+        }
+
+        p a{
+            text-decoration: none;
+        }
+
+        p a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalização dos Fundos</h1>
+    <br>
+    <p>Aqui nós aprendemos sobre a questão de usar o <strong><mark>BACKGROUND-IMAGE: URL('');</mark></strong> vai fazer com a a imagem fique <strong><mark>SEMPRE SE REPETINDO POR PADRÃO</mark></strong> mas podemos usar umas <strong><mark>PROPRIEDADES PARA MUDAR ESSE COMPORTAMENTO</mark></strong>.</p>
+    <p>São elas: &downarrow;</p>
+    <code>
+        <ul>
+            <li>background-repeat: repeat-x;</li>
+            <li>background-repeat: repeat-y;</li>
+            <li>background-repeat: no-repeat;</li>
+        </ul>
+    </code>
+    <p>Ao usarmos a propriedade: <strong><mark>&LT;REPEAT-X&GT;</mark></strong> vai fazer com que a imagem se repita na <strong>HORIZONTAL</strong>. <br>Ao usarmos a propriedade: <strong><mark>&lt;REPEAT-Y&gt;</mark></strong> vai fazer com que a imagem se repita na <strong>VERTICAL</strong>. <br>Já a propriedade <strong><mark>&lt;NO-REPEAT&gt;</mark></strong> vai fazer com que só apareça a imagem uma <strong>ÚNICA VEZ</strong> no canto superior esquerdo.</p>
+    
+    <p>As imagens aparecem POR PADRÃO no canto SUPERIOR ESQUERDO mas podemos mudar isso só que veremos como fazer isso mais pra frente.</p>
+    <p>Para voltar para a página anterior, <a href="background001.html"  target="_self" rel="prev">clique aqui</a></p>
+</body>
+</html>
