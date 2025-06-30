@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Mudando o tamanho - &#x1f440</title>
+
+    <!--* Mesmo se for colocar uma imagem de fundo, SEMPRE coloque uma cor background atras da imagem pois se o servidor estiver lento algum di, vai primeiramente carregar o HTML e depois as Imagens. Para que o cliente/usuário já possa ir mexendo no site, é bom ter uma cor enquanto ele espera o site carregar por completo!! -->
+    <style>
+
+        body{
+            height: 100vh;
+            margin: 0px;
+            background-color: black;
+            background-image: url(Images-cap03/wallpaper002.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        main{
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            border: 2px solid blue;
+            border-radius: 10px;
+            padding: 10px;
+            text-indent: 30px;
+        }
+
+        main h1{
+            text-align: center;
+            text-indent: 0px;
+        }
+    </style>
+    <!--* Essa configuração aqui do H1 eu que fiz pra deixar mais "bonitinho" e não tem nada a ver com a aula. -->
+</head>
+<body>
+    <main>
+        <h1>Teste de imagem de Fundo</h1>
+        
+        <p>No <strong><mark>&lt;background-size:&gt;</mark></strong>, podemos colocar o valor em px, em porcentagem de tela (100%). Ele vai cobrir 100% da tela mas tem um porém...dependendo do tamanho da imagem e do tamanho do viewport do cliente/usuário, vai ficar mostrando o fundo, preto(preto nesse caso pois colocamos o background-color black) e esse é o contra dele. Ou seja, aqui podemos colocar o tamanho fixo ou em porcentagem na tela.</p>
+        
+        <p>Outra coisa que podemos fazer é colocando o valor 100% 100% (100% de width e 100% de height). Aqui vai fazer com que pegue a tela inteira do viewport mas o problema é que dependendo do tamanho da tela, a imagem fica <STRONG>ACHATADA!</STRONG> e isso é horrível.</p>
+        <p>Por padrão, o background-size vem com a declaração <strong><mark>&lt;auto&gt;</mark></strong>. Mas existem outras duas declarações interessantes: &downarrow;</p>
+
+        <p>O <strong><mark>&lt;contain&gt;</mark></strong> faz com que a imagem seja 100% exibida sem cortes. Mas ele ainda continua com o problema de deixar o fundo aparecendo...e cria aquele cenário como se fosse de quando vemos filmes que ficam com aqueles fundos pretos na parte de cima ou nas laterais. Ou seja, coloca 100% da imagem na tela sem cortar mas deixando uma barra preta.</p>
+        
+        <p>O mais interessante pra nós aqui é o <strong><mark>&lt;cover&gt;</mark></strong>. Ele vai cobrir 100% da tela sem deixar os cortes pretos mesmo que tenha que dar uma picotada na imagem para fazer a imagem ocupar 100% da tela (vh). O porém é que dependendo do tamanho da tela, ele não mostra a imagem por completo.</p>
+
+        <p>Qual é o melhor?! <strong>DEPENDE</strong> do que você está tentando fazer. Isso significa que todos podem ser usados...menos deixar a imagem fica pra não deixar a tela achatada.</p>
+
+        <p>OUTRO PROBLEMA! Dependendo do tamanho da imagem e do tamanho do conteúdo que você vai por, o conteúdo vai passar do tamanho da imagem e vai <q>vazar</q>. Mas calma que tem como resolver. Para saber como resolver, siga para a próxima página que é a aula 6.</p>
+        <p style="text-align: right;"><a href="cap3-resizing-image-size-aula05-b.html" target="_self" rel="next">Aula 06</a></p>
+    </main>
+</body>
+</html>
