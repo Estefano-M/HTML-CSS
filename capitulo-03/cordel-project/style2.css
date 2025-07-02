@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+:root{
+    --font0: normal bolder 11vh 'Passion One', Arial, Helvetica, serif;
+    --font01: normal 600 2em 'Sriracha', Arial, Helvetica, sans-serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+header{
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    height: 300px;
+    position: relative;
+}
+
+h1{
+    font: var(--font0);
+    position: absolute;
+    top: 24%;
+    left: 24%;
+    transform: translate(-0%, -20%);
+}
+
+header p{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-42%, -40%);
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+main{
+    font: var(--font01);
+}
+
+main p{
+    padding-left: 30px;
+    line-height: 2.5em;
+}
+
+section#section1{
+    height: 700px;
+    background-image: url(imagens/background001.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center right;
+    background-size: cover;
+    box-shadow: 01px 01px 05px 01px rgba(0, 0, 0, 0.493);
+    position: relative;
+}
+
+div.sec1{
+    position: absolute;
+    height: 550px;
+    width: 380px;
+    border: 0px solid black;
+    background-color: rgba(0, 128, 0, 0.178);
+    color: white;
+    text-shadow: 01px 01px 1px black;
+    top: 10%;
+    left: 1.5%;
+}
+
+div p{
+    text-indent: -25px;
+}
+
+section#section2{
+    height: 700px;
+    background-image: url(imagens/background002.jpg);
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+}
+
+div.sec2{
+    position: absolute;
+    height: 550px;
+    width: 390px;
+    border: 0px solid black;
+    background-color: rgba(128, 128, 128, 0.5);
+    color: white;
+    text-shadow: 01px 01px 01px black;
+    top: 10%;
+    left: 1.5%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 100px;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color: white; 
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
