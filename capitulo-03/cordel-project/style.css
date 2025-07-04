@@ -2,145 +2,104 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
+/** Ao usar a shorthand "font" posso colocar também a propriedade "small-caps" para deixar as letras maiúsculas! */
+/** DETALHE, o VW é útil mas não é o mais optimal. O melhor a se usar é o "MEDIA-QUERIES" que ainda vamos aprender.*/
 :root{
-    --font-header: normal bolder 11vh 'Passion One', Arial, Helvetica, serif;
-    --font-content: normal 600 2.3vh 'Sriracha', Arial, Helvetica, sans-serif; /** VW(view width) aqui fez o tamanho da letra se adaptar com o tamanho da tela!!!*/
+    --title-font: normal bolder 10vw 'Passion One', Arial, Helvetica, sans-serif;
+    --content-font: normal 500 3.5vw 'Sriracha', Arial, Helvetica, sans-serif;
+    --font01: Verdana, Tahoma, sans-serif;
 }
+
+/* section pre{
+    white-space: pre-line; */ /** Ao invés de usar vários "BRs", eu simplesmente posso usar essa tag "white-space: pre-line" que ele deixa como se estivesse com o BR. OBS: Essa propriedade somente apaga a parte branca ao usar o "PRE". */
 
 *{
     margin: 0px;
     padding: 0px;
 }
 
-body{
-    height: 100%;  
+html, body{
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--font01);
 }
 
 header{
     background-color: black;
-    height: 300px;
-    margin: 0px;
-    box-sizing: border-box;
+    color: white;
     text-align: center;
-    justify-content: center;  
 }
 
+/** "text-transform: uppercase;" Aqui deixa a letra MAIÚSCULA! Por isso o meu não estava igual!*/
+/** Ao usar a shorthand "font" posso colocar também a propriedade "small-caps" para deixar as letras maiúsculas! */
 header h1{
-    color: white;
-    font: var(--font-header);
-    padding-top: 30px;
-    box-sizing: border-box;
+    padding-top: 50px;
+    font-variant: small-caps; /** Essa daqui deixa as letras em MAIÚSCULO mas as primeiras letras são maiores!! Essa é "melhor". */
+    font: var(--title-font);
 }
 
+/** Guanabara usou essa "técnica" para deixar "centralizado" pois foi padding-top: 50px do H1 e padding-bottom: 50px do Parágrafo dentro do header. */
 header p{
+    padding-bottom: 50px; 
+}
+
+ /** Tinha esquecido mas ao colocar vírgula "," você >adiciona< um tagging group! */
+header a, footer a{ 
     color: white;
+    text-decoration: none;
     font-weight: bolder;
 }
 
-header p > a{
-    text-decoration: none;
-    color: white;
-}
-
-header p > a:hover{
+/** Bem melhor e poupa linhas de código! */
+header a:hover, footer a:hover{ 
     text-decoration: underline;
 }
 
-main{
-    font: var(--font-content);
-    line-height: 2.9em;
-}
-
-main p{
+/** Bom demais colocar o VH pois ao mudar o tamanho da janela, ele já se adapta. Por isso "view-port height"! */
+/** Aqui colocamos o padding-top e paddin-bottom usando "VH" para dar um espaçamento entre as sections.*/
+section{
+    padding-top: 10vh; 
+    padding-bottom: 10vh; 
+    line-height: 2em;
     padding-left: 30px;
-    
+    font: var(--content-font);
 }
 
-div.divfather{
-    height: 800px;
+section.normal{
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgb(133, 128, 128);
+    color: white;
     background-image: url(imagens/background001.jpg);
-    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center right;
     background-size: cover;
-    box-sizing: border-box;
-    box-shadow: 01px  01px 10px 04px rgba(0, 0, 0, 0.411);
-    position: relative;
 }
 
-div.divson{
-    position: absolute;
-    max-height: 680px;
-    min-height: 280px;
-    max-height: 600px;
-    min-width: 280px;
-    max-width: 600px;
-    margin: 10px;
-    background-color: rgba(35, 63, 35, 0.219);
+section.imagem2{
+    background-color: rgb(202, 158, 158);
     color: white;
-    top: 10%;
-    left: 1%;
-    transform: translate(3px, -25px)
-    
-}
-
-div.divson > p{
-    padding-left: 0px;
-}
-
-div.divfather2{
-    height: 800px;
     background-image: url(imagens/background002.jpg);
-    background-color: rgba(0, 0, 0, 0.205);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center right;
     background-size: cover;
-    box-sizing: border-box;
-    box-shadow: 01px  01px 10px 04px rgba(0, 0, 0, 0.342);
-    position: relative;
 }
 
-div.divson2{
-    position: absolute;
-    min-height: 280px;
-    max-height: 580px;
-    min-width: 280px;
-    max-width: 600px;
-    margin: 10px;
-    background-color: rgba(128, 128, 128, 0.541);
-    color: white;
-    top: 10%;
-    left: 1%;
-    transform: translate(-01px, 10px);
-}
-
-div.divson2 > p{
-    padding-left: 0px;
+/** Se lembra daquele problema que estava cortando as palavras? Pois é. Use o "DISPLAY: inline-block". Que ele vai se adaptar ao tamanho da tela! */
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.548);
+    display: inline-block;
+    padding: 05px;
 }
 
 footer{
     background-color: black;
     color: white;
-    height: 30px;
-    margin-top: 100px;
-    margin-bottom: 0px;
+    padding: 10px;
     text-align: center;
-    box-sizing: border-box;
-}
-
-footer p{
-    padding-top: 05px;
-    font-weight: bolder;
-}
-
-footer a{
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-footer a:hover{
-    text-decoration: underline;
 }
