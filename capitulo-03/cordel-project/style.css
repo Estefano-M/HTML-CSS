@@ -2,95 +2,143 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
+:root{
+    --font-header: normal bolder 11vh 'Passion One', Arial, Helvetica, serif;
+    --font-content: normal 600 2.3vh 'Sriracha', Arial, Helvetica, sans-serif; /** VW(view width) aqui fez o tamanho da letra se adaptar com o tamanho da tela!!!*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100%;  
+}
+
 header{
-    border: 1px solid black;
-    height: 300px;
     background-color: black;
+    height: 300px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;  
+}
+
+header h1{
     color: white;
-    margin: -08px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font: var(--font-header);
+    padding-top: 30px;
+    box-sizing: border-box;
 }
 
-article .bodyp{
-    padding-left: 10px;
-    width: 500px;
+header p{
+    color: white;
+    font-weight: bolder;
 }
 
-article .article-image{
-    height: 700px;
-    margin: -08px;
+header p > a{
+    text-decoration: none;
+    color: white;
+}
+
+header p > a:hover{
+    text-decoration: underline;
+}
+
+main{
+    font: var(--font-content);
+    line-height: 2.9em;
+}
+
+main p{
+    padding-left: 30px;
+    
+}
+
+div.divfather{
+    height: 800px;
     background-image: url(imagens/background001.jpg);
+    background-color: black;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center right;
     background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 01px  01px 10px 04px rgba(0, 0, 0, 0.411);
     position: relative;
 }
 
-article .image{
-    border: 0px solid black;
-    background-color: #002400bd;
-    color: white;
-    width: 500px;
-    height: 500px;
-    text-align: center;
-    text-shadow: 01px 01px 01px black;
+div.divson{
     position: absolute;
-    left: 05%;
-    transform: translate(-65px, 100px);
+    max-height: 680px;
+    min-height: 280px;
+    max-height: 600px;
+    min-width: 280px;
+    max-width: 600px;
+    margin: 10px;
+    background-color: rgba(35, 63, 35, 0.219);
+    color: white;
+    top: 10%;
+    left: 1%;
+    transform: translate(3px, -25px)
+    
 }
 
-article .article-image2{
-    height: 700px;
-    margin: -08px;
+div.divson > p{
+    padding-left: 0px;
+}
+
+div.divfather2{
+    height: 800px;
     background-image: url(imagens/background002.jpg);
+    background-color: rgba(0, 0, 0, 0.205);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 01px  01px 10px 04px rgba(0, 0, 0, 0.342);
     position: relative;
-
 }
 
-article .image2{
-    border: 0px solid black;
-    background-color: rgba(2, 2, 2, 0.432);
-    text-shadow: 1px 1px 1px black;
-    text-align: center;
-    color: white;
-    width: 500px;
-    height: 500px;
+div.divson2{
     position: absolute;
-    left: 05%;
-    transform: translate(-65px, 100px);
+    min-height: 280px;
+    max-height: 580px;
+    min-width: 280px;
+    max-width: 600px;
+    margin: 10px;
+    background-color: rgba(128, 128, 128, 0.541);
+    color: white;
+    top: 10%;
+    left: 1%;
+    transform: translate(-01px, 10px);
 }
 
-div .p{
-    text-align: center;
-
+div.divson2 > p{
+    padding-left: 0px;
 }
 
 footer{
     background-color: black;
-    height: 25px;
-    padding: 05px;
-    margin: -08px;
     color: white;
+    height: 30px;
+    margin-top: 100px;
+    margin-bottom: 0px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 footer p{
-    margin: 0px;
-    padding: 05px;
+    padding-top: 05px;
+    font-weight: bolder;
 }
 
 footer a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: bolder;
-
 }
 
 footer a:hover{
