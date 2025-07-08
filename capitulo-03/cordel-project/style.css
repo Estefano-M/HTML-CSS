@@ -50,7 +50,7 @@ header a, footer a{
     font-weight: bolder;
 }
 
-/** Bem melhor e poupa linhas de código! */
+/** Bem melhor e poupa linhas de código! Ao usar a vírgula para adicionar outra tagging group. */
 header a:hover, footer a:hover{ 
     text-decoration: underline;
 }
@@ -73,21 +73,9 @@ section.normal{
 section.imagem{
     background-color: rgb(133, 128, 128);
     color: white;
-    background-image: url(imagens/background001.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center right;
+    box-shadow: inset 06px 06px 13px 0px rgba(0, 0, 0, 0.5);
     background-size: cover;
-}
-
-section.imagem2{
-    background-color: rgb(202, 158, 158);
-    color: white;
-    background-image: url(imagens/background002.jpg);
-    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center right;
-    background-size: cover;
 }
 
 /** Se lembra daquele problema que estava cortando as palavras? Pois é. Use o "DISPLAY: inline-block". Que ele vai se adaptar ao tamanho da tela! */
@@ -95,6 +83,34 @@ section.imagem > p{
     background-color: rgba(0, 0, 0, 0.548);
     display: inline-block;
     padding: 05px;
+    text-shadow: 03px 01px 01px black;
+}
+
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/** Como pode ver, usei o shorthand sem o "background: cover" e nem o "attachment" pois já coloquei na class "imagem" ali em cima.*/
+/** E só pra não esquecer a sequência do shorthand: */
+/** Fui tirar o attachment para deixar na class "image" ali em cima mas não foi. Creio que o shorthand tem que ser completo.*/
+/*
+
+background-color:
+background-image: url('')
+background-repeat:
+background-attachment:
+background-position:
+background-size:
+
+*/
+section#img02{
+    background: url(imagens/background002.jpg) no-repeat fixed center right;
+}
+
+section > p{
+    padding-bottom: 2em;
 }
 
 footer{
