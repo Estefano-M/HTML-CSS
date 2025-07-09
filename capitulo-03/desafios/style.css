@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{
+    max-height: 100vh;
+}
+
+body#deep-space{
+    background: lightgray url(espaco.jpg) fixed center center/cover;
+    
+    
+}
+
+body > div#astro{
+    background-image: url(astronauta.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: 40%;
+    min-height: 91vh;
+}
+
+h1{
+    color: white;
+    font-size: 2.5vh;
+    text-align: center;
+}
