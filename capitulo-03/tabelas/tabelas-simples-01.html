@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Tabelas - &#x1f440</title>
+    <style>
+
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        table{
+            width: 400px;
+            border-collapse: collapse; /* Aqui vai fazer com que a linha que separava as "células" se juntem e fiquem que nem no EXCEL! */
+        }
+
+        td{
+            border: 01px solid black;
+            padding: 08px;
+        }
+
+        tr.destaque{
+            background-color: lightslategray;
+        }
+
+        td.aviso{
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Minha Primeira Tabela - Aula 1 - </h1>
+    <!-- Aqui em baixo não esqueça que está aninhada ou seja, a parte aninhada está DENTRO da propriedado como nesse caso aqui é o TABLE ROW
+
+    * HIERARQUIA DE TABELAS (SIMPLES)
+    * TABLE = tabela
+    *    TABLE ROW = linha de tabela
+    *       TABLE HEADER = cabeçalho de tabela
+    *       TABLE DATA = dado de tabela
+
+    -->
+    
+    <table>
+        <tr> <!--* Primeira Linha -->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="destaque"> <!--* Segunda Linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!--* Terceira Linha-->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!--* Quarta Linha-->
+            <td>A4</td>
+            <td>B4</td>
+            <td class="aviso">C4</td>
+        </tr>
+    </table>
+    <h2>HIERARQUIA É OBRIGATÓRIO</h2>
+    <p>Se não seguir a <strong><mark>hierarquia</mark></strong>, os dados podem aparecer antes ou depois e acabar bagunçando tudo.</p>
+    <p>Eis aqui o código como ficou &downarrow;:</p>
+    <pre>
+        <code>
+            table
+                tr
+                    td>A1/td
+                    td>B1/td
+                    td>C1/td
+                /tr
+                tr class="destaque"
+                    td>A2/td
+                    td>B2/td
+                    td>C2/td
+                /tr
+                tr 
+                    td>A3/td
+                    td>B3/td
+                    td>C3/td
+                /tr
+                tr
+                    td>A4/td
+                    td>B4/td
+                    td class="aviso">C4/td
+                /tr
+            /table>
+        </code>
+    </pre>
+</body>
+</html>
