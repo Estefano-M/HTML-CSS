@@ -3,9 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title> - Tabelas Grandes - &#x1f440 </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        table{
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        /* 
+        Anatomia para Tabelas Grandes:
+        TABLE
+            Caption  = Aqui serve para por a legenda da tabela. Veja o resultado ao abrir o liveserver.
+            THead
+                tr, td, th,
+            TBody
+                tr, td, th
+            TFoot
+                tr, td, th
+        */
+
+        /* "SCOPE="COL" para declarar ao SEO que é um ESCOPO DE COLUNA como diz o próprio nome da propriedade! 
+            "SCOPE="ROW" para declarar ao SEO que é uma LINHA como diz o próprio nome da propriedade!
+        */
+
+        caption{
+            background-color: rgb(128, 126, 126);
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Quando tiver uma tabela muito grande e se a pessoa acabar esquecendo o que significa a COLUNA, eu posso usar essas propriedades do POSITION > RELATIVE > POSITION > STICKY e o TOP 0 para fazer com que o TH desça junto com a rolagem. UTILIZAR SOMENTE SE ESTIVER COM UMA TABELA COM MUITAS LINHAS! */
+        thead > tr > th{
+            position: sticky;
+            top: 0;
+            background-color: lightgray;
+        }
+
+        thead, tfoot{
+            background-color: lightgray;
+        }
+
+        td, th{
+            border: 01px solid black;
+            padding: 10px;
+        }
+
+        /** Essa PSEUDO-CLASS aqui é excelente! Ao invés de eu ter usado o pseudo-class"numero" EM CADA UM, eu posso usar esse aqui e poupar tempo e esforço! Pesquisar sobre "CSS :nth-child() Pseudo-class" no W3C. Pintei de vermelho só pra fazer o teste. */
+        td:nth-child(2){
+            background-color: lightslategray;
+        }
+        
+        td.numero{
+            text-align: right;
+        }
+
+        /* Aqui usei a pseudo-classe para pular duas linhas. W3C diz que "n" pode ser números também. Veja mais no site. E com isso, iremos deixar as linhas zebradas com o cinza-claro. 
+        Posso usar também(e até acho melhor, colocar o "ODD"(que é ímpar em Inglês também) ou "EVEN"(que é par). */
+
+        tbody > tr:nth-child(2n){
+            background-color: lightgray;
+        }
+        /*(tr>td+td.numero)*27 Aqui posso criar quantas formas eu quero ao INVÉS DE TER QUE FAZER UMA POR UMA! BEM MELHOR! */
+
+
+    </style>
 </head>
 <body>
+    <h1> Uso de Tabelas Grandes - Aula 03 </h1>
+
+    <table>
+        <caption>Unidades Federativas do Brasil por População</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th> <!--* Usei uma inline style pontual aqui só para diminuir o tamanho. -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="numero">45.973.194</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="numero">21.322.691</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">17.219.679</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="numero">14.850.513</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="numero">11.824.665</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Sul</td>
+                <td class="numero">11.229.915</td>
+            </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="numero">9.539.029</td>
+            </tr>
+            <tr>
+                <td>Ceará</td>
+                <td class="numero">9.233.656</td>
+            </tr>
+            <tr>
+                <td>Pará</td>
+                <td class="numero">8.664.306</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">8.058.441</td>
+            </tr>
+            <tr>
+                <td>Goiás</td>
+                <td class="numero">7.350.483</td>
+            </tr>
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">7.010.960</td>
+            </tr>
+            <tr>
+                <td>Amazonas</td>
+                <td class="numero">4.281.209</td>
+            </tr>
+            <tr>
+                <td>Paraíba</td>
+                <td class="numero">4.145.040</td>
+            </tr>
+            <tr>
+                <td>Espírito Santo</td>
+                <td class="numero">4.102.129</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso</td>
+                <td class="numero">3.836.399</td>
+            </tr>
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">3.446.071</td>
+            </tr>
+            <tr>
+                <td>Piauí</td>
+                <td class="numero">3.375.646</td>
+            </tr>
+            <tr>
+                <td>Alagoas</td>
+                <td class="numero">3.220.104</td>
+            </tr>
+            <tr>
+                <td>Distrito Federal</td>
+                <td class="numero">2.982.818</td>
+            </tr>
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">2.901.895</td>
+            </tr>
+            <tr>
+                <td>Sergipe</td>
+                <td class="numero">2.291.077</td>
+            </tr>
+            <tr>
+                <td>Rondônia</td>
+                <td class="numero">1.746.227</td>
+            </tr>
+            <tr>
+                <td>Tocantins</td>
+                <td class="numero">1.577.342</td>
+            </tr>
+            <tr>
+                <td>Acre</td>
+                <td class="numero">880.631</td>
+            </tr>
+            <tr>
+                <td>Amapá</td>
+                <td class="numero">802.837</td>
+            </tr>
+            <tr>
+                <td>Roraima</td>
+                <td class="numero">716.793</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="numero"><strong>212.583.750</strong></td>
+            </tr>
+
+        </tfoot>
+    </table>
+    <h2>Anatomia para Tabelas Grandes</h2>
+    <pre>
+        <code>
+            Table
+                Caption
+                THEAD
+                    tr, td, th
+                TBODY
+                    tr, td, th
+                TFOOT
+                    tr, td, th
+        </code>
+    </pre>
+    <p>Detalhe, ao colocar o <strong><mark>&lt;th&gt;</mark></strong>, por PADRÃO, o navegador colocou ele no CENTRO e COLOCOU EM NEGRITO!</p>
     
+
 </body>
 </html>
