@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Configurando iFrames - &#x1f440 </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        iframe{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>- Configurando iFrames - Aula 02</h1>
+    
+    <!--* Detalhe, DENTRO da tag "iFrame", podemos colocar aquela mensagem que nós aprendemos que podemos usa-la quando o navegador não consegue abrir o conteúdo. Porém, aqui é melhor usar o link do conteúdo que você está tentando mostrar caso o navegador do cliente/usuário não consiga exibir. Eis um exemplo aqui em baixo: -->
+    <p>Acessando o site do <iframe src="https://www.cursoemvideo.com" frameborder="0" height="500px" scrolling="no"> <a href="https://www.cursoemvideo.com" target="_blank" rel="external">Curso em Vídeo</a> </iframe> para aprender a programar.</p>
+
+
+    <p>O site do <iframe src="https://www.google.com.br" frameborder="0"> Seu navegador não é compatível com isso</iframe> é legal mas que pena que a proteção não deixa eu coloca-lo no meu iframe. </p>
+
+    <!--* Outro exemplo: -->
+    <p>O repositório do Guanabara <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500px" width="500px">no <a href="https://gustavoguanabara.github.io" target="_blank" rel="external">Github</a></iframe> também é bem legal.</p>
+
+    <!--* TAMANHO PADRÃO DO IFRAME: 300x150 (300 de height e 150 de width). Mas podemos mudar dentro da própria tag caso queiramos. Veja os exemplos acima.-->
+
+    <p>Como pode ver nos<strong><mark>iFrames</mark></strong> acima, configuramos o <strong>HEIGHT e o WIDTH</strong> cada um deles de acordo com a nossa vontade. <br> DETALHE, por mais que eu tenha configurado o inline-style dos iFrames, o que vai realmente prevalecer vão ser as CSS na tag STYLE! Por exemplo, mesmo com as inline-style feitas no iframe, vou usar a CSS no HEAD da página para muda-los para 400x400.</p>
+    <p>VIU?!</p>
+    <p>CASO, não existam nenhuma configuração nas folhas de estilo, aí sim, prevalece os inline-styles pontuais. E caso não existam nenhuma das duas, como já sabemos, obviamente irá prevalecer o padrão pré estabelecido que é de 300x150(height and width).</p>
+
+    <p>Para o elemento iframe, também existe o parâmetro " scrolling ", que igualmente deve ser inserido dentro da tag de abertura do iframe. Esse parâmetro serve para configurar a barra de rolagem do iframe, e ele aceita os seguintes valores: "auto", "yes" e "no". <br>
+
+    <p><strong><mark>&lt;AUTO&gt;</mark></strong> - É o valor padrão, faz com que a barra de rolagem no iframe apareça e possa ser utilizada normalmente.</p>
+
+    <p><strong><mark>&lt;YES&gt;</mark></strong> - Força a exibição de uma barra de rolagem, mesmo que o site embutido no iframe não tenha uma.</p>
+
+    <p><strong><mark>&lt;NO&gt;</mark></strong> - Bloqueia a barra de rolagem do site que está embutido no iframe, impedindo o usuário de scrollar.</p>
+
+    Você pode também adicionar uma borda com o estilo que preferir no seu iframe, para fazer isso basta inserir a declaração de borda dentro do seletor CSS do iframe. <br>
+
+    <p>Olhe no primeiro exemplo. Está com a propriedade <q>NO</q> dentro da tag <strong><mark>SCROLLING</mark></strong> e por isso, o site já não tem mais barra de rolagem.</p>
+
+    Nota: Como nós já sabemos, vários sites possuem proteção contra o iframe, bloqueiam a sua visualização dentro deles... Talvez você possa pensar que por causa disso os iframes não tem serventia e acabe se perguntando de que forma vai utilizá-los... A resposta é simples: Você também pode inserir o seu próprio conteúdo (uma página sua, local) dentro de um iframe, existem muitas possibilidades com isso.</p>
+
+    <p>Em relação ao <strong><mark>&lt;FRAMEBORDER&gt;</mark></strong> o valor <q>0 ou qualquer outro valor</q> vai simplesmente fazer com que a borda apareça. Simplesmente isso.</p>
+
+    <p>Mas caso queira, podemos personalizar a bordar do <strong><mark>FRAMEBORDER</mark></strong> dentro do STYLE como por exemplo:</p>
+    <pre>
+        <code>
+            style{
+                iframe{
+                    border: 01px solid black;
+                    height: 400px;
+                    width: 400px;
+                }
+            }
+        </code>
+    </pre>
+</body>
+</html>
