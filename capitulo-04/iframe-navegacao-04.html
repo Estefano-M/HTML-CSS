@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Navegação no iFrame - &#x1f440 </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        iframe{
+            border: 02px solid black;
+            width: 98vw;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>- Navegando no iFrame - Aula 04</h1>
+    <h2>Faça uma escolha</h2>
+    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa laudantium unde dolor, nobis ad id accusantium, repellat libero maiores illo dolores? Nam quisquam unde aut minus numquam, vitae voluptas non. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et optio quasi doloremque in nesciunt? Impedit, optio id? Quas reiciendis fugiat molestias quasi earum cupiditate repellat quam perspiciatis ut, inventore natus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat voluptates quos facilis nobis qui sequi modi alias omnis sunt ut voluptatum quam voluptatibus ratione delectus corporis, error officiis cum quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quibusdam minus nostrum odit magni libero saepe, sequi, maxime natus dolores corrupti minima animi, enim maiores iure reprehenderit odio illum sunt!</p>
+
+    <ul>
+        <li><a href="paginas-extras-aula-04-navegacao/pag001.html" target="iframe" rel="author">Primeira Página</a></li>
+        <li><a href="paginas-extras-aula-04-navegacao/pag002.html" target="iframe" rel="author">Segunda Página</a></li>
+        <li><a href="paginas-extras-aula-04-navegacao/pag003.html" target="iframe" rel="author">Terceira Página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui excepturi omnis fugiat tenetur doloribus nostrum, temporibus sint voluptatem totam, possimus delectus rem? Hic obcaecati perspiciatis sit! Rerum distinctio minima atque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto laborum sit, nemo dicta id minima quis necessitatibus corrupti veniam nihil placeat cum vero debitis illo dolorem sed nostrum explicabo harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorum consequuntur at iure debitis, nihil facere repellendus incidunt autem rerum harum accusamus dolores deserunt dicta laboriosam officia? Ab, molestiae unde! Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam fuga odit obcaecati molestiae corporis eius id enim, aliquam facilis asperiores culpa recusandae temporibus pariatur est porro natus laboriosam facere? Reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias quia, optio in sed nostrum quibusdam delectus commodi tenetur sapiente. Dolor quae quam non, minima in officia amet assumenda eius?</p>
+
+    <iframe src="" name="iframe"> <!--* Aprendi uma tag nova! Como já diz o próprio nome, ele NOMEIA uma propriedade. -->
+        <p>Infelizmente seu navegador não é compatível com esse conteúdo!</p>
+    </iframe> <!--* Aqui eu tirei o "frameborder" para deixar o frame (a borda) mostrando na página.-->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque natus perferendis magnam explicabo quo pariatur. Mollitia eos neque atque nisi eius reiciendis deleniti ex consectetur laboriosam, natus soluta modi? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem quaerat qui repellat, voluptates aspernatur numquam illo rerum expedita quam totam vero labore. Fugit cum eveniet nesciunt voluptas, eligendi deleniti placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nemo perspiciatis inventore adipisci facere, neque sint voluptatum officiis. Doloremque quos et deserunt minima, beatae aperiam illum praesentium quisquam voluptate cupiditate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, facere dolorum debitis, consequuntur eos quis a explicabo eius fuga possimus repellendus harum iure, saepe labore modi eum minima architecto exercitationem.</p>
+
+    <p>Essa aula foi bem legal de aprender. Isso de conseguir abrir uma página dentro do iFrame ou clicar no link foi legal.</p>
+    <h2>Quando faz sentido usar o Iframe com conteúdo local:</h2>
+    <ul>
+        <li>Pré-Visualização de páginas ou documentos</li>
+            <ul style="list-style: square;">
+                <li>Visualização de Templates, Relatórios ou temas HTML</li>
+                <li>Demonstração de comportamento de interfaces (modo "sandbox") Esse aqui é pra segurabça que vamos ver mais pra frente.</li>
+            </ul>
+        <li>Separação de Contexto de Execução</li>
+            <ul style="list-style: square;">
+                <li>Prevenir conflitos de CSS/JS</li>
+                <li>Simular carregamento externo</li>
+                <li>Separar responsabilidades (ex: um editor HTML e um painel de visualização ao lado)</li>
+            </ul>
+        <li>Testes ou Protótipos</li>
+            <ul style="list-style: square;">
+                <li>Durante o desenvolvimento, pode ser útil simular a navegação ou comportamento de links dentro de um iFrame com páginas locais.</li>
+            </ul>
+        <li>Cuidados mesmo com conteúdo local</li>
+            <ul style="list-style: square;">
+                <li>SEO: conteúdo do iFrame não é indexado da mesma forma</li>
+                <li>Acessibilidade: leitores de telas menores podem não ler bem o conteúdo embutido</li>
+                <li>responsividade: precisa garantir que o iFrame se adapte bem a telas pequenas</li>
+                <li>Performance: se você carregar muitas páginas em iFrames simultaneamente, pode pesar no DOM (at this moment, i don't know what this is)</li>
+            </ul>
+    </ul>
+</body>
+</html>
