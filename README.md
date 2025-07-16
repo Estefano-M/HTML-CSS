@@ -9,4 +9,5 @@ I'm learning how to create webpages and now i'm going to manage my repositories!
 
 I just don't get it why even if i put the "target_blank" the webpage is being loaded in the same page and not opening a new webpage.
 
-# Just doing some tests
+ background-image: url(Images-cap03/pattern001.png)
+ <img src="Capítulo-01/imagens/html-logo-200width.png" alt="HTML-Logotipo">
