@@ -30,10 +30,19 @@
 
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro non, aliquam quibusdam dicta commodi omnis facere praesentium deleniti beatae accusamus eaque quasi ratione. Optio, minima nostrum repudiandae ipsum voluptas facilis? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ea sed cupiditate ab ducimus dignissimos commodi, dolore, magnam facere iure omnis officia iste, ipsam quaerat tempore perferendis tempora? Dolores, culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. A adipisci eos, quae illum saepe repudiandae modi veritatis voluptatem aut praesentium quo distinctio repellat dolore. Ab aut saepe corrupti voluptatum vitae.</p>
 
-    <iframe srcdoc="<h1> Escolha uma das opções</h1><p> Só fazendo o teste e não coloquei <q>lorem</q> pra não ficar com minhas palavras e confundir. Veja aqui em baixo como consegui inserir uma imagem aqui dentro do iFrame e ainda consegui configurar o tamanho da imagem dentro do SCRDOC!!</p><img src='paginas-extras-/deus-e-amor-logo-0-pq.png' alt='Deus é amor logotipo' width='270'>" name="iframe"> <!--* Aprendi uma tag nova! Como já diz o próprio nome, ele NOMEIA uma propriedade. -->
+    <!--* Aqui temos um novo parâmetro chamado "SRCDOC" e nele eu posso colocar as informações como você consegue ver mais abaixo! Mas o certo mesmo é criar um documento para deixar aqui ao invés de fazer isso aqui! Vou deixar separado só para facilitar a leitura! -->
+
+    <!--* Aprendi uma tag nova! Como já diz o próprio nome, ele NOMEIA uma propriedade para que a gente possa chama-la quando quisermos usa-la! -->
+
+    <!--* Aqui eu tirei o "frameborder" para deixar o frame (a borda) mostrando na página.-->
+    <iframe name="iframe" srcdoc="<h1> Escolha uma das opções</h1>
+        <p> Só fazendo o teste e não coloquei <q>lorem</q> pra não ficar com minhas palavras e confundir. Veja aqui em baixo como consegui inserir uma imagem aqui dentro do iFrame e ainda consegui configurar o tamanho da imagem dentro do SCRDOC!!</p>
+        
+        <img src='paginas-extras-/deus-e-amor-logo-0-pq.png' alt='Deus é amor logotipo' width='270'>" > 
         
         <p>Infelizmente seu navegador não é compatível com esse conteúdo!</p>
-    </iframe> <!--* Aqui eu tirei o "frameborder" para deixar o frame (a borda) mostrando na página.-->
+        
+    </iframe> 
 
     <p>O recomendado é criar um documento separado e com CSS para colocar aqui dentro do iFrame como eu fiz nos links ali em cima. Aqui, o Guanabara nos quis mostrar uma nova propriedade mas não é a melhor opção. <br>A intenção aqui foi mostrar que nós podemos colocar um <strong>CONTEÚDO ESTÁTICO</strong> sem precisar criar um documento.</p>
 
