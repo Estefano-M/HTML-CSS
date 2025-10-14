@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Iframe - </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Página</h1>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero expedita eos illum, placeat nesciunt vel, eum iusto neque laborum, dolore tempora fuga nobis maxime nemo sed quis aperiam pariatur commodi! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit distinctio quo aspernatur, consequatur rerum ipsa labore commodi. Amet fugiat iure dignissimos ullam neque tempore? Amet fugit temporibus nesciunt laboriosam molestiae. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, distinctio. Saepe, error culpa facere rerum neque deserunt ducimus nam, ad corrupti mollitia non reprehenderit unde impedit, totam delectus aspernatur repellendus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptate soluta rem, perspiciatis delectus cum molestiae minus voluptatum fugiat expedita vel explicabo earum optio aperiam ab mollitia quibusdam alias labore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, deleniti quibusdam? Ut facere soluta cumque quisquam. Pariatur hic error, doloribus ab vitae ullam, ex maxime consequatur, libero natus totam molestias?</p>
+
+    <!--* É perigoso deixar o site permitindo Scripts como esse exemplo aqui em baixo. Quando é um site "SAME ORIGIN", ou seja, seu, tudo bem! -->
+    
+    <!--* Mas se tratando dos sites dos outros, isso pode ser perigoso! -->
+    
+    <!--* Nesse caso aqui, a gente vai e usa o sandbox e o referrer policy para bloquear os acessos! -->
+    <iframe src="paginas-extras-/pag005.html" frameborder="0" sandbox="allow-same-origin allow-forms allow-scripts" referrerpolicy="no-referrer" scrolling="yes">
+
+        <p>Infelizmente o seu navegador não suporta esse tipo de arquivo...</p>
+    </iframe>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum eligendi accusamus at dignissimos, sed delectus ex iure adipisci corporis minima incidunt quos harum consequatur, quia atque autem eos numquam obcaecati! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam quia repellendus animi officia deserunt! Repellat, eum autem doloribus maxime error mollitia ipsum ea blanditiis, harum rerum voluptatem eius est? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa adipisci ex, minus, asperiores in veritatis qui facere voluptate dolorem aspernatur corrupti perferendis saepe earum pariatur voluptatum quibusdam voluptatibus cum delectus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, ut natus? Omnis, necessitatibus nobis nihil in tenetur officia, minus alias blanditiis voluptatem animi temporibus iusto aliquid veniam qui, perferendis autem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error culpa excepturi unde eveniet vitae exercitationem reiciendis assumenda earum perspiciatis quibusdam praesentium impedit illum cum ab, harum, hic temporibus repellat id.</p>
+</body>
+</html>

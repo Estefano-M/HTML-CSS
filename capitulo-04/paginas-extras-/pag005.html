@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1> - Deixando o iFrame mais Seguro - Aula 05</h1>
+    <a href="#" onclick="clicou()">Clique em mim</a>
+    
+    <div id="saida">
+
+    </div>
+
+    <script>
+        function clicou(){
+            s = window.document.getElementById("saida");
+            s.innerHTML += '<p>Você clicou!</p>';
+        }
+    </script>
+</body>
+</html>
