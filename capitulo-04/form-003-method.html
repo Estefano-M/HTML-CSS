@@ -14,7 +14,7 @@
 <body>
     <h1> - Methods - 003</h1>
 
-    <form autocomplete="off" action="formcontrol.php" method="">
+    <form autocomplete="off" action="formcontrol.php" method="post">
         <p>
             <label for="inome">Nome:</label>
                 <input type="text" name="nome" id="inome">
@@ -28,8 +28,18 @@
 
     <h2>Quando usar GET ou POST?</h2>
 
-    <p>Quando usar o atributo <strong><mark>METHOD</mark></strong> com o valor <strong><mark>GET</mark></strong>, é quando você está solicitando dados dos usuários como por exemplo: Altura, nome, peso, etc. Nada que venha conter informações sensíveis. Que nem a gente quando vai fazer uma pesquisa no Google! <br> A gente não coloca informações sensíveis no search bar do Google! <br> Quando a gente usa o <mark><strong><code>method="get"</code></strong></mark>, as informações aparecem na cara do usuário na barra de endereço.</p>
+    <h3>Usando o GET</h3>
+    
+    <p>Quando usar o atributo <strong><mark>METHOD</mark></strong> com o valor <strong><mark>GET</mark></strong>, é quando você está solicitando dados dos usuários como por exemplo: Altura, nome, peso, etc. Nada que venha conter informações sensíveis. Que nem a gente quando vai fazer uma pesquisa no Google! <br> A gente não coloca informações sensíveis no search bar do Google! <br> Quando a gente usa o <mark><strong><code>method="get"</code></strong></mark>, as informações aparecem na cara do usuário na barra de endereço. <br> Quando a gente usa o <code>method="get"</code>, a gente pode pegar as informações que estão na barra de endereço e compartilhar aquele link com mais alguém que nem a gente faz quando quer enviar um link para outra pessoa. </p>
+
+    <p>Outra coisa, quando for enviar dados usando o method get, só pode enviar dados <mark>em até 3000 bytes é aproximadamente 3 mil letras do formulário completo que o usuário está enviando</mark>. </p>
+
+    <p>Não usar o method get também quando o usuário for enviado arquivos e fotos. </p>
+
+    <h3>Usando o POST</h3>
 
     <p>Quando usar o valor <strong><mark>POST</mark></strong>, é quando a gente está coletando dados sensíveis dos usuários como senhas, numero do cartão de crédito, endereço, CEP, etc.<br> Outra coisa também é quando a gente quer mudar algo no servidor(enviando um formulário, salvando dados, etc). </p>
+
+    <p>Mais pra frente, eu tenho que aprender mais sobre <strong>HTTPS</strong> para saber mais sobre como deixar as informações mais seguras e criptografadas!</p>
 </body>
 </html>
