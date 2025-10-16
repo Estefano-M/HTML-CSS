@@ -14,22 +14,34 @@
 <body>
     <h1> - My First Form - 01</h1>
 
-    <form action="formulario-01.html.php" method="get">
+    <form autocomplete="off" action="formulario-01.html.php" method="get">
        
-        <p>Nome: <input type="text" name="username" id="username"></p>
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </p>
        
-       <p>Sobrenome: <input type="text" name="lastname" id="lastname"></p>
+       <p><label for="sobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
 
-       <p><input type="submit" value="Acessar"></p>
+       <p><input type="submit" value="Enviar"></p>
 
     </form>
 
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum nostrum inventore ex quae at aut adipisci quam libero corrupti ad minima, quaerat saepe deserunt, ea aspernatur non! Veritatis, enim iure? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo vero alias quam, possimus ea placeat officiis laudantium qui obcaecati architecto numquam necessitatibus vitae est facere dolorem. Provident maxime minus rerum.</p>
 
-    <form action="form-001.html" method="get">
-        <p>
-            
-        </p>
-    </form>
+    <p>Se lembra quando você coloca as suas informações em um formulário e depois que você volta novamente á aquele site, os seus dados(seu nome, CEP por exemplo) aparecem para você clicar e automaticamente preencher o formulário? <br> Então...é dele que iremos falar agora: </p>
+
+    <p>Quando usamos o elemento &lt;<strong><mark>FORM</mark></strong>&gt;(ou tag), podemos usar um <q>inline-style</q> nele e conseguir desativar essa opção. Eis aqui um exemplo: &downarrow;</p>
+
+    <pre>
+        <code>
+            form autocomplete="off"
+        </code>
+    </pre>
+
+    <p>Ao usar o atributo <strong><mark>AUTOCOMPLETE="off"</mark></strong>, você desativa o autopreenchimento ao selecionar uma caixa de um formulário! E o próprio nome do atributo fala sobre o que ele faz!</p>
+
+    
 </body>
-</html>
+</html> 
