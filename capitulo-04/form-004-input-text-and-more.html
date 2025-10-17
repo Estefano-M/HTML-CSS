@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Input:Text - </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>- Form Test - 004</h1>
+
+    <form action="formcontrol.php" method="post" autocomplete="off">
+        <p>
+            <label for="iuser">Username:</label>
+            <input type="text" name="username" id="iuser" required minlength="5" maxlength="15" size="10" placeholder="Nome do usuário">
+        </p>
+        <p>
+            <label for="ipassword">Password:</label>
+            <input type="password" name="password" id="ipassword" required minlength="8" maxlength="20" size="10" placeholder="mínimo de 8 caracteres">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        
+    </form>
+
+    <p>Aqui nessa aula falamos sobre dois novos atributos: <br> <strong><mark>REQUIRED(requerido/obrigatório)</mark></strong> = quando a gente quer que o usuário não deixe de preencher essa informação pois ela é essencial na hora de enviar os dados para o servidor. Como nesse exemplo aqui quando a pessoa for acessar a conta dela, o usuário e o password é <strong>required</strong>
+    </p>
+    
+    <p>Aprendemos também sobre o atributo: <strong><mark>INPUT:TYPE="RESET"</mark></strong><br>Quando a gente cria uma caixa de formulário e quando os usuáros quiserem apagar todas as informações de uma vez ao invés de ir apagando uma por uma como no exemplo acima &uparrow;</p>
+
+    <p>Aprendemos também os atributos: <br><strong><mark>MINLENGHT e MAXLENGTH</mark></strong> = Como a gente já leu no livro, esse atributo determina o tamanho mínimo de caracteres e o tamanho máximo! <br>Isso para colocar em senhas, passwords, etc é ótimo!</p>
+
+    <p>Aprendemos também sobre o atributo: <br><strong><mark>SIZE</mark></strong> = Ele vai determinar o tamanho da caixa de preenchimento do formulário. Aqui nesse exemplo, eu coloquei a senha com o <strong>size</strong> 10. Ao você preencher totalmente o valor definido, ao chegar no valor ele vai deslizar a tela para o lado! </p>
+
+    <p>Aprendemos também sobre o atributo: <br> <strong><mark>PLACEHOLDER</mark></strong> = É quando a gente quer deixar uma dica para o usuário sobre o que que ele tem que preencher naquele campo de texto ou como no caso do password, quantos caracteres mínimos é necessário preencher!</p>
+
+    <p>Aprendemos também sobre o atributo: <br> <strong><mark>AUTOCOMPLETE</mark></strong> = Quando a gente coloca o <strong>autocomplete="on"</strong> no formulário, todas as informações que o usuário já preencheu anteriormente irão aparecer para ele. Mas temos novas coisas chegando aqui e são elas: <br> No caso da senha por exemplo que ele tem que preencher para conseguir acessar a conta dele, a gente pode usar o atributo com o valor: <br><strong><mark>autocomplete="current-password"</mark></strong> ou seja, como diz o próprio nome do valor, ele vai usar o autocomplete mas se referindo a senha atual dele! <br>Quando for uma nova senha que o usuário tem que se cadastrar, podemos usar o atributo <strong><q>autocomplete</q></strong> com o valor <strong><q>new-password</q></strong>!</p>
+</body>
+</html>
