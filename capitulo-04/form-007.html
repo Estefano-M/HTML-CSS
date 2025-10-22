@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- Checbox and Radio - </title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>- Checkbox and Radio Button - 007</h1>
+
+    <form action="formcontrol.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <p> 
+                <input type="radio" name="sexradiobutton" id="isexradiomasc"> <label for="isexradiomasc">Masculino</label>
+                <input type="radio" name="sexradiobutton" id="isexradiofem"> <label for="isexradiofem">Feminino</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Quais são os seus personagens da Biblia que você mais se identifica?</legend>
+            <p>
+              <input type="checkbox" name="pbjoseph" id="iuserdatajoseph"> <label for="iuserdatajoseph">Joseph</label> <br>
+              <input type="checkbox" name="pbabraham" id="iuserdataabraham"> <label for="iuserdataabraham">Abraham</label> <br>
+              <input type="checkbox" name="pbmoses" id="iuserdatamoses"> <label for="iuserdatamoses">Moses</label> <br>
+              <input type="checkbox" name="pbjesus" id="iuserdatajesus"> <label for="iuserdatajesus">Jesus</label> <br>
+            </p>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <h3>Aprendi que:</h3>
+    <p>Quando a gente usa o elemento <strong><mark>&lt;RADIO&gt;</mark></strong>, quando a gente seleciona uma opção, a gente não consegue desmarcar! Para que a gente corriga esse "erro", a gente precisa fazer com que o <strong><mark>&lt;NAME&gt;</mark></strong> tenha o mesmo <strong><mark>valor</mark></strong> que a outra opção para que quando a gente clicar em uma opção(por exemplo "sexo" no exemplo acima), o valor(a opção escolhida) </p>
+</body>
+</html>
