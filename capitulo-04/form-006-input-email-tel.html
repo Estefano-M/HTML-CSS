@@ -23,15 +23,22 @@
             </p>
             <p>
                 <label for="iuseremail">E-mail:</label>
-                <input type="email" name="useremail" id="iuseremail" required maxlength="40" placeholder="E-mail">
+                <input type="email" name="useremail" id="iuseremail" required maxlength="40" placeholder="E-mail" autocomplete="email">
             </p>
+
+            <!--TODO Estudar mais pra frente sobre RegEx(expressões regular)! Olhe o atributo "PATTERN" no código abaixo e ele também pode ser usado no e-mail! -->
+
+            <!--*Estamos falando sobre esse assunto pois na questão do numero de telefone, irá abordar sobre diversos assuntos na hora de colocar os valores do atributo "autocomplete".-->
+
+            <!--*Dentro desse atributo "PATTERN", eu coloquei os valores que são necessários para o usuário colocar na hora de preencher os formulários!-->
             <p>
                 <label for="iusercontact">Tel:</label>
-                <input type="tel" name="usercontact" id="iusercontact" required placeholder="Numero de Telefone" maxlength="15">
+                <input type="tel" name="usercontact" id="iusercontact" required placeholder="(xx)xxxx-xxxx" maxlength="15" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
             </p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
         </fieldset>
+        
     </form>
 </body>
 </html>
