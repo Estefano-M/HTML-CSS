@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Capítulo-01/imagens/-Area-Barrier-Build.32.png" type="image/x-icon">
+    <title>- New Elements - </title>
+</head>
+<body>
+    <h1>- New Elements Select, Datalist and Textarea - 009</h1>
+
+    <form action="controledeformulario.php" method="post" autocomplete="on">
+        <div>
+            <label for="iest">Estado:</label>
+            <select name="Estado" id="iest">
+                <option value="#" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </div>
+                
+        <div>
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="prof" id="iprof" list="prof-list">
+            <datalist id="prof-list">
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+                <option value="Atend">Atendente</option>
+            </datalist>
+        </div>
+            
+        <div>
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="   Digite aqui sua mensagem" style="resize: none;"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+        
+    </form>
+</body>
+</html>
