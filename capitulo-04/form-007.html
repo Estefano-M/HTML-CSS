@@ -14,12 +14,12 @@
 <body>
     <h1>- Checkbox and Radio Button - 007</h1>
 
-    <form action="formcontrol.php" method="get" autocomplete="on">
+    <form action="controledeformulario.php" method="get" autocomplete="on">
         <fieldset>
             <legend>Sexo</legend>
             <p> 
-                <input type="radio" name="sexradiobutton" id="isexradiomasc"> <label for="isexradiomasc">Masculino</label>
-                <input type="radio" name="sexradiobutton" id="isexradiofem"> <label for="isexradiofem">Feminino</label>
+                <input type="radio" name="sexradiobutton" id="isexradiomasc" value="M"> <label for="isexradiomasc">Masculino</label>
+                <input type="radio" name="sexradiobutton" id="isexradiofem" value="F"> <label for="isexradiofem">Feminino</label>
             </p>
         </fieldset>
         <fieldset>
@@ -36,6 +36,26 @@
     </form>
 
     <h3>Aprendi que:</h3>
-    <p>Quando a gente usa o elemento <strong><mark>&lt;RADIO&gt;</mark></strong>, quando a gente seleciona uma opção, a gente não consegue desmarcar! Para que a gente corriga esse "erro", a gente precisa fazer com que o <strong><mark>&lt;NAME&gt;</mark></strong> tenha o mesmo <strong><mark>valor</mark></strong> que a outra opção para que quando a gente clicar em uma opção(por exemplo "sexo" no exemplo acima), o valor(a opção escolhida) </p>
+    <p>Quando a gente usa o elemento <strong><mark>&lt;RADIO&gt;</mark></strong>, quando a gente seleciona uma opção, a gente não consegue desmarcar! Para que a gente corriga esse "erro", a gente precisa fazer com que o atributo <strong><mark>&lt;NAME&gt;</mark></strong> tenha o mesmo <strong><mark>valor</mark></strong> que a outra opção para que quando a gente clicar em uma opção(por exemplo "sexo" no exemplo acima), o valor(a opção escolhida) seja selecionado desmarcando a outra opção! <br> Ou seja, todas as opções de <strong>RADIO BUTTON</strong> tem que ter o mesmo valor para o atributo <strong>NAME</strong>! <br> O atributo <strong>ID</strong> tem que ser diferente para que o botão funcione pois são valores(opções) diferentes! </p>
+
+    <p>Essa dica aqui de cima não se aplica ao elemento <strong><mark>&lt;CHECKBOX&gt;</mark></strong>! Somente quando se trata de <strong><mark>RADIO BUTTONS</mark></strong>!</p>
+
+    <p>Quando eu quero que um elemento radio button, checkbox, etc venha marcado, eu posso usar o atributo <strong><mark>&lt;CHECKED&gt;</mark></strong> que assim que o usuário for preencher o formulário, ele venha marcado como no exemplo a seguir:</p>
+
+    <form action="formcontrole.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Qual país você deseja ir?</legend>
+            <input type="checkbox" name="paisDesejadoEua" id="ipaisDesejado" checked><label for="ipaisDesejado">EUA</label>
+            <input type="checkbox" name="paisDesejadoIsrael" id="ipaisDesejadoIsrael" checked><label for="ipaisDesejadoIsrael">Israel</label>
+            <input type="checkbox" name="paisDesejadoJapao" id="ipaisDesejadoJapao"><label for="ipaisDesejadoJapao">Japão</label>
+            <input type="checkbox" name="paisDesejadoEgito" id="ipaisDesejadoEgito"><label for="ipaisDesejadoEgito">Egito</label>
+        </fieldset>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+
+    <p>Viu?! <br> Lembrando que no elemento <strong><mark>RADIO BUTTON</mark></strong>, não é possível colocar um atributo <strong><mark>CHECKED</mark></strong> em mais de um!</p>
+
+    <p>Quando enviar os dados para o php, quando for o <strong>METHOD="GET"</strong> fique de olho para ver se as opções escolhidas aparecem na URL. Esses exemplos criados aqui, identifiquei que quando você seleciona um <strong>CHECKBOX</strong> ou um <strong>RADIOBUTTON</strong>, na URL a opção escolhida fica como <strong><q>ON</q></strong>!</p>
 </body>
 </html>
