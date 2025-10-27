@@ -37,5 +37,9 @@ article{
     margin: auto;
     width: 500px;
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 1.6em;
+    text-indent: 2em;
+}
+article > ul{
+    margin-left: 20px;
 }
