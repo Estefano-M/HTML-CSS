@@ -2,6 +2,24 @@
 
 /** Configurações Gerais  */
 
-html{
+*{
+    margin: 0px;
+    padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+h1, p, code{
+    color: white;
+}
+h1{
+    text-shadow: 01px 02px 0px rgba(0, 0, 0, 0.527);
+    padding: 10px;
 }
