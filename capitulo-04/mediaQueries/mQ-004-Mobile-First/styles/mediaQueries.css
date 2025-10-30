@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@media screen and (orientation: landscape) {
+    body{
+        background-image: url(../back-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
