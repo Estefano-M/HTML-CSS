@@ -38,32 +38,42 @@ img{
     display: block;
     margin: auto;
 }
-@media print{
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px){
+/* Tablet Devices - Tablets (portrait), small laptops*/
+@media screen and (min-width: 769px){
     body{
         background-image: url(../back-tablet.jpg);
     }
+    img#tablet{
+        display: block;
+    }
     img#phone, #print, #pc, #tv{
         display: none;
-    }
-    
+    }   
 }
-@media screen and (min-width: 992px) and (max-width: 1200px){
+/* Small Desktop Devices - Tablets (landscape), smaller laptops */
+@media screen and (min-width: 1025px){
     body{
         background-image: url(../back-pc.jpg);
+    }
+    img#pc{
+        display: block;
     }
     img#tablet, #phone, #print, #tv{
         display: none;
     }
 }
-@media screen and (min-width: 1200px){
+/* Large Desktop - Desktop Monitors, larger laptops */
+@media screen and (min-width: 1440px){
     body{
         background-image: url(../back-tv.jpg);
     }
-    img#phone, #print, #tablet, #pc{
+    img#tv{
+        display: block;
+    }
+    img#phone, #print, #tablet{
+        display: none;
+    }
+    img#pc{
         display: none;
     }
 }
