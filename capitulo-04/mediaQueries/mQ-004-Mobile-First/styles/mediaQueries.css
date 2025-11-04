@@ -38,6 +38,31 @@ img{
     display: block;
     margin: auto;
 }
+@media print{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main{
+        border: 02px solid black;
+        border-radius: 10px;
+        width: 90vw;
+    }
+    main::after{
+        content: 'Esse site foi feito através do curso do Guanabara no site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+    main > h1{
+        text-shadow: none;
+        color: black;
+    }
+    img#print{
+        display: block;
+    }
+    img#phone, #tablet, #pc, #tv{
+        display: none;
+    }
+}
+
 /* Tablet Devices - Tablets (portrait), small laptops*/
 @media screen and (min-width: 769px){
     body{
@@ -66,6 +91,9 @@ img{
 @media screen and (min-width: 1440px){
     body{
         background-image: url(../back-tv.jpg);
+    }
+    main{
+        width: 60vw;
     }
     img#tv{
         display: block;
