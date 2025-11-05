@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+
+@media print{
+    body{
+        background-image: url(icon-print.png);
+    }
+    main > img#print{
+        display: block;
+        margin: auto;
+    }
+    main > img#phone{
+        display: none;
+    }
+    main > h1::after{
+        content: 'Essa página foi desenvolvida por EDM';
+    }
+}
+
+@media screen and (min-width: 769px){
+    body{
+        background-image: url(back-tablet.jpg);
+    }
+    main > img#tablet{
+        display: block;
+        margin: auto;
+    }
+    main > img#phone{
+        display: none;
+    }
+}
+@media screen and (min-width: 1025px){
+    body{
+        background-image: url(back-pc.jpg);
+    }
+    main > img#PC{
+        display: block;
+        margin: auto;
+    }
+    main > img#tablet{
+        display: none;
+    }
+}
+@media screen and (min-width: 1920px) {
+    body{
+        background-image: url(back-tv.jpg);
+    }
+    main > img#TV{
+        display: block;
+        margin: auto;
+    }
+    main > img#PC{
+        display: none;
+    }    
+}
