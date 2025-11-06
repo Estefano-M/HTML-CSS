@@ -17,7 +17,8 @@
     main > img#phone{
         display: none;
     }
-    main > h1::after{
+    main::after{
+        text-decoration: underline;
         content: 'Essa página foi desenvolvida por EDM';
     }
 }
