@@ -1,16 +1,19 @@
 @charset "UTF-8";
 
 
-
 *{
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1em;
+    text-align: justify;
     box-sizing: border-box;
 }
 html, body{
-    background-color: rgba(4, 41, 253, 0.829);
+    height: 100vh;
+}
+body{
+    background-color: cadetblue;
 }
 header > h1{
     padding: 10px;
@@ -57,6 +60,7 @@ main{
     padding: 10px;
     border-radius: 04px;
     margin-top: 10px;
+    
 }
 main > article > h2{
     text-align: center;
@@ -76,4 +80,11 @@ footer{
     color: white;
     margin-top: 20px;
     text-align: center;
+}
+footer > p > a{
+    text-decoration: none;
+    color: white;
+}
+footer > p > a:hover{
+    color: lightblue;
 }
