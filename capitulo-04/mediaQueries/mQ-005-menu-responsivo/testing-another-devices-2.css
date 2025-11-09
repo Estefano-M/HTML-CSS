@@ -6,17 +6,39 @@
 }
 @media screen and (min-width: 768px) {
     body{
+        
         background-image: url(../images/back-tablet.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    main{
+        height: 100vh;
     }
 }
 @media screen and (min-width: 1025px) {
     body{
         background-image: url(../images/back-pc.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center center;
+    }
+    main{
+        height: 100vh;
     }
 }
 @media screen and (min-width: 1600px) {
     body{
         background-image: url(../images/back-tv.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    main{
+        height: 100vh;
     }
     
 }

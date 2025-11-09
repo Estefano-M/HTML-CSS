@@ -52,7 +52,7 @@ main{
     margin: auto;
     margin-bottom: 20px;
     width: 85vw;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.74);
     border: 01px solid black;
     border-radius: 05px;
     
