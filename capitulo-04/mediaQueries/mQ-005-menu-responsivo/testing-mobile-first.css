@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    margin: auto;
+}
+header{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: 60vw;
+    border-radius: 05px;
+}
+header > h1{
+    font-size: 1.5em;
+    text-shadow: 01px 01px 01px rgba(0, 0, 0, 0.356);
+    text-align: center;
+    padding: 10px;
+}
+header > p {
+    text-align: center;
+    padding: 10px;
+}
+nav > a{
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+nav > a:hover{
+    background-color: white;
+    cursor: pointer;
+}
+body{
+    background-image: url(../images/back-phone.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: auto;
+}
+main{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 85vw;
+    background-color: white;
+    border: 01px solid black;
+    border-radius: 05px;
+    
+}
+article > h2{
+    text-align: center;
+    margin-top: 10px;
+}
+article > p{
+    margin-top: 20px;
+    text-align: center;
+    text-indent: 20px;
+    text-align: justify;
+}
+footer{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+footer > p > a{
+    text-decoration: none;
+    color: white;
+}
+footer > p > a:hover{
+    text-decoration: underline;
+}
