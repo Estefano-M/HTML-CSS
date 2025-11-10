@@ -32,8 +32,6 @@
     }
     main{
         flex: 1;
-    }
-    #menuHamburguer{
         width: 100vw;
     }
     nav{
