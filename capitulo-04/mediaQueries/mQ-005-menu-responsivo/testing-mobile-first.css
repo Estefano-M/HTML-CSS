@@ -12,7 +12,6 @@ html, body{
     margin: auto;
 }
 header{
-    display: block;
     background-color: rgba(0, 0, 0, 0.37);
     color: white;
     margin: auto;
@@ -30,6 +29,23 @@ header > p {
     text-align: center;
     padding: 10px;
 }
+#menuHamburguer{
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    margin: auto;
+}
+#menuHamburguer:hover{
+    background-color: rgba(211, 211, 211, 0.425);
+    color: black;
+    cursor: pointer;
+}
+nav{
+    display: none;
+}
+
 nav > a{
     text-align: center;
     color: black;
