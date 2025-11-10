@@ -15,8 +15,8 @@
             By EDM
         </p>
     </header>
-    <span class="material-symbols-outlined" id="menuHamburguer" onclick="">menu</span>
-    <nav>
+    <span class="material-symbols-outlined" id="menuHamburguer" onclick="menuButton()">menu</span>
+    <nav id="menuOptions">
         <a href="">Opção 1</a>
         <a href="">Opção 2</a>
         <a href="">Opção 3</a>
@@ -35,13 +35,19 @@
 
         </article>
     </main>
+    <!--* Essa função aqui vai fazer com que o MENU com as opções apareça ou não! Iremos aprender mais no curso de JavaScript do Guanabara/DIO!  -->
     <script>
-        function onclick(){
-            menu.style.onclick == 'block';
+        function menuButton(){
+            if (menuOptions.style.display == 'block'){
+                menuOptions.style.display = 'none';
+            }
+            else{
+                menuOptions.style.display = 'block';
+            }
         }
     </script>
     <footer>
-        <p>Created by <a href="#">EDM</a></p>
+        <p>Created by <a href="https://github.com/Estefano-M" target="_blank" rel="author">EDM</a></p>
     </footer>
 </body>
 </html>

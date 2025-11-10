@@ -33,6 +33,24 @@
     main{
         flex: 1;
     }
+    #menuHamburguer{
+        width: 100vw;
+    }
+    nav{
+        text-align: center;
+    }
+    nav > a{
+        display: inline;
+        background-color:  rgba(211, 211, 211, 0.425);
+        border-radius: 06px;
+        margin: 10px;
+    }
+    nav > a:hover{
+        color: white;
+        border-style: groove;
+        border-color: rgb(226, 43, 211);
+        
+    }    
     
 }
 @media screen and (min-width: 1600px) {
@@ -47,6 +65,9 @@
     }
     main{
         flex: 1;
+    }
+    nav > a:hover{
+        border-color: blue;
     }
     
     

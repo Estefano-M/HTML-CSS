@@ -53,7 +53,7 @@ nav > a{
     display: block;
 }
 nav > a:hover{
-    background-color: white;
+    background-color: rgba(128, 128, 128, 0.418);
     cursor: pointer;
 }
 body{
@@ -87,10 +87,11 @@ article > p{
     text-align: justify;
 }
 footer{
-    padding: 10px;
-    background-color: black;
+    padding: 05px;
+    background-color: rgba(0, 0, 0, 0.37);
     color: white;
     text-align: center;
+    height: 40px;
 }
 footer > p > a{
     text-decoration: none;
