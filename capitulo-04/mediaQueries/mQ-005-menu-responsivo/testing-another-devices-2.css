@@ -12,9 +12,11 @@
         background-position: center center;
         background-size: cover;
         background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
     }
     main{
-        height: 100vh;
+        flex: 1;
     }
 }
 @media screen and (min-width: 1025px) {
@@ -24,10 +26,14 @@
         background-size: cover;
         background-attachment: fixed;
         background-position: center center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
     main{
-        height: 100vh;
+        flex: 1;
     }
+    
 }
 @media screen and (min-width: 1600px) {
     body{
@@ -36,9 +42,12 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
     }
     main{
-        height: 100vh;
+        flex: 1;
     }
+    
     
 }

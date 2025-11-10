@@ -47,8 +47,11 @@ body{
     background-size: cover;
     background-attachment: fixed;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 main{
+    flex: 1;
     margin: auto;
     margin-bottom: 20px;
     width: 85vw;
