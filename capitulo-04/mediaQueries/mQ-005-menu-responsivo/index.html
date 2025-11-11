@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="otherdevices.css" media="all">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
-<body>
+<body onresize="mudouTamanho">
     <header>
         <h1> Meu Site</h1>
         <span id="menu" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -42,6 +42,16 @@
         </p>
     </footer>
     <script>
+        // Essa FUNCTION aqui foi criada pois quando o menu(hamburguer) era encolhido e expandido e aumentava de tamanho(de tablet para pc), as opções no pc(em diante) sumia! Aqui como pode ver serve para criar um script para fazer com que isso seja resolvido! 
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                navOptions.style.display = 'block';
+            }
+            else{
+                navOptions.style.display = 'none';
+            }
+        }
+        // Essa FUNCTION aqui foi criada para fazer que, ao clicar no hamburguer(menu), aparecesse as opções!
         function clickMenu(){
             if (navOptions.style.display == 'block'){
                 navOptions.style.display = 'none';

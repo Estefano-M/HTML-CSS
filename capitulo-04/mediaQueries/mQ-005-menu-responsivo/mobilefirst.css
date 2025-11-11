@@ -79,6 +79,8 @@ footer{
     background-color: black;
     color: white;
     margin-top: 20px;
+}
+footer > p{
     text-align: center;
 }
 footer > p > a{
