@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Responsive Menu - </title>
+    <link rel="stylesheet" href="mobile-first.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
+<body>
+    <main>
+        <section id="content">
+            <div id="image">
+
+            </div>
+            <div id="form">
+                <form action="menu-responsivo.html" method="post" autocomplete="on">
+                    <h1>
+                        Login
+                    </h1>
+                    <p>
+                        Seja Bem-Vindo(a) novamente! Entre com sua conta para poder acessar os seus dados e realizar as configurações da sua conta!
+                    </p>
+                    <div class="dados">
+                        <span class="material-symbols-outlined">account_box</span>
+                        <input type="email" name="useremail" id="iuseremail" autocomplete="email" required maxlength="30" placeholder="Digite seu e-mail">
+                        <label for="iuseremail"></label>
+                    </div>
+                    <div class="dados">
+                        <span class="material-symbols-outlined">Key</span>
+                        <input type="password" name="userpassword" id="iuserpassword" autocomplete="current-password" required maxlength="30" minlength="08" placeholder="Digite sua senha">
+                        <label for="iuserpassword"></label>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="entrando.php" target="_blank" rel="external">Esqueci a senha</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

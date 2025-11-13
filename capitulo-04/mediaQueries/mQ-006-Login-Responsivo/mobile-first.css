@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(82, 20, 20, 0.986);
+    position: relative;
+}
+section{
+    background-color: white;
+    width: 85%;
+    height: 750px;
+    border-radius: 15px;
+    box-shadow: 03px 03px 10px rgba(255, 255, 255, 0.37);
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section#content > div#image{
+    background: url(images/pattern-building.jpg) center center no-repeat fixed;
+    background-size: cover;
+    height: 45%;
+    width: 100%;
+}
+section#content > div#form{
+    height: 55%;
+    height: 100%;
+}
+section#content > div#form > form > h1{
+    text-align: center;
+    padding: 10px 05px;
+    font-size: 2.1em;
+}
+section#content > div#form > form > p{
+    text-align: center;
+    font-size: 1em;
+    padding: 10px 05px;
+}
+section#content > div#form > form > div.dados{
+    background-color: rgb(201, 55, 2);
+    border: 01px solid black;
+    border-radius: 15px;
+}
+section#content > div#form > form > div.dados > span{
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+section#content > div#form > form > div.dados > input{
+    background-color: lightslategray;
+    /* width */
+    height: 40px;
+    border-radius: 15px;
+}
+section#content > div#form > form > label{
+    display: block;
+}
+section#content > div#form > form > div.dados > input:focus-within{
+    background-color: white;
+    color: black;
+}
+section#content > div#form > form > input[type=submit]{
+    display: block;
+    width: 100%;
+    height: 55px;
+    border-radius: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+section#content > div#form > form > input[type=submit]:hover{
+    background-color: rgb(104, 101, 101);
+    color: white;
+}
+section#content > div#form > form > a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 05px 0px;
+    padding-top: 15px;
+    border-radius: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+section#content > div#form > form > a:hover{
+    background-color: rgb(104, 101, 101);
+    color: white;
+}
