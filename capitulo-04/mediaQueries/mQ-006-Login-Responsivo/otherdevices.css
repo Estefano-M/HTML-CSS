@@ -2,13 +2,17 @@
 
 @media screen and (min-width: 768px) {
     main{
-        background-image: linear-gradient( orange, black) ;
+        background-image: linear-gradient(to right, rgb(2,2,2), rgb(201, 131, 2), rgb(2, 2, 2));
+        width: 100%;
     }
-    section#content > div#image{
-        float: right;
+    section{
+        width: 75%;
+        height: 670px;
     }
-    section#content > div#form{
-
+    section#content > div#form > form{
+        width: 90%;
+        margin: auto;
+        
     }
     
 }

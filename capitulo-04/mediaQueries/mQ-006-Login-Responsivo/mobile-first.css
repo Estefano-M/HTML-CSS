@@ -29,7 +29,10 @@ section{
     transform: translate(-50%, -50%);
 }
 section#content > div#image{
-    background: url(images/pattern-building.jpg) center center no-repeat fixed;
+    background: url(images/pattern-building.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 45%;
     width: 100%;
