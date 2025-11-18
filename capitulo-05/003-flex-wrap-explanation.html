@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Flex Wrap -</title>
+    <style>
+        p{
+            font-size: 1.2em;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>- Flex Wrap - 003</h1>
+    
+    <h2>Flex-Wrap: nowrap</h2>
+    
+    <p>
+        Ao usar essa propriedade, você pode controlar como os itens flexíveis se comportam quando não há espaço suficiente em uma única linha. <br> O encolhimento dos itens flexíveis é uma característica importante do Flexbox, permitindo que os itens se ajustem dinamicamente ao espaço disponível no contêiner flexível.
+    </p>
+    <p>
+        Se usar o <strong><mark>FLEX-WRAP: NOWRAP</mark></strong>, o tamanho do bloco vai dependender muito do tamanho do conteúdo que existe nele. <br> Se o conteúdo for muito grande, o bloco pode acabar ficando maior do que o esperado, causando problemas de layout e dificultando a leitura ou a interação com o conteúdo.
+    </p>
+    <p>
+        Ao colocar um <strong><mark>DISPLAY: FLEX</mark></strong> dentro do um <ins>container</ins>, ele já vem por padrão <strong><mark>FLEX-WRAP: NOWRAP</mark></strong>!
+    </p>
+    
+    <h2>Flex-Wrap: Wrap</h2>
+    
+    <p>
+        Ele se comporta da mesma forma que o <strong>flex-wrap: nowrap</strong>. A diferença dele é que quando o conteúdo ultrapassa o tamanho do bloco, ele quebra a linha na direção do cross-axis criando uma nova linha para acomodar o conteúdo que passou do tamanho do bloco!
+    </p>
+    
+    <h2>Flex-Wrap: Wrap-Reverse</h2>
+    
+    <p>
+        Ele se comporta da mesma forma que os outros dois. A diferença dele é que quando o conteúdo ultrapassa o tamanho do bloco, ele quebra a linha na direção oposta do croos-axis criando uma nova linha para acomodar o conteúdo que passou do tamanho do bloco! Ao colocarmos o <strong><mark>FLEX-DIRECTION: ROW</mark></strong> e usarmos esse <strong><mark>FLEX-WRAP: WRAP-REVERSE</mark></strong>, quando chegar no limite do tamanho do bloco, ele vai criar uma nova linha acima da primeira linha! 
+    </p>
+    <p>
+        Mas lembrando que a direção do cross-axis pode ser alterada ao mudarmos o <strong>flex-direction</strong> o que significa que o <ins>comportamento do <strong>flex-wrap: wrap-reverse</strong> pode mudar dependendo do valor definido para o <strong>flex-direction</strong></ins>!
+    </p>
+    <p>
+        Veja os exemplos aqui em baixo para onde o conteúdo irá após ultrapassar o tamanho do bloco em cada um dos casos! &downarrow;
+    </p>
+    
+    <img src="flex-direction-all-flex-wrap.jpeg" alt="Exemplos de Flex Wrap">
+    
+    <p>
+        Mais um exemplo aqui em baixo mas dessa vez com o <strong><mark>FLEX-WRAP: WRAP-REVERSE</mark></strong> &downarrow;:
+    </p>
+    
+    <img src="flex-direction-all-flex-wrap-reverse.jpeg" alt="Exemplos de Flex Wrap Reverse">
+    
+    <h2>- SHORTCUT -</h2>
+    <p>
+        Quando for usar a propriedade <strong><mark>FLEX-DIRECTION: ROW;</mark></strong> e a propriedade <strong><mark>FLEX-WRAP: NOWRAP;</mark></strong> a gente pode usar o seguinte <strong><mark>SHORTCUT</mark></strong>:
+    </p>
+    <pre>
+        <code>
+            flex-flow: row nowrap;
+        </code>
+    </pre>
+    <p>
+        Lembrando que essa propriedade que usamos aqui em cima é aquela que faz com que o conteúdo que está dentro do container fléxivel não quebre. Ou seja, ele vai ficar uma linha independente do tamanho do conteúdo que estiver dentro dele!
+    </p>
+    <p>
+        O W3C <strong><ins>INDICA</ins></strong> que a gente use sempre o flex-flor ao invés de usar as duas propriedades separadas! Mas isso fica ao seu critério mas também é bom para manter o código mais limpo, com menos linhas e organizado!
+    </p>
+
+    <h2>- Flex-Flow -</h2>
+    <p>
+        Ao usar o <strong><mark>FLEX-FLOW: ROW WRAP;</mark></strong> <ins>juntamente</ins> com o <strong><mark>FLEX: AUTO;</mark></strong>, ele primeiramente vai <q>preencher</q> o espaço que estiver fazio do container fléxivel e depois que chegar no limite do tamanho do bloco, ele vai começar a encolher os blocos para que todos eles caibam dentro do container flexível tentando não criar linhas novas o máximo possível!
+    </p>
+    <p>
+        É como diz o nome, um fluxo de itens flexíveis dentro do container flexível! <br> Ou seja, você vai configurar a direção e o comportamento do <q>empacotamento(wrap)</q> dentro dele que é a forma como ele vai <q>quebrar</q>.
+    </p>
+    <p>
+        Quando for usar a propriedade <strong><mark>COLUMN;</mark></strong> você <ins>obrigatoriamente</ins> terá que usar o <strong><mark>height</mark></strong> no <strong><mark>container</mark></strong> para que você veja o efeito acontecendo!
+    </p>
+</body>
+</html>
