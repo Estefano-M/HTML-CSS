@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Align Itens -</title>
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+        }
+        h1{
+            font-size: 1.3em;
+            background-color: lightsalmon;
+            text-align: center;
+        }
+        h2{
+            background-color: cornflowerblue;
+            text-align: center;
+        }        
+    </style>
+
+    
+</head>
+<body>
+    <h1>
+        Align Itens:
+    </h1>
+    <p>
+        Ao usarmos a propriedade <strong><mark>align-itens</mark></strong>, estamos definindo o alinhamento dos itens ao longo do eixo transversal (o CROSS-AXIS) do container flexível. O eixo transversal é perpendicular ao eixo principal (MAIN-AXIS), que é determinado pela propriedade <strong><mark>flex-direction</mark></strong>.
+    </p>
+    <p>
+        Lembrando também que ele tem as propriedades <strong><mark>cross-start</mark></strong> e <strong><mark>cross-end</mark></strong>! Quando ele estiver com o valor padrão <strong><mark>ROW</mark></strong>, o <strong>cross-start</strong> estará na parte de cima e o <strong>cross-end</strong> na parte de baixo.
+    </p>
+    <p>
+        Para alinhar um iten no cross-axis, é preciso aumentar o tamanho do container flexível no eixo transversal. Isso pode ser definido com o <strong>height</strong>. 
+    </p>
+    <p>
+        Por padrão do <strong>align itens</strong> é o <strong><mark>stretch</mark></strong> que faz com que os itens se estiquem para preencher o container flexível no eixo transversal! Ao aumentar a altura do container, os itens também aumentam sua altura para poder preender o espaço disponível! Por padrão, ele não tem o valor <strong>flex-start/flex-end</strong>. Eis na imagem abaixo um exemplo &downarrow;:
+    </p>
+
+    <img src="images/align-itens-stretch.jpeg" alt="align-itens: stretch; padrão do align-itens">
+
+    <h2>
+        Align-Itens: flex-start;
+    </h2>
+    <p>
+        O <strong>flex-start</strong> vai fazer com que os itens se alinhem no início do eixo transversal (cross-start) do container flexível. Ou seja, todos os itens serão posicionados na parte suoperior do container flexível. O espaço em branco ficará na parte inferior do container flexível. Na imagem abaixo, na parte amarela aparecerá o espaço em branco (vazio). Você vai observer também que ficará um espaço branco na lateral direito do container flexível e para que a gente possa resolver isso, podemos usar o <strong><mark>justify-content: <q></q></mark></strong>! Ou seja, ele faz parte do nosso <strong>MAIN-AXIS</strong> e não do nosso <strong>CROSS-AXIS</strong> que é esse caso. 
+    </p>
+
+    <img src="images/align-itens-flex-start.jpeg" alt="aling-itens: flex-start;">
+
+    <h2>
+        Align-Itens: flex-end;
+    </h2>
+    <p>
+        Da mesma forma que o <strong>flex-start</strong> só que ao contrário! O <strong>flex-end</strong> vai fazer com que os itens se alinhem no final do eixo transversal (cross-end) do container flexível. Ou seja, todos os itens serão posicionados na parte inferior do container. O espaço em branco ficará na parte superiror do container.
+    </p>
+
+    <h2>
+        Align-Itens: center;
+    </h2>
+    <p>
+        O <strong>align-itens: center;</strong> vai pegar os itens e alinhar eles no centrod o eixo transversal (CROSS-AXIS) do container. Ou seja, os itens ficarão centralizados verticalmente dentro do container com espaço igual na parte superior e inferior do container. Veja imagem abaixo:
+    </p>
+
+    <img src="images/align-itens-center.jpeg" alt="align-itens: center;">
+</body>
+</html>

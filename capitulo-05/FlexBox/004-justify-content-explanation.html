@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- 004 Explanation -</title>
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+        }
+        h1{
+            background-color: lightgray;
+            text-align: center;
+        }
+        h3,h2{
+            background-color: lightgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+      -  Axis Alignment in FlexBox 004 - 
+    </h1>
+    <h2>
+        Justify Content:
+    </h2>
+    <p>
+        Ao usar a propriedade <strong><mark>JUSTIFY-CONTENT:</mark></strong>, ele vai alinhar os itens do eixo principal (MAIN AXIS) no meio do container flexível! <br> Lembrando que dependendo do eixo(reverse ou row/column), o <ins><strong>alinhamento pode ser horizontal ou vertical</strong></ins>!
+    </p>
+    <p>
+        Vamos falar agora sobre os <strong><mark>VALORES</mark></strong> do <mark>Justify Content</mark>:
+    </p>
+    <h3>
+        Justify-content: flex-start:
+    </h3>
+    <p>
+        Ao usar a propriedade <strong><mark>justify-content: flex-start;</mark></strong>, vai fazer com que o primeiro item fique grudado no ínicio do MAIN AXIS (eixo principal) que nós aprendemos sobre e o seu nome é <q>MAIN-START</q> do container flexível. Lembre-se que tem o MAIN-START e o MAIN-END. <br> Ou seja, se o eixo for <strong>ROW</strong> (o padrão), o alinhamento será na horizontal, e se for <strong>COLUMN</strong>, o alinhamento será na vertical!
+    </p>
+    <p>
+        Ao usar a propriedade <strong><mark>justify-content: flex-start</mark></strong>, vai fazer com que o espaço livre (pintado de amarelo na imagem abaixo), seja jogado pro final do container flexível. Ou seja, pro MAIN-END. Eis o exemplo abaixo: &downarrow;
+    </p>
+
+    <img src="images/justify-content-flex-start.jpeg" alt="justify-content: flex-start example image">
+
+    <h3>Justify-content: flex-end;</h3>
+    <p>
+        É a mesma coisa que o justify-content: flex-start mas ao contrário! Ou seja, o primeiro item vai ficar grudado no final do MAIN AXIS (MAIN-END) do container flexível e o espaço livre (pintado de amaarelo na imagem acima), será jogado para o início do container flexível.
+    </p>
+
+    <h3>
+        Justify-content: center;
+    </h3>
+    <p>
+        Como você já pode imaginar, ele vai pegar os itens e coloca-los no meio do MAIN AXIS (eixo principal) do container flexível. E o espaço livre, printado de amarelo como na imagem abaixo, será dividido igualmente entreo <strong><ins>main-start</ins></strong> e o <strong><ins>main-end</ins></strong> como na imagem abaixo: &downarrow; <br> Mas lembrando que dependendo do eixo (row/column ou reverse), o alinhamento pode ser horizontal ou vertical!
+    </p>
+
+    <img src="images/justify-content-center.jpeg" alt="justify-content: center example image">
+
+    <h3>
+        justify-content: space-between;
+    </h3>
+    <p>
+        Quando usar essa propriedade com esse valor, ele vai <q>grudar</q> o primeiro item no <strong><ins>main-start</ins></strong> e o último item no <strong><ins>main-end</ins></strong>. O restante dos itens, serão distribuídos igualmente entre o espaço deixado pelo main-start e o main-end. Como diz o nome, <strong><q>BETWEEN</q></strong>, vai fazer com que o espaço vazio pintado de amarelo na imagem abaixo, fique entre (between) o main-start e o main-end!
+    </p>
+
+    <img src="images/justify-content-space-between.jpeg" alt="justify-content: space-between exameple image">
+
+    <h3>
+        justify-content: space-evenly;
+    </h3>
+    <p>
+        Pelo nome, já da pra saber o que ele faz. Vai fazer com que o espaçamento entre os itens sejam iguais! Ou seja, o espaço vazio pintado de amarelo na imagem abaixo, será dividido igualmente entre todos os itens do container flexível. Inclusive o espaço entre o primeiro item no main-start e o último item no main-end!
+    </p>
+
+    <img src="images/justify-content-space-evenly.jpeg" alt="justify-content: space-evenly example image">
+
+    <h3>
+        justify-content: space-around;
+    </h3>
+    <p>
+        Ao usar o <strong><mark>justify-content: space-around</mark></strong>, ele vai fazer com que o espaço vazio pintado de amarelo na imagem abaixo, seja dividido igualmente entre os itens do container flexível. Porém, o espaço entre o primeiro item e o main-start, e o último item e o main-end, será a metade do espaço entre os itens. Ou seja, o espaço entre os itens é maior do que o espaço entre o primeiro item e o main-start, e o último item e o main-end!
+    </p>
+
+    <img src="images/justify-content-space-around.jpeg" alt="justify-content: space-around example image">
+
+    <h1>
+        Veja as diferenças:
+    </h1>
+    <img src="images/justify-content-differences.jpeg" alt="justify-content differences example image">
+
+    <h1>
+        Veja as diferenças ao usar Column:
+    </h1>
+    <img src="images/justify-content-column-differences.jpeg" alt="justify-content differences example image column">
+</body>
+</html>
