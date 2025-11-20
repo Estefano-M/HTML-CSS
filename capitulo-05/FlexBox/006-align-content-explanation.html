@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Align Content - </title>
+    <style>
+        h1,h2{
+            text-align: center;
+            background-color: cadetblue;
+        }
+        h2{
+            background-color: cornflowerblue;
+        }
+
+        p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>
+                - Align Content -
+            </h1>
+            <p>
+                O <strong><mark>align-content:</mark></strong> alinha os itens na transversal mas quando eles estão <strong><mark>wrap</mark></strong>. Ele por padrão tem o valor <strong><mark>stretch</mark></strong> que nem o <strong><mark>align-itens</mark></strong>! Lembrando que para que possa ser <q>mostrado</q> o <strong>stretch</strong>, o height do container deve ser maior que a soma dos heights dos itens.
+            </p>
+            <h2>
+                align-content: stretch;
+            </h2>
+            <p>
+                Esse é o valor padrão do do <strong>align-content:</strong> ele estica os itens para preencher o container. Se o height do container for menos que a soma dos heights dos itens, o <strong>stretch</strong> não será percebido. Na imagem abaixo, o height do container é maior que a soma dos heights dos itens e por isso o <strong>stretch</strong> é percebido. &downarrow;
+            </p>
+
+            <img src="images/align-content-strech-padrao.jpeg" alt="align-content: stretch; (valor padrão)">
+
+            <h2>
+                align-content: flex-start;
+            </h2>
+            <p>
+                Ao usar a propriedade <strong><mark>align-content: flex-start</mark></strong>, os itens serão alinhados no início do eixo transversal do container. Isso significa que todos os itens serão posicionados na parte superior do container, deixando qualquer espaço extra na parte inferior em branco como no exemplo abaixo:
+            </p>
+
+            <img src="images/align-content-flex-start.jpeg" alt="align-content: flex-start;">
+
+            <h2>
+                align-content: flex-end;
+            </h2>
+            <p>
+                Mesma coisa que o <strong>flex-start</strong> mas ao contrário, ou seja, os itens serão alinhados na parte inferior do container, deixando qualquer espaço extra na parte superior em branco. Lembrando que isso dependente de como está configurado o <strong>flex-direction:</strong>!
+            </p>
+
+            <h2>
+                align-content: center;
+            </h2>
+            <p>
+                Com o <strong><mark>align-content: center;</mark></strong> os itens serão centralizados no eixo transversal do container (CROSS-AXIS) de forma que o espaço extra em branco seja distribuído igualmente acima e abaixo dos itens. Isso cria um efeito visual onde os itens ficam agrupados no centro do container como mostrado na imagem abaixo:
+            </p>
+
+            <img src="images/align-content-center.jpeg" alt="align-content: center;">
+
+            <h2>
+                align-content: space-between;
+            </h2>
+            <p>
+                Ao usarmos a propriedade <strong><mark>align-content: space-between</mark></strong>, ele vai se comportar da mesma forma que vimos anteriormente ao usarmos o <strong>justify-content: space-between</strong>. Ele vai pegar os itens, colocar nas extremidades (CROSS-START e CROSS-END) e vai deixar um espaço em branco no meio. Caso haja mais itens, o espaço em branco no meio será preenchido da mesma forma que o justify-content: space-between. Veja a imagem abaixo: 
+            </p>
+
+            <img src="images/align-content-space-between.jpeg" alt="align-content: space-between;">
+
+            <h2>
+                align-content: space-evenly;
+            </h2>
+            <p>
+                Ao usar o <strong><mark>align-content: evenly;</mark></strong>, ele vai colocar um espaço no <strong>cross-start</strong> e no <strong>cross-end</strong> e nos elementos também para que exista o mesmo espaçamento entre eles. Os espaços em branco serão do mesmo tamanho para os itens ficarem milimetricamente distribuidos de forma igual! Veja na imagem abaixo:
+            </p>
+
+            <img src="images/align-content-space-evenly.jpeg" alt="align-content: space-evenly;">
+
+            <h2>
+                align-content: space-around;
+            </h2>
+            <p>
+                O <strong><mark>align-content: space-around;</mark></strong>, vai começar dividindo o espaço na transversal (cross-axis) em partes iguais e centralizar os itens. Veja imagem abaixo:
+            </p>
+
+            <img src="images/align-content-space-around.jpeg" alt="align-content: space-around;">
+        </section>
+    </main>
+</body>
+</html>
