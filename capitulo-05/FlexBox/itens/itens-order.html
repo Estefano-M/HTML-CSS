@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Item Order - </title>
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.1em;
+        }
+        h1{
+            background-color: coral;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        section#container{
+            background-color: burlywood;
+            height: 500px;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        div.item{
+            background-color: cadetblue;
+            border: 01px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item">
+                Exemplo A
+            </div>
+            <div class="item">
+                Exemplo B
+            </div>
+            <div class="item">
+                Exemplo C
+            </div>
+            <div class="item" style="order: -3;">
+                Exemplo D
+            </div>
+            <div class="item">
+                Exemplo E
+            </div>
+            <div class="item" style="order: 1;">
+                Exemplo F
+            </div>
+            <div class="item">
+                Exemplo G
+            </div>
+        </section>
+        <section>
+            <h1>- Order -</h1>
+            <p>
+                Ao usarmos a tag <strong><mark>order</mark></strong>, iremos definir como já diz o nome, a <strong>ORDEM</strong> (ou seja, quem aparecerá primeiro de acordo com o valor colocado nele)!
+            </p>
+            <p>
+                Temos duas formas de colocar a tag e assim, alterarmos a ordem do item: <br>Primeiro, nós temos o <strong>inline style</strong> o que nos é instruído a não usar ou usar pouco. <br>Segundo nós temos a forma de criar um id e configurarmos ele no CSS. 
+            </p>
+            <pre>
+                <code>
+                    <p>
+                        div class="item" style="order: -3">
+                        div class="item" style="order: 2">
+                        div class="item" style="order: 4">
+                    </p>
+                </code>
+            </pre>
+            
+        </section>
+    </main>
+</body>
+</html>
