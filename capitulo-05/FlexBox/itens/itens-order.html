@@ -14,63 +14,141 @@
             text-align: center;
             font-size: 1.5em;
         }
-        section#container{
+        h2{
+            background-color: thistle;
+            text-align: center;
+        }
+        pre{
+            line-height: 1.2em;
+        }
+        main > section#container{
             background-color: burlywood;
-            height: 500px;
+            height: 200px;
             display: flex;
             flex-flow: row wrap;
         }
-        div.item{
+        main > section > div.item{
             background-color: cadetblue;
             border: 01px solid black;
             padding: 20px;
             text-align: center;
         }
+        main > section > div#i1{
+            order: 1;
+        }
+        main > section > div#i2{
+            order: -1;
+        }
+        main > section > div#i3{
+            order: 2;
+        }
+        main > section > div#i4{
+            order: 0;
+        }
+        main > section > div#i5{
+            order: 6;
+        }
+        main > section > div#i6{
+            order: -4;
+        }
+        main > section > div#i7{
+            order: 3;
+        }
+        
     </style>
 </head>
 <body>
     <main>
         <section id="container">
-            <div class="item">
+            <div class="item" id="i1">
                 Exemplo A
             </div>
-            <div class="item">
+            <div class="item" id="i2">
                 Exemplo B
             </div>
-            <div class="item">
+            <div class="item" id="i3">
                 Exemplo C
             </div>
-            <div class="item" style="order: -3;">
+            <div class="item" id="i4">
                 Exemplo D
             </div>
-            <div class="item">
+            <div class="item" id="i5">
                 Exemplo E
             </div>
-            <div class="item" style="order: 1;">
+            <div class="item" id="i6">
                 Exemplo F
             </div>
-            <div class="item">
+            <div class="item" id="i7">
                 Exemplo G
             </div>
         </section>
         <section>
-            <h1>- Order -</h1>
+            <h1>- Flex-Item: -</h1>
+            
+            <h2> Order: </h2>
+            
             <p>
                 Ao usarmos a tag <strong><mark>order</mark></strong>, iremos definir como já diz o nome, a <strong>ORDEM</strong> (ou seja, quem aparecerá primeiro de acordo com o valor colocado nele)!
             </p>
             <p>
-                Temos duas formas de colocar a tag e assim, alterarmos a ordem do item: <br>Primeiro, nós temos o <strong>inline style</strong> o que nos é instruído a não usar ou usar pouco. <br>Segundo nós temos a forma de criar um id e configurarmos ele no CSS. 
+                Temos duas formas de colocar a tag e assim, alterarmos a ordem do item: <br>Primeiro, nós temos o <strong>inline style</strong> o que nos é instruído a não usar ou usar pouco. <br>Segundo, nós temos a forma de criar um id e configurarmos ele no CSS. 
+            </p>
+            <p>
+                O exemplo a seguir foi feito usando o INLINE-STYLE:
+            </p>
+
+            <pre>
+                <code>
+                    div class="item" style="order: -3">
+                    div class="item" style="order: 2">
+                    div class="item" style="order: 4">
+                </code>
+            </pre>
+
+            <p>
+                A outra forma de fazer é colocando um <strong>ID</strong> no item e depois colocando no CSS como no exemplo abaixo:
             </p>
             <pre>
                 <code>
-                    <p>
-                        div class="item" style="order: -3">
-                        div class="item" style="order: 2">
-                        div class="item" style="order: 4">
-                    </p>
+                    style{
+                        div#i7{
+                            order: -3;
+                        }
+                        div#i6{
+                            order: 1;
+                        }
+                    }
                 </code>
             </pre>
             
+            <p>
+                Lembrando que ao deixar o <strong>content/item</strong>, sem um <q><strong>order</strong></q>, o valor padrão dos <strong>item</strong> é <q>0</q>. Ou seja, se eu definir uma ordem e deixar algum item sem ter uma ordem definida(e nem ter um valor negativo), ele vai ficar com o valor padrão <q>0</q> e vai ser o <strong>primeiro da lista</strong>. <br> Numeros negativos vão vir antes. Eis a order: <strong>negativo> 0 > outros valores (positivos)</strong>. <br> Ou seja, para resumir: <ins>TODO ELEMENTO QUE ESTIVER DENTRO DO CONTAINER POR PADRÃO VAI TER O ORDER: 0</ins>!
+            </p>
+            <p>
+                Isso é mais usado em exeplos que ao estiver em uma tela de celular, a ordem dos elementos mudam. O menu se desloca para outro lugar por exemplo. Quando colocar em uma tela maior, o menu se desloca para outro lugar e assim com todos os tamanhos de telas caso queira. 
+            </p>
+            
+            <h2>Flex: auto;</h2>
+            
+            <p>
+                O <strong><mark>flex: auto;</mark></strong> é um elemento de <strong>flex-item</strong>! Se lembra nos primeiros vídeos que para fazer com que o item preencha o <strong><ins>container</ins></strong> por completo, a gente usou esse elemento?
+            </p>
+
+            <h2>Align-Self:</h2>
+
+            <p>
+                O <strong>align-self</strong> se aplica diretamente nos itens e ele vai funcionar diretamente no <strong>CROSS-AXIS(eixo transversal)</strong>! <br> O <strong>align-self</strong> tem 5 valores e são eles:
+            </p>
+            <ul>
+                <li>Auto;</li>
+                    <ul>
+                        <li>O valor <strong>auto;</strong> vai erdar a característica de alinhamento do seu pai. </li>
+                    </ul>
+                <li>Flex-Start;</li>
+                <li>Flex-End;</li>
+                <li>Center;</li>
+                <li>Stretch;</li>
+            </ul>
         </section>
     </main>
 </body>
