@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>- Flex-Basis -</title>
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.1em;
+        }
+        main > section#container{
+            background-color: thistle;
+            
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        main > section > div.item{
+            flex-basis: 150px;
+            background-color: steelblue;
+            border: 01px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        h1{
+            background-color: slateblue;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        h2{
+            background-color: rosybrown;
+            text-align: center;
+        }
+        
+    </style>
 </head>
 <body>
-    
+    <main>
+        <section id="container">
+            <div class="item" id="e1"> Outro conteúdo</div>
+            <div class="item" id="e2"> Pequeno</div>
+            <div class="item" id="e3"> C</div>
+            <div class="item" id="e4"> Conteúdo </div>
+            <div class="item" id="e5"> EEEEE</div>
+            <div class="item" id="e6"> Conteúdo um pouco maior</div>
+            <div class="item" id="e7"> GG</div>
+            <div class="item" id="e8"> Conteúdo um pouco maior ainda</div>
+        </section>
+        <p>
+            <h1>- Flex-Basis -</h1>
+
+            <h2> flex-basis: auto;</h2>
+            <p>
+                Quando usarmos o elemento <strong><mark>flex-basis: auto;</mark></strong>, ele vai fazer com que a largura <ins>width</ins> (quando o eixo principal (MAIN-AXIS) está em row) se adpte ao tamanho do conteúdo. E claro, se o estiver no eixo transversal (CROSS-AXIS), ele vai se adaptar ao tamanho <ins>height</ins> do conteúdo. <br> Por padrão, ele vem como <strong>auto</strong>.
+            </p>
+            <p>
+                Se por acaso eu diminuir o tamanho do <ins>container</ins>, ele vai tentar ao máximo <q>espremer</q> o tamanho do conteúdo.
+            </p>
+            <p>
+                Lembrando que, se aumentarmos o tamanho do <ins>container</ins>, ele não vai mudar pois ele se <q>alarga</q> ou <q>aumenta de tamanho</q> dependendo do tamanho do conteúdo (ou item) que há nele! Ou seja, o tamanho do container ao estar maior, não tem influência sobre ele. Isso quando ele estiver como <strong>flex-wrap: nowrap</strong>. Pois se ele estiver como <strong>wrap</strong>, obviamente ele vai <q>quebrar ou empacotar</q>.
+            </p>
+            <p>Eis uma imagem abaixo para ilustrar: &downarrow;</p>
+
+            <img src="images/flex-basis-auto.jpeg" alt="flex-basis: auto;" style="width: 100%; height: 500px;">
+            <img src="images/flex-basis-auto2.jpeg" alt="flex-basis: auto;" style="width: 100%; height: 500px;">
+
+            <h2> flex-basis: 200px</h2>
+
+            <p>
+                Ao usarmos o <strong>flex-basis: 200px</strong> (com um valor em px), ele vai ficar com o conteúdo/item com um tamanho definido! Mas também podemos colocar um tamanho separado para cada item caso a gente queira. Se colocarmos um valor fixo como é esse exemplo agora, ele <strong>não</strong> vai se adaptar ao tamanho do item como no caso do <strong>flex-basis: auto;</strong>!
+            </p>
+            <p>
+                Lembrando que, mesmo a gente tendo o poder de escolha de tamanho, para ficar mais simetricamente alinhados, o mais comum é a gente usar os tamanhos dos item/conteúdo iguais! Ou seja, a gente configura o <strong>flex-basis:</strong> bem parecido para todos os itens!
+            </p>
+            <p>
+                <strong><mark>Importante:</mark></strong> mesmos a gente colocando o valor 200px (como no exemplo atual), não estamos realmente definindo o tamanho do item pois <ins>lembre-se que o tamanho muda dependendo do recipiente!</ins> <br> Ou seja, não posso dizer que: <q>A caixa vai ter 200px e acabou!</q> dentro de um container flex! <br> Ao colocarmos o valor em px, ele vai ficar com esse tamanho <ins>enquanto der</ins> pois como a água dentro do recipiente muda de forma, a mesma coisa ele!
+            </p>
+            <p>
+                Ou seja, vamos dizer que nessas imagens abaixo eu tenha um container de 650 px e cada item vai ter o <strong>flex-basis: 200px</strong>. <ins>Enquanto o tamanho do container</ins> for maior que o item, os itens irão ficar com os <q>200px</q>!
+            </p>
+            <p>Eis uma imagem abaixo para ilustrar: &downarrow;</p>
+
+            <img src="images/flex-basis-200px.jpeg" alt="flex-basis: 200px" style="width: 100%;" height="500px">
+            <img src="images/flex-basis-200px-100px.jpeg" alt="flex-basis: 200px e com 100px" style="width: 100%;" height="500px">
+
+            <p>Ao você diminuir o tamanho do container, ele vai ir diminuindo o item até onde ele conseguir e logo na sequência ele vai quebrar o item. <br> Se estiver com o flex-wrap: nowrap</p>, ele vai quebrar mais ainda pois ele não vai <q>empacotar</q> o item.
+            </p>
+            <p>Eis as imagens do que acontece quando diminuímos o tamanho do container: &downarrow;</p>
+
+            <img src="images/flex-basis-200-quebrado.jpeg" alt="flex-basis: 200px quebrado" style="width: 100%;" height="500px">
+            <img src="images/flex-basis-200px-quebrado-sem-wrap.jpeg" alt="flex-basis: 200px quebrado e sem 'wrap'" style="width: 100%;" height="500px">
+        </section>
+    </main>
 </body>
-</html>
+</html> 

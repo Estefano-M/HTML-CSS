@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Flex-growth -</title>
+    <style>
+        *{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+        main > section#container{
+            background-color: royalblue;
+            width: 550px;
+            height: 150px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        main > section > div.item{
+            flex-basis: 150px;
+            flex-shrink: 1;
+            flex-grow: 1;
+            background-color: slategray;
+            border: 01px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        h1{
+            background-color: tomato;
+            text-align: center;
+        }
+        h3{
+            background-color: cornflowerblue;
+            text-align: center;
+        }        
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item"> Exemplo A</div>
+            <div class="item"> Exemplo B</div>
+            <div class="item"> Exemplo C</div>
+        </section>
+        <section>
+            <h1>Flex-Grow</h1>
+
+            <p>Nessa aula iremos aprender a usar os elementos para fazer com que um item possa ou não encolher ou crescer quando o container chegar diminuir ou aumentar.</p>
+
+            <p>
+                Lembrando que para usar as tags <strong>grow e shrink</strong>, não podemos estar usando o flexwrap: wrap pois se usarmos, quando o item chegar no seu limite, ele vai <q>quebrar/envelopar</q> e assim, o <strong>grow e o shrink</strong> não serão uteis! Ou seja, sempre que formos usar o grow e o shrink, <ins>usar o flex-wrap: nowrap</ins>!
+            </p>
+            <p>Por padrão, o <strong>flex-grow: 0;</strong> e o<strong>flex-shrink: 01;</strong>. Ou seja, se você nao colocar/alterar nenhum valor, irão vir como padrão esses valores.</p>
+            
+            <h3>Mas o que significa esses valores?</h3>
+
+            <p>
+                Ao colocarmos o <strong>flex-shrink: 01</strong>, significa que <ins>SIM</ins>, ele pode encolher. Ou seja, é como se fosse um <strong>false(0) and true (1)</strong>
+            </p>
+            <p>
+                Da mesma forma funciona o <strong>flex-grow: 0;</strong>. Ao usarmos o valor de true (1) ele vai poder crescer e ao usarmos o valor de false (0) ele não vai poder crescer. 
+            </p>
+            <p>No exemplo que estamos usando agora, está com as seguintes configurações:</p>
+            <pre>
+                <code>
+                    flex-shrink: 01;
+                    flex-grow: 0;
+                </code>
+            </pre>
+            <p>
+                Ou seja, ele <ins>pode encolher</ins> e <ins>não</ins> pode crescer.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
