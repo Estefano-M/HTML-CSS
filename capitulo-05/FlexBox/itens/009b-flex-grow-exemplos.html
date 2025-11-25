@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Examples - </title>
+    <style>
+        *{
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+        #container{
+            background-color: thistle;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        .item{
+            flex-basis: 250px;
+            /* Lembrando que por padrão, o flex-basis vem com o valor 'flex-shrink: 1; e flex-grow: 0;' */
+            align-content: center;
+            background-color: teal;
+            border: 01px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        main > section > div#a{
+           flex-shrink: 0;
+           flex-grow: 1; 
+        }
+        main > section > div#b{
+            flex-shrink: 2;
+            flex-grow: 0;
+        }
+        main > section > div#c{
+            flex-shrink: 1;
+            flex-grow: 2;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item" id="a"> Item A</div>
+            <div class="item" id="b"> Item B</div>
+            <div class="item" id="c"> Item C</div>
+        </section>
+    </main>
+    <aside>
+        <p>Praticar bastante <code>flex-basis, flex-shrink e flex-grow</code> pois quando estiver fazendo projetos mais elaboradores e com vários elementos como títulos, textos, imagens, etc, essas propriedades vão ser muito úteis para alinhar e posicionar objetos!</p>
+    </aside>
+</body>
+</html>

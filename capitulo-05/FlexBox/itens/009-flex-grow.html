@@ -6,19 +6,16 @@
     <title>- Flex-growth -</title>
     <style>
         *{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 1.1em;
             box-sizing: border-box;
         }
         main > section#container{
             background-color: royalblue;
-            width: 550px;
-            height: 150px;
             display: flex;
             flex-flow: row nowrap;
         }
         main > section > div.item{
-            flex-basis: 150px;
+            flex-basis: 300px;
             flex-shrink: 1;
             flex-grow: 1;
             background-color: slategray;
@@ -29,37 +26,70 @@
         h1{
             background-color: tomato;
             text-align: center;
+            font-size: 1.5em;
+        }
+        h2{
+            background-color: rgb(255, 39, 1);
+            color: white;
+            text-align: center;
         }
         h3{
-            background-color: cornflowerblue;
+            background-color: rgba(255, 99, 71, 0.671);
             text-align: center;
-        }        
+        }
+        p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        main > section > pre{
+            line-height: 1em;
+        }
+        img{
+            width: 100%;
+            height: 500px;
+        }      
     </style>
 </head>
 <body>
     <main>
         <section id="container">
-            <div class="item"> Exemplo A</div>
-            <div class="item"> Exemplo B</div>
-            <div class="item"> Exemplo C</div>
+            <div class="item">Exemplo A</div>
+            <div class="item">Exemplo B</div>
+            <div class="item">Exemplo C</div>
+            
         </section>
         <section>
             <h1>Flex-Grow</h1>
 
-            <p>Nessa aula iremos aprender a usar os elementos para fazer com que um item possa ou não encolher ou crescer quando o container chegar diminuir ou aumentar.</p>
+            <p>Nessa aula iremos aprender a usar os elementos para fazer com que um item possa ou não encolher ou crescer quando o container diminuir ou aumentar.</p>
 
             <p>
-                Lembrando que para usar as tags <strong>grow e shrink</strong>, não podemos estar usando o flexwrap: wrap pois se usarmos, quando o item chegar no seu limite, ele vai <q>quebrar/envelopar</q> e assim, o <strong>grow e o shrink</strong> não serão uteis! Ou seja, sempre que formos usar o grow e o shrink, <ins>usar o flex-wrap: nowrap</ins>!
+                Lembrando que, para usar as tags <strong>grow e shrink</strong>, não podemos estar usando o elemento <code><strong>flex-wrap: wrap</strong></code> pois se usarmos, quando o item chegar no limite do container, ele vai <q>quebrar/envelopar</q> e assim, o <strong>grow e o shrink</strong> não serão uteis! Ou seja, sempre que formos usar o grow e o shrink, <ins>usar o flex-wrap: nowrap</ins>!
             </p>
             <p>Por padrão, o <strong>flex-grow: 0;</strong> e o<strong>flex-shrink: 01;</strong>. Ou seja, se você nao colocar/alterar nenhum valor, irão vir como padrão esses valores.</p>
             
             <h3>Mas o que significa esses valores?</h3>
 
             <p>
-                Ao colocarmos o <strong>flex-shrink: 01</strong>, significa que <ins>SIM</ins>, ele pode encolher. Ou seja, é como se fosse um <strong>false(0) and true (1)</strong>
+                Ao colocarmos o <strong>flex-shrink: 01</strong>, significa que <ins>SIM</ins>, o item pode encolher. Ou seja, é como se fosse um <strong>false(0) and true (1)</strong>
             </p>
             <p>
-                Da mesma forma funciona o <strong>flex-grow: 0;</strong>. Ao usarmos o valor de true (1) ele vai poder crescer e ao usarmos o valor de false (0) ele não vai poder crescer. 
+                Da mesma forma funciona o <strong>flex-grow: 0;</strong>. Ao usarmos o valor de true (1) o item vai poder crescer dentro do container e ao usarmos o valor de false (0) ele não vai poder crescer. 
+            </p>
+            <p>
+                Se reparar, o Guanabara já tinha usado esse flex-shrink e o flex-grow nos vídeos anteriores mas a gente estava no começo e ainda não tinha aprendido sobre essa aula atual. Quer saber como? <br> Lembra que no começo ele usou o seguinte elemento:
+            </p>
+            <pre>
+                <code>
+                    #container{
+                        display: flex;
+                    }
+                    .item{
+                        flex: auto;
+                    }
+                </code>
+            </pre>
+            <p>
+                Ou seja, ao usarmos o elemento <strong>flex: auto;</strong> (no item), iremos ter as tags <strong>flex-shrink</strong> e <strong>flex-grow</strong> como <strong>true</strong>!
             </p>
             <p>No exemplo que estamos usando agora, está com as seguintes configurações:</p>
             <pre>
@@ -69,8 +99,106 @@
                 </code>
             </pre>
             <p>
-                Ou seja, ele <ins>pode encolher</ins> e <ins>não</ins> pode crescer.
+                Ou seja, o item <ins>pode encolher</ins> e <ins>não</ins> pode crescer dentro do container.
             </p>
+            <p>Eis um exemplo abaixo de um container que aumentou mas os itens ficaram do mesmo tamanho pois está com o valor <code>flex-shrink: 1 e flex-grow: 0;</code>:</p>
+
+            <img src="images/flex-shrink-1-flex-grow-0.jpeg" alt="flex-shrink: 1; e flex-grow: 0;">
+
+            <p>Agora, eis o que acontece quando a gente coloca o <code>flex-shrink: 1; e flex-grow: 1;</code> ao aumentarmos a largura do container:</p>
+
+            <img src="images/flex-shrink-1-e-flex-grow-1.jpeg" alt="flex-shrink: 1; e flex-grow: 1;">
+
+            <p><strong>Resumindo:</strong> Caso a gente queira que os itens/content fiquem flexíveis/elásticos e aumentem e diminuam até o limite da tela, usar os elementos: <code>flex-shrink: 1; e flex-grow: 1;</code>!</p>
+            <p>Lembrando que se a gente deixar o flex-shrink: 0; e o flex-grow: 1; e mudar o tamanho do container, o item irá quebrar ficando maior que o tamanho do container caso o <code><strong>flex-basis</strong></code> tiver um tamanho em px maior que o tamanho do container. <br>Eis o exemplo do que acontece quando a gente deixa o <code>flex-shrink: 0; e flex-grow: 1;</code>:</p>
+
+            <img src="images/flex-shrink-0-e-flex-grow-1.jpeg" alt="flex-shrink: 0; e flex-grow: 1;">
+
+            <p>Tomar cuidado com o tamanho do conteúdo do item/content pois se for uma tela/screen de celular pequena, pode acabar quebrando. Usei um exemplo colocando <q>lorem</q> nas div de exemplo. </p>
+
+            <p><strong>LEMBRANDO QUE:</strong> Os exemplos que nós usamos aqui estão configurados no <code>flex-flow: row nowrap</code> mas isso não significa que a gente não possa usar esses elementos no <ins>flex-flow: row wrap</ins>!!</p>
+            <p>Se a gente for usar o <code>flex-flow: row wrap - flex-shrink: 1; e flex-grow: 1;</code>, quando o container/tela for diminuir até o tamanho do item, ele vai quebrar/envelopar normalmente ocupando o espaço criado por inteiro! <br>Veja o exemplo abaixo:</p>
+
+            <img src="images/flex-flow-row-wrap-flex-shrink-1-flex-grow-1.jpeg" alt="flex-flow: row wrap / flex-shrink: 1; flex-grow: 1;">
+
+            <h2> Mais sobre Flex-Grow</h2>
+            
+            <p>Agora, iremos falar sobre os <ins>diferentes valores</ins> que a gente pode colocar no <code>flex-grow</code>. Ou seja, não são somente os 1 e 0 (não é binário) e nem true or false.</p>
+            <p>
+                A gente pode fazer a mesma coisa que nós fizemos na aula de <strong>order</strong>. Se lembra que a gente pode pegar um item e mudar a order/local dele? Então...aqui a gente pode fazer a mesma coisa ao colocarmos um <code>id</code> ou <code>class</code>. <br>Só que nessa aula, iremos continuar usando o elemento <code>flex-grow</code> usando os valores <code>0, 1, etc</code> para mudar o comportamento/ampliação do item que estará com um <code>id</code> ou <code>class</code>!
+            </p>
+            <p>Nesse exemplo que irei mostrar agora, está configurado dessa forma:</p>
+            
+            <pre>
+                #item1{
+                    flex-grow: 0;
+                }
+                #item2{
+                    flex-grow: 1;
+                }
+                #item3{
+                    flex-grow: 0;
+                }
+            </pre>
+            
+            <p>Eis o resultado ao aumentarmos o tamanho do container:</p>
+
+            <img src="images/flex-grow-0-flex-grow-1-flex-grow-0.jpeg" alt="flex-grow: 0; - flex-grow: 1; - flex-grow: 0;">
+
+            <p>Ao colocarmos outros valores, ele vai crescer de acordo com o valor da proporção que colocarmos. <br> No exemplo que iremos mostrar aqui, pegamos os seguintes valores: </p>
+
+            <pre>
+                #item1{
+                    flex-grow: 0;
+                }
+                #item2{
+                    flex-grow: 1;
+                }
+                #item3{
+                    flex-grow: 2;
+                }
+            </pre>
+            <p>Ao colocarmos esses valores, o primeiro item <ins>não</ins> irá crescer (pois o valor é 0), o segundo item vai crescer (valor 1) e o terceiro item (valor 2), vai crescer o <ins>dobro</ins> da proporção do (item 2)! Lembrando que é uma questão de <strong><ins>proporção e não somente números ou sobre ficar maior</ins></strong>. Ou seja, vai crescer o dobro porque 2 é o dobro de 1!<br>Veja a imagem abaixo:</p>
+
+            <img src="images/flex-grow-0-flex-grow-1-flex-grow-2.jpeg" alt="flex-grow: 0; - flex-grow: 1; - flex-grow: 2;">
+
+            <p>Não falei no comentário de cima que não é uma questão de valores (números) e sim de proporção? O exemplo que irei mostrar aqui agora vai mostrar que estamos falando de <strong>proporção</strong>. No exemplo abaixo, irei colocar os seguintes valores:</p>
+
+            <pre>
+                #item!{
+                    flex-grow: 0;
+                }
+                #item2{
+                    flex-grow: 2;
+                }
+                #item3{
+                    flex-grow: 2;
+                }
+            </pre>
+            <p>Ou seja, o item 3 <ins>não</ins> vai crescer o dobro do segundo item pois <ins>ambos tem o mesmo valor</ins> e por isso não se trata de números ("ah, número 2 é sempre dobro e 3 é o triplo") e sim de proporção! No exemplo a seguir, o item 2 e item 3 terão o mesmo tamanho <ins><strong>pois a proporção é igual</strong></ins>! Ou seja, item 2 e 3 irão crescer da mesma forma proporcional. Eis a imagem: &downarrow; </p>
+
+            <img src="images/flex-grow-0-flex-grow-2-flex-grow-2.jpeg" alt="flex-grow: 0; - flex-grow: 2; - flex-grow: 2;">
+
+            <h2> Continuando com o mesmo exemplo mas usando o flex-shrink</h2>
+
+            <p>O mesmo é aplicado quando usamos o <code>flex-shrink</code>. Eis alguns exemplos sendo aplicados da mesma forma mas no flex-shrink: </p>
+
+            <img src="images/flex-shrink-0-flex-shrink-1-flex-shrink-0.jpeg" alt="flex-shrink: 0; - flex-shrink: 1; - flex-shrink: 0;">
+            <img src="images/flex-shrink-2-flex-shrink-0-flex-shrink-1.jpeg" alt="flex-shrink: 2; - flex-shrink: 0 - flex-shrink: 1;">
+
+            <h2>Exemplos misturando os 3 (flex-basis + flex-grow + flex-shrink)</h2>
+
+            <p>Eis um exemplo de início que iremos aumentar o container:</p>
+
+            <img src="images/flex-basis-flex-grow-flex-shrink.jpeg" alt="flex-basis + flex-grow + flex-shrink">
+
+            <p>Eis um exemplo ao diminuirmos o container:</p>
+
+            <img src="images/diminuindo-flex-basis-flex-grow-flex-shrink.jpeg" alt="flex-basis + flex-grow + flex-shrink">
+
+            <p>Ou seja, dessa forma, a gente pode criar diversos tipos de comportamentos dependendo do dispositivo que a nossa página estiver! Eis um exemplo de como seria acessando a nossa web page em diferentes dispositivos usando os exemplos citados acima:</p>
+
+            <img src="images/diferentes-dispositivos-flex-basis-flex-grow-flex-shrink.jpeg" alt="tablet-bigger-screens-mobile-first">
         </section>
     </main>
 </body>
