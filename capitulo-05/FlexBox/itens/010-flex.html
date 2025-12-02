@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Flex -</title>
+    <style>
+        *{
+            font-size: 1.1em;
+            box-sizing: border-box;
+        }
+        h1{
+            background-color: tomato;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        main > section#container{
+            background-color: thistle;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        main > section > div.item{
+            background-color: steelblue;
+            border: 01px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        main > section > div#ia{
+            /*
+            flex-grow: 1;
+            flex-shrink: 0; 
+            flex-basis: 200px;
+            */
+        
+            flex: 1 0 200px;
+        }
+        main > section > div#ib{
+            /*
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 150px;
+            */
+
+            flex: 1 1 150px;
+        }
+        main > section > div#ic{
+            /*flex-grow: 1;
+            flex-shrink: 8;
+            flex-basis: 300px;
+           */
+
+           flex: 1 8 auto;
+        }
+        main > section > img{
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="container">
+            <div class="item" id="ia"> Exemplo A</div>
+            <div class="item" id="ib"> Exemplo B</div>
+            <div class="item" id="ic"> Exemplo C</div>
+        </section>
+        <section id="content">
+            <h1>- Flex -</h1>
+
+            <p>É recomendado pela <ins>W3C</ins> que a gente use essa tag <strong><code>flex</code></strong> como o shorthand para o <code>flex-grow, flex-shrink e flex-basis</code>.</p>
+            <p>Quando formos usar o shorthand <code><strong>flex:</strong></code>, devemos colocar os valores na seguinte ordem:</p>
+
+            <pre>
+                <code>flex-grow > flex-shrink > flex-basis</code>
+            </pre>
+
+            <p>Ou seja, iremos primeiro colocar o valor do <code>flex-grow</code>, depois o <code>flex-shrink</code> e por último o <code>flex-basis</code>. <br> Dê uma olhada na imagem abaixo para entender melhor:</p>
+
+            <img src="images/flex.jpeg" alt="flex:">
+
+            <p>Para não esquecermos, eis os valores <ins>padrão</ins> de cada um deles:</p>
+            <ul>
+                <li><code>FLex-Grow</code>
+                    <ul>
+                        <li>flex-grow: 0;</li>
+                    </ul>
+                </li>
+                <li><code>Flex-Shrink</code>
+                    <ul>
+                        <li>flex-shrink: 1;</li>
+                    </ul>
+                </li>
+                <li><code>Flex-Basis</code>
+                    <ul>
+                        <li>flex-basis: auto;</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>O atributo <code>flex</code> tem o padrão <q><code>flex: 0 1 auto</code></q>. Se repararmos nesse valor, iremos identificar que é o valor padrão dos atributos  <code>grow, shrink e basis</code> citados acima. <br>Existem 3 formas de colocar o valor padrão do atributo <code>flex</code> no documento HTML. Eis as formas: &downarrow;</p>
+            <pre>
+                1 - Ao não declarar o atributo flex ele já estará ativo com o valor padrão;
+                2 - flex: 0 1 auto;
+                3 - flex: initial;
+            </pre>
+            <p></p>
+        </section>
+    </main>
+</body>
+</html>

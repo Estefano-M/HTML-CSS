@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    header > h1{
+        text-align: start;
+        padding: 10px;
+    }
+    header > div#navContainer{
+        display: flex;
+        justify-content: flex-start;
+    }
+    header > div > nav{
+       flex: 0 1 150px; 
+    }
+    
+}
