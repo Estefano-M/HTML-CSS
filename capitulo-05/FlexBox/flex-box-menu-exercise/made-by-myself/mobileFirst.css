@@ -4,54 +4,61 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 html, body{
     height: 100vh;
+    width: 100vw;
+    /* Quando for usar o "vw" no html, body, use o "overflow-x: hidden" para fazer com que aquela barra de rolagem lateral suma! */
+    overflow-x: hidden;
 }
 body{
     background-color: lightgray;
 }
 header{
     background-color: gray;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 header > h1{
+    flex-basis: 50px;
     color: white;
-    text-shadow: 01px 02px 03px black;
-    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    text-shadow: 02px 02px 02px rgba(0, 0, 0, 0.61);
 }
-div#navContainer{
-    background-color: gray;
-    padding-bottom: 10px;
+header > nav{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 10px;
 }
-div#navContainer > nav > a{
+header > nav > a{
+    width: 90vw;
     background-color: black;
     color: white;
-    text-decoration: none;
     text-align: center;
-    display: block;
-    margin: 10px;
-    padding: 10px;
+    text-decoration: none;
     border-radius: 07px;
+    padding: 10px;
+    margin: 05px;
 }
-div#navContainer nav > a:hover{
+header > nav > a:hover{
     background-color: white;
     color: black;
+    transition: background-color 0.5s;
 }
-main#main-Container{
-    display: flex;
-    justify-content: center;
-}
-main > section#main-Content{
+main > section{
     background-color: white;
     border-radius: 10px;
-    width: 95%;
     padding: 10px;
+    width: 90vw;
+    margin: auto;
     margin-top: 10px;
-    box-shadow: 07px 05px 10px rgba(0, 0, 0, 0.247);
+    box-shadow: 02px 02px 04px rgba(0, 0, 0, 0.425);
 }
-main > section#main-Content > p{
+main > section > p{
     text-align: justify;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1em;
     text-indent: 20px;
 }

@@ -1,16 +1,26 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px) {
-    header > h1{
-        text-align: start;
-        padding: 10px;
-    }
-    header > div#navContainer{
+    header{
         display: flex;
-        justify-content: flex-start;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
     }
-    header > div > nav{
-       flex: 0 1 150px; 
+    header > h1{
+        flex: 0 0 200px;
     }
-    
+    header > nav{
+        width: 670px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        
+    }
+    header > nav > a{
+        flex: 0 0 100px;
+        padding: 10px;
+        margin: 05px;
+        
+    }
 }
