@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Propriedades</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            gap: 20px;
+            border: 02px dashed red;
+        }
+        .item{
+            border: 02px dashed blue;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item">Item A</div>
+            <div class="item">Item B</div>
+            <div class="item">Item C</div>
+            <div class="item">Item D</div>
+            <div class="item">Item E</div>
+            <div class="item">Item F</div>
+            <div class="item">Item G</div>
+        </div>
+    </main>
+</body>
+</html>
