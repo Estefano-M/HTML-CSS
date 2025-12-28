@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+}
+h1, h2, p{
+    margin-bottom: 10px;
+}
+header{
+    background-color: rgba(128, 128, 128, 0.541);
+    background-image: url(background-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    height: 170px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    height: 170px;
+}
+nav > a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+}
+nav > a:hover{
+    background-color: rgba(255, 255, 255, 0.507);
+    border-radius: 10px;
+    border: 01px solid black;
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+.logo > img{
+    display: none;
+}
+main{
+    background-color: lightgray;
+}
+section.flex-content{
+    background-color: lightgray;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+article{
+    background-color: white;
+}
+article.media-text{
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+    border-radius: 15px 15px 0px 0px;
+}
+div.text{
+    flex: 1 1 450px;
+    padding-right: 15px;
+}
+.text > h2{
+    margin-top: 10px;
+}
+div.media{
+    flex: 0 1 450px;
+    margin: auto;
+}
+.media > img{
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+}
+article.text-media{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-radius: 0px 0px 15px 15px;
+}
+.media > iframe{
+    display: block;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+}
+section.normal-content{
+    padding: 20px;
+}
+article.normal{
+    background-color: white;
+    border-radius: 15px;
+}
+.normal > h2{
+    padding-top: 05px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+footer > p > a{
+    text-decoration: none;
+    color: white;
+}
+
+
