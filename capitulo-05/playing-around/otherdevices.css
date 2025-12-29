@@ -23,6 +23,7 @@
     }
     header > nav{
         display: block;
+        align-content: flex-end;
     }
     nav > a{
         border: none;
@@ -36,11 +37,12 @@
         transition: background-color 1s;
         border: 01px solid black;
     }
-    h2{
-        text-align: center;
-    }
     .media > iframe{
         border-radius: 10px;
     }
-
+}
+@media screen and (min-width: 955px) {
+    h2{
+        text-align: center;
+    }
 }
