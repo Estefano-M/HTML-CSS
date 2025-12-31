@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids Container Properties 2</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.2em;
+        }
+        .container{
+            border: 02px solid blue;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            align-items: stretch;
+        }
+        .items{
+            border: 02px solid red;
+        }
+        img{
+            width: 850px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Propriedades de container do Grid-Layout</h1>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <div class="items">A</div>
+                <div class="items">B</div>
+                <div class="items">C</div>
+                <div class="items">D</div>
+                <div class="items">E</div>
+                <div class="items">F</div>
+                <div class="items">G</div>
+            </div>
+        </article>
+        <article>
+            <h2>Valores para a propriedade align-items</h2>
+            <p>Ao usarmos a propriedade <strong><code>grid"</code></strong>, o valor padrão para o <code><strong>align-items:" "</strong></code> é <code><mark>stretch</mark></code>. <br>Ou seja, sempre que usar a propriedade Grid, a propriedade align-items já terá como padrão o valor stretch e por isso ao adicionar os columns e os rows, o item vem <q>esticado</q> até ele caber dentro da grade(grid).</p>
+            <p>Lembrando que o align-items são <strong>VERTICAIS</strong>!</p>
+            <p>Eis aqui alguns valores e seus resultados para colocar dentro da propriedade <strong><code><mark>align-items:</mark></code></strong></p>
+            <ul>
+                <li><strong>Align-items: start</strong></li>
+                <ul>
+                    <li>Ao usarmos o valor <code>start</code>, ele vai pegar todos os items e coloca-los no início. Eis um exemplo:
+                    <img src="images/align-items-start.jpeg" alt="Align-items:'start'" style="width: 800px; height: 400px;"></li>
+                </ul>
+                <li><strong>Align-items: center</strong></li>
+                <ul>
+                    <li>Ao usarmos o valor <code>center</code>, ele vai pegar os items e centraliza-los verticalmente. Eis um exemplo:
+                    <img src="images/align-items-center.jpeg" alt="Align-items: center" style="width: 800px; height: 400px;"></li>
+                </ul>
+                <li><strong>Align-items: end</strong></li>
+                <ul>
+                    <li>Ao usarmos o valor <code>end</code>, os items irão ficar na parte de baixo do container. </li>
+                </ul>
+            </ul>
+        </article>
+        <article>
+            <h2>Valores para a propriedade justify-content</h2>
+            <p>Ao usarmos a propriedade grid, por padrão, o valor da propriedade <code>justify-content</code> é <strong><code><mark>stretch</mark></code></strong>.</p>
+            <p>Lembrando que ao usarmos a propriedade <code><strong>justify-content</strong></code>, ele irá alinhar os items na <strong>HORIZONTAL!</strong></p>
+            <p>Agora, vamos aos valores e seus resultados: </p>
+            <ul>
+                <li><strong>justify-content: start</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>start</code>, o item irá ficar no início horizontal. Veja o exemplo:
+                            <img src="images/justify-content-start.jpeg" alt="Justify-content:'start'" style="width: 850px;">
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>justify-content: center</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>center</code>, os items irão obviamente ficar na parte central horizontalmente dentro do container. Eis a imagem de exemplo:
+                            <img src="images/justify-content-center.jpeg" alt="justify-content: center">
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>justify-content: end</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>end</code>, como já sabemos, o item irá ficar na parte final horizontalmente. Eis a imagem de exemplo abaixo:
+                            <img src="images/justify-content-end.jpeg" alt="justify-content: end">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+        <aside>
+            <h2>Pro Tips about what we've learned in this lesson:</h2>
+            <p>
+                Só para relembrar: <br> Podemos usar o <strong><code>align-items, justify-items, align-content e justify-content</code></strong> tanto no <strong>container</strong> quanto no <strong>item</strong>! <br> No <strong><mark>GRID</mark></strong>, sempre que tratarmos com as propriedades <strong><code>align-items</code> e <code>align-content</code></strong>, estaremos trabalhando com alinhamento <strong>vertical!</strong>
+            </p>
+            <p>Sempre que usarmos as propriedades <strong><code>justify-items</code> e <code>justify-content</code></strong>, estaremos trabalhando com alinhamento <strong>horizontal!</strong>. Veja a imagem abaixo:
+            </p>
+            <img src="bizu-grid-propriedades-aula-2.jpeg" alt="Grid Properties Lesson 2" style="width: 100%; height: 600px;">
+        </aside>
+    </main>
+</body>
+</html>

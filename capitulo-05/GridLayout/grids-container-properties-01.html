@@ -7,29 +7,40 @@
     <style>
         .container{
             display: grid;
+            /* No grid-template-columns e no grid-template-rows posso colocar os valores em px também caso queira */
             grid-template-columns: auto auto auto;
-            grid-template-rows: 100px 100px 100px;
-            gap: 20px;
-            border: 02px dashed red;
+            grid-template-rows: auto auto auto;
+            gap: 05px;
+            height: 300px;
+            border: 02px solid red;
         }
         .item{
-            border: 02px dashed blue;
-            align-content: center;
-            text-align: center;
+            border: 02px solid blue;
         }
     </style>
 </head>
 <body>
     <main>
         <div class="container">
-            <div class="item">Item A</div>
-            <div class="item">Item B</div>
-            <div class="item">Item C</div>
-            <div class="item">Item D</div>
-            <div class="item">Item E</div>
-            <div class="item">Item F</div>
-            <div class="item">Item G</div>
+            <div class="item">A</div>
+            <div class="item">B</div>
+            <div class="item">C</div>
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
         </div>
     </main>
+    <aside>
+        <p>Nessa aula aprendi que ao usar o <strong><mark><code>grid-template-columns:" "</code></mark></strong>, posso colocar dois valores mas com resultados diferentes. Vou explica-los abaixo: &downarrow;</p>
+        <p>Ao usar o valor <mark>auto</mark>(ao adicionar mais <mark>auto</mark> ele vai criando mais colunas), ele vai criar uma nova coluna.</p>
+        <p>Ao adicionar o valor em <q>px</q> <mark>50px;</mark> por exemplo, ele vai criar uma nova coluna e aquela nova coluna terá o valor de 50px. Quanto mais valores eu fornecer, mais colunas eu terei.</p>
+    </aside>
+    <article>
+        <p>Ao colocar mais um valor no <code><mark>grid-template-rows:" "</mark></code> ou <code><mark>grid-template-columns:" "</mark></code>, irá ser criado um espaço só que menor para que a gente possa adicionar mais itens. Mas pode ficar tranquilo que mesmo que esse espaço novo que foi criado seja menor, a gente poderá configura-lo conforme a nossa vontade mais para frente.</p>
+    </article>
+    <aside>
+        <p>Lembrando que, eu posso usar as ferramentas de desenvolvedor <q>Dev Tools</q> (F12 ou <q>Inspecionar</q>) e conseguir visualizar os grids ao clicar em <strong>grid</strong> e na aba <strong>styles</strong> do dev tools, você pode selecionar aquele quadrado e conseguir visualizar como irá ficar seus itens!</p>
+    </aside>
 </body>
 </html>
