@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Container 3</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .container{
+            border: 01px solid red;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            grid-auto-rows: 100px;
+            gap: 05px;
+        }
+        .item{
+            border: 01px solid blue;
+            padding: 05px;
+        }
+        img{
+            max-width: 100%;
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                    <div class="item">H</div>
+                    <div class="item">I</div>
+                    <div class="item">J</div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Propriedades de Container do Grid Layout</h1>
+                <p>Nessa aula, iremos aprender novas propriedades de Container do Grid Layout. E iremos falar sobre as seguintes propriedades:</p>
+                <ul>
+                    <li>grid-auto-row</li>
+                    <li>grid-auto-column</li>
+                    <li>place-items</li>
+                    <li>place-content</li>
+                    <li>grid-template</li>
+                </ul>
+                <h2> - <code><mark>grid-auto-row:</mark></code></h2>
+                <p>Quando a gente coloca os valores: <code>100px 100px 100px</code> no grid-template-row, a gente cria uma grid com 3 linhas de 100px cada item. <br> Mas ao colocarmos uma quarta linha, ele irá ficar com um tamanho menor e visualmente falando incompatível com os demais items como nesse exemplo abaixo.</p>
+                <img src="images/sem-grid-layout-grid-auto-row.jpeg" alt="Grid Layout - sem grid-auto-row">
+                <p>Caso eu queira que, ao adicionar uma nova linha(ou item) ela venha com a mesma altura que as demais, devo usar a propriedade <code><mark><strong>grid-auto-row: 100px</strong></mark></code> pois assim, <ins>cada vez que for adicionado uma nova linha</ins>, esse item terá o mesmo tamanho que as demais(eu escolherei o tamanho ao colocar o valor <q>px ou auto</q>). Veja a imagem abaixo: &downarrow; </p>
+                <img src="images/grid-layout-grid-auto-row-100-px.jpeg" alt="Grid Layout - grid-auto-row: 100px;">
+                <h2>- <mark><code>grid-auto-column:</code></mark></h2>
+                <p>Da mesma forma que o exemplo acima opera, essa propriedade <mark><code>grid-auto-column</code></mark> faz a mesma coisa. </p>
+                <p>Quando é criado <q>células</q>(sejam column ou row) que estão fora do grid, são chamadas de <strong><mark>GRID IMPLÍCITO</mark></strong>. As criadas dentro da grid são chamadas de <strong><mark>grid explicito</mark></strong>. Ou seja, foram pré-definidas.</p>
+            </article>
+            <article>
+                <h2>Propriedades Simplificadoras(shorthands)</h2>
+                <p>Agora, iremos pegar as propriedades que nós aprendemos nas aulas anteriores e usar as novas propriedades que iremos aprender agora pois elas irão <ins>simplificar</ins>(shorthand) as quantidades de declarações que irão ser usadas dentro do container, etc. <br>Veja a imagem a seguir que contem todas aquelas declarações(7 propriedades) que fizemos na aula passada mas que agora irá ter as novas propriedades shorthand: </p>
+
+                <img src="images/shorthand-for-grid-layout-place-items.jpeg" alt="Grid Layout - shorthand - place-items">
+
+                <p>Veja que na imagem acima &uparrow;, o <code>align-items: stretch;</code> está antes do <code>justify-items: center;</code>. Isso significa que ao usarmos essa shorthand, <strong>SEMPRE SERÁ NECESSÁRIO COLOCAR O VALOR PARA <mark>O ALIGN-ITEMS EM PRIMEIRO LUGAR</mark> E <mark>DEPOIS O VALOR DO JUSTIFY-ITEMS</mark></strong>! <br> Na imagem abaixo, iremos usar o shorthand <code><strong><mark>place-items:</mark></strong></code> colocando os valores na sequência que acabamos de aprender. Veja a seguir: </p>
+
+                <img src="images/grid-layout-shorthand-place-items.jpeg" alt="Grid Layout - shorthand - place-items: stretch center;">
+
+                <p>A propriedade simplificadora(shorthand) <code><mark>place-content:</mark></code> trabalha da mesma forma que a propriedade anterior. Lembrando que, a ordem dos valores segue da mesma forma que o exemplo anterior. Eis um exemplo de como ficará ao usarmos o shorthand <code>place-content:</code></p>
+
+                <img src="images/grid-layout-shorthand-place-content.jpeg" alt="Grid Layout - shorthand - place-content: start end;">
+
+                <p>Agora iremos fazer a mesma coisa com os <code><mark><strong>grid-template-rows</strong></mark></code> e <code><mark><strong>grid-template-columns</strong></mark></code>. <br>Quando se trata dessas duas propriedades, a <strong>ordem</strong> ao se colocar os valores é a seguinte: <ins><strong>primeiro colocar o valor do <code>grid-template-rows</code></strong></ins> e <ins>depois colocar o valor do <code><strong>grid-template-columns</strong></code></ins>. Veja na imagem abaixo.</p>
+
+                <p>Aqui estamos usando o shorthand <code>grid-template:</code>. Observe que estamos colocando o valor do grid-template-rows primeiro para depois colocar o valor do grid-template-columns usando uma <strong>/</strong> para separa-los.</p>
+
+                <img src="images/grid-layout-shorthand-grid-template.jpeg" alt="Grid Layout - shorthand - grid-template: 100px 100px 100px / auto auto auto">
+            </article>
+        </section>
+    </main>
+</body>
+</html>

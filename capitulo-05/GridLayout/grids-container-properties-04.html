@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades de Container 04</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .container{
+            border: 01px solid red;
+            display: grid;
+            /* Essa propriedade aqui é uma shorthand para as propriedades: grid-template-rows e grid-template-columns (nessa ordem mesmo). */
+            grid-template: 100px 100px 100px / auto auto auto;
+        }
+        .item{
+            border: 01px dashed blue;
+            text-align: center;
+            align-content: center;
+        }
+        img{
+            width: 900px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Simplificando as coisas com Grid Layout(shorthand)</h1>
+                <p>Nessa aula aqui, iremos dar continuidade com mais algumas propriedades que irão simplificar as coisas. </p>
+                <p>Nesse exemplo aqui em baixo, repare que nessas aulas que tivemos, sempre colocamos o valor do <code><mark>grid-template-columns</mark></code> em <q>auto auto auto</q>. Mas desta vez, iremos usar uma propriedade nova para não precisarmos gastar tantas linhas/palavras ao codarmos.</p>
+
+                <h2> - <code><mark>repeat</mark></code>:</h2>
+                <p>
+                    Com esse atributo, a gente irá fazer com que o valor que colocarmos nela seja repetido como o próprio nome dela diz. Ao usarmos esse atributo <mark><code>repeat</code></mark>, iremos colocar dois parâmetros que nesse caso usamos: <code><mark>repeat(3, auto)</mark></code> que irá fazer com que o valor <code><mark>auto</mark></code> se repita por 3 vezes. Lembrando que posso fazer isso dentro da propriedade <code>grid-template-rows</code> da mesma forma ao colocar esse atributo. Eis um exemplo abaixo:
+                </p>
+
+                <img src="images/grid-layout-repeat.jpeg" alt="Grid Layout - repeat(3, auto); ou repeat(3, 100px);">
+
+                <p>Ou seja, podemos usar dois <q>simplificadores</q> usando a propriedade <code><mark>grid-template</mark></code> e o atributo <code><mark>repeat</mark></code> para deixar o shorthand completo. Mas <ins><mark>não se esqueça de usar o <q>/</q></mark></ins>. Veja na imagem abaixo como ficará:</p>
+
+                <img src="images/grid-layout-grid-template-repeat.jpeg" alt="Grid Layout - grid-template: repeat(3, 100px) / repeat(3, auto);">
+
+                <h2>Usando Unidade Fraction(1fr)</h2>
+                <p>
+                    O valor que iremos aprender agora, ele vai <q>tomar o lugar</q> do <q>auto</q> quando formos criar novas <strong>columns</strong>. Vamos criar um exemplo: <br>Vamos dizer que eu tenha um container de 1500px e ao invés de eu usar <q>auto auto auto</q> que vai fazer com que as 3 colunas sejam do mesmo tamanho, eu queira que a coluna B, seja o dobro da coluna A. Para que eu consiga ter esse resultado, terei que recorrer ao valor <code>1FR</code>.
+                </p>
+                <p>
+                    Ou seja, esse <code>1fr</code> vai fraccionar o tamanho do item e ficar na mesma largura dos outros itens para caber dentro do container que foi especificado o tamanho na hora de sua criação. Lembrando que esse <q>1fr</q> é um exemplo que pode(e deve de acordo com o Guanabara) ser usado ao invés do <q>auto auto auto</q>.
+                </p>
+                <p>Nesse exemplo a seguir, temos um container do width de 1500px e um grid-template-columns: auto auto auto;. Ao colocarmos o valor de <code>auto</code>, vai fazer com que o tamanho de cada item, seja de 500px para que eles caibam dentro do container de 1500px de width.</p>
+
+                <img src="images/grid-layout-grid-template-columns-auto-auto-auto-exemplo.jpeg" alt="Grid Layout - grid-template-columns: auto auto auto;">
+                
+                <p>Mas ao invés da gente usar o <q>auto auto auto</q>, é melhor a gente usar o <q>1fr</q>, pois cada <q>fr</q>, irá fracionar em pedaços do mesmo tamanho(caso a gente queira) em cada coluna como na imagem acima. &uparrow;</p>
+                
+                <p>Lembrando que a fraction(fr) serve tanto para grid-template-columns tanto para grid-template-rows. Uma dica do Guanabara é: "vai usar grid, usa o fr".</p>
+
+                <img src="images/grid-layout-grid-template-columns-fr.jpeg" alt="Grid Layout - grid-template-columns: 1fr 1fr 1fr;">
+                
+                <p>Nesse exemplo aqui abaixo irei mostrar na imagem abaixo como o uso do <code>fr</code> é útil quando você quer que o item B seja maior que o item A e o item C.</p>
+
+                <img src="images/grid-layout-grid-columns-1fr-2fr-1fr.jpeg" alt="Grid Layout - grid-template-columns: 1fr 2fr 1fr;">
+
+                <p>Nesse exemplo a seguir, possa ser que o cliente pediu para que você colocasse um logo, ou alguma outra coisa que tem um tamanho específico e nesses casos, você pode colocar os valores de diversas formas em um grid-template-columns como no exemplo a seguir. Mas lembrando que isso é alguns casos específicos e que devemos usar sempre o fraction(1fr).</p>
+                <p><ins><strong>Sempre colocar os valores das medidas fixas e das porcentagens primeiro</strong></ins> e depois que sobrar um espaço dentro do container, você fraciona o valor restante conforma na imagem abaixo.</p>
+
+                <img src="images/grid-layout-grid-template-columns-diversos-valores.jpeg" alt="Grid Layout - grid-template-columns: 100px 20% 1fr 1fr">
+
+                <p>Se você observou direito, na imagem acima nós repetimos o 1fr duas vezes &uparrow;. Agora que nós temos o atributo <strong>repeat</strong>, podemos usa-lo sempre quando formos repetir algum valor. Veja imagem abaixo:</p>
+
+                <img src="images/grid-layout-grid-template-columns-diversos-valores-com-repeat.jpeg" alt="">
+
+            </article>
+        </section>
+    </main>
+</body>
+</html>

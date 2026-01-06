@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando part 3</title>
+    <style>
+        .container{
+            border: 01px solid red;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(3, 1fr);
+            place-items: stretch stretch;
+            place-content: stretch stretch;
+            gap: 02px;
+        }
+        .item{
+            border: 01px dashed blue;
+            padding: 05px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="item">A</div>
+                    <div class="item">B</div>
+                    <div class="item">C</div>
+                    <div class="item">D</div>
+                    <div class="item">E</div>
+                    <div class="item">F</div>
+                    <div class="item">G</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
