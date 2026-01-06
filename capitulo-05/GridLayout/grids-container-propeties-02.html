@@ -15,9 +15,13 @@
             grid-template-columns: auto auto auto;
             grid-template-rows: 100px 100px 100px;
             align-items: stretch;
+            justify-items: stretch;
+
         }
         .items{
             border: 02px solid red;
+            text-align: center;
+            align-content: center;
         }
         img{
             width: 850px;
@@ -42,11 +46,11 @@
             </div>
         </article>
         <article>
-            <h2>Valores para a propriedade align-items</h2>
+            <h2>Valores para a propriedade <code><mark>align-items</mark></code></h2>
             
-            <p>Ao usarmos a propriedade <strong><code>grid</code></strong>, o valor padrão para o <code><strong>align-items:" "</strong></code> é <code><mark>stretch</mark></code>. <br>Ou seja, sempre que usar a propriedade Grid, a propriedade align-items já terá como padrão o valor stretch e por isso ao adicionar os columns e os rows, o item virá <q>esticado</q> para fazer com que ele caiba dentro da grade(grid).</p>
+            <p>Ao usarmos a propriedade <strong><code>grid</code></strong>, o valor padrão para o <code><strong>align-items:" "</strong></code> é <code><mark>stretch</mark></code>. <br>Ou seja, sempre que usarmos a propriedade Grid, a propriedade align-items já terá como padrão o valor <strong>stretch</strong> e por isso ao adicionar os columns e os rows, o item virá <q>esticado</q> para fazer com que ele caiba dentro da grade(grid).</p>
             
-            <p>Lembrando que no GRID, as propriedades <strong><mark><code>align-items</code></mark></strong> e <strong><mark><code>align-content</code></mark></strong> alinham <strong>VERTICALMENTE</strong> os items!</p>
+            <p>Lembrando que no GRID, as propriedades <strong><mark><code>align-items</code></mark></strong> e <strong><mark><code>align-content</code></mark></strong> alinham <strong>VERTICALMENTE</strong>!</p>
 
             <p>Eis aqui alguns valores e seus outputs para colocar dentro da propriedade <strong><code><mark>align-items:</mark></code></strong></p>
             <ul>
@@ -67,30 +71,30 @@
             </ul>
         </article>
         <article>
-            <h2>Valores para a propriedade justify-content</h2>
+            <h2>Valores para a propriedade <code><mark>justify-items</mark></code></h2>
             
-            <p>Ao usarmos a propriedade grid, por padrão, o valor da propriedade <code>justify-content</code> é <strong><code><mark>stretch</mark></code></strong>.</p>
+            <p>Ao usarmos a propriedade grid, por padrão, o valor da propriedade <code>justify-items</code> é <strong><code><mark>stretch</mark></code></strong>.</p>
             
-            <p>Lembrando que ao usarmos a propriedade <code><strong>justify-content</strong></code>, ele irá alinhar os items na <strong>HORIZONTAL!</strong></p>
+            <p>Lembrando que ao usarmos a propriedade <code><strong>justify-items</strong></code>, ele irá alinhar <strong>HORIZONTALMENTE!</strong></p>
             
             <p>Agora, vamos aos valores e seus resultados: </p>
             
             <ul>
-                <li><strong>justify-content: start</strong>
+                <li><strong>justify-items: start</strong>
                     <ul>
                         <li>Ao usarmos o valor <code>start</code>, o item irá ficar no início horizontal. Veja o exemplo: <br>
                             <img src="images/justify-content-start.jpeg" alt="Justify-content:'start'" style="width: 850px;">
                         </li>
                     </ul>
                 </li>
-                <li><strong>justify-content: center</strong>
+                <li><strong>justify-items: center</strong>
                     <ul>
                         <li>Ao usarmos o valor <code>center</code>, os items irão obviamente ficar na parte central horizontalmente dentro do container. Eis a imagem de exemplo:
                             <img src="images/justify-content-center.jpeg" alt="justify-content: center">
                         </li>
                     </ul>
                 </li>
-                <li><strong>justify-content: end</strong>
+                <li><strong>justify-items: end</strong>
                     <ul>
                         <li>Ao usarmos o valor <code>end</code>, como já sabemos, o item irá ficar na parte final horizontalmente. Eis a imagem de exemplo abaixo:
                             <img src="images/justify-content-end.jpeg" alt="justify-content: end">
@@ -100,7 +104,55 @@
             </ul>
         </article>
         <article>
-            <h2></h2>
+            <h2>Agora iremos aprender mais sobre a propriedade <code><mark>align-content</mark></code></h2>
+            <p>Acabamos de falar sobre as propriedades align-items e justify-items, agora iremos aprender sobre a propriedade <strong>align-content</strong>.</p>
+            <p>Por padrão, o valor da propriedade <code><mark>align-content</mark></code> é <mark>start</mark>. <br>Lembrando que agora que estamos falando sobre o <strong>content</strong>, estamos falando do conteúdo e não mais do <strong>item</strong>(que é o quadradinho com a letra) e sim do conteúdo que está em vermelho na imagem a seguir. &downarrow;</p>
+
+            <img src="images/grid-layout-align-content-start.jpeg" alt="Grid Layout- align-content: start">
+
+            <p>Veja a propriedade <code>align-content</code> com cada valor e seus outputs:</p>
+            <ul>
+                <li> <strong>align-content: center;</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>align-content: center</code>, o conteúdo irá ficar centralizado como na imagem a seguir:
+                            <img src="images/grid-layout-align-content-center.jpeg" alt="Grid-Layout - Align-content: center">
+                        </li>
+                    </ul>
+                </li>
+                <li> <strong>align-content: end;</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>align-content: end</code>, o conteúdo irá para baixo como na imagem abaixo:
+                            <img src="images/grid-layout-align-content-end.jpeg" alt="Grid-Layout - Align-content: end">
+                        </li>
+                    </ul>
+                </li>
+                <li> <strong>align-content: space-between;</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>space-between</code>, o primeiro item(nesse caso a letra A) e o último item(letra G), ficarão colados opostos um do outro com um espaçamento no meio como diz o próprio nome do valor Ou seja, o D, E e o F que são a <strong>track</strong> do meio, ficará centralizada! Ou seja, o espaço entre eles(space-between) será distribuído igualmente. Veja a imagem. <br>
+                            <img src="images/grid-layout-align-content-space-between.jpeg" alt="Grid-Layout - Align-content: space-between">
+                        </li>
+                    </ul>
+                </li>
+                <li> <strong>align-content: space-evenly;</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>space-evenly</code>, ele vai alinhar os itens verticalmente acima, abaixo e entre as <strong>tracks</strong> horizontais de forma iguais. Veja a imagem abaixo para entender melhor:
+                            <img src="images/grid-layout-align-content-space-evenly.jpeg" alt="Grid-Layout - Align-content: space-evenly">
+                        </li>
+                    </ul>
+                </li>
+                <li> <strong>align-content: space-around</strong>
+                    <ul>
+                        <li>Ao usarmos o valor <code>space-around</code>, como diz o próprio nome, ele vai colocar um space em volta dos items. Ou seja, ele vai distribuir acima e abaixo de cada item tenha exatamente o mesmo espaço. Só que, o primeiro e o último item, vai ficar mais perto da borda. Por isso o space-around tem o mesmo espaço ao redor do item. Mas na <strong>track</strong> horizontal do meio, os items tem um espaçamento maior que os que estão próximos da borda. Veja na imagem:
+                            <img src="images/grid-layout-align-content-space-around.jpeg" alt="Grid-Layout - Align-content: space-around">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+        <article>
+            <h2>Iremos falar agora sobre a propriedade <code><mark>justify-content:</mark></code></h2>
+            <p>O justify-content, faz a mesma coisa que o align-content mas no <strong><mark>HORIZONTALMENTE!</mark></strong>. <br>Caso queira ver mais sobre, siga esse link para o vídeo do <abbr title="Melhor Professor que já vi por enquanto">Guanabara</abbr>. <br> Segue o link para o vídeo:</p>
+            <a href="https://www.youtube.com/watch?v=RK3TLfFqEDw" target="_blank" rel="external">Clique aqui</a>
         </article>
         <aside>
             <h2>Pro Tips about what we've learned in this lesson:</h2>
