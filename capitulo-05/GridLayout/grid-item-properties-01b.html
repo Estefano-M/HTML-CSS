@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades para Itens Grid</title>
+    <style>
+        
+        .container{
+            border: 01px dashed black;
+            height: 300px;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+        }
+        .items{
+            border: 01px dashed blue;
+            padding: 05px;
+        }
+        #caixa1{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        #caixa2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        #caixa3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="items">A</div>
+                    <div class="items">B</div>
+                    <div class="items">C</div>
+                    <div class="items">D</div>
+                    <div class="items">E</div>
+                    <div class="items">F</div>
+                    <div class="items">G</div>
+                    <div class="items">H</div>
+                    <div class="items">I</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

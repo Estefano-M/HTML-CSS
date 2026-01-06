@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades para Grid Items</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .container{
+            border: 01px solid red;
+            height: 300px;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+            grid-auto-rows: 100px;
+            grid-auto-columns: auto;
+            grid-auto-flow: row;
+            gap: 01px;
+        }
+        .items{
+            border: 01px dashed blue;
+            padding: 05px;
+        }
+        #caixa1{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        #caixa2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        .caixa3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        img{
+            width: 900px;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="items">A</div>
+                    <div class="items">B</div>
+                    <div class="items">C</div>
+                    <div class="items">D</div>
+                    <div class="items">E</div>
+                    <div class="items">F</div>
+                    <div class="items">G</div>
+                    <div class="items">H</div>
+                    <div class="items">I</div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Propriedades para itens no Grid Layout</h1>
+                <p>Nessa aula iremos aprender sobre as seguintes propriedades para itens no grid layout:</p>
+                <ul>
+                    <li>grid-row-start</li>
+                    <li>grid-row-end</li>
+                    <li>grid-column-start</li>
+                    <li>grid-column-end</li>
+                </ul>
+                <p>O que aprendemos aqui é como se fosse aquele jogo de <a href="https://www.youtube.com/watch?v=dp8vxN31kIw" target="_blank" rel="external">BATALHA NAVAL</a>. Ou seja, ao usarmos o recurso do DevTools, a gente consegue ver a linha e a coluna que nós queremos para criar uma <code><mark>grid-area</mark></code>.</p>
+
+                <p>Lembra que no começo da aula sobre Grid Layout, vimos um site que está todo dividido em areas? Sei que você lembra mas veja essa imagem:</p>
+
+                <img src="images/exemplo-de-site-com-grid-layout.gif" alt="Exemplo de Site em Grid Layout">
+                <img src="images/exemplo-de-site-com-grid-ou-flexbox.jpg" alt="Exemplo de Site em Flexbox e/ou Grid Layout">
+                <img src="images/Exemplo-de-site-em-grid.jpg" alt="Exemplo de Site em Grid">
+
+                <p>Veja esses blocos cinza escuro que estão na primeira imagem, o <strong><code>grid-area</code></strong> que fizemos agora é a mesma coisa. Para mais informações, veja o documento HTML para saber como ficou e como o exemplo de batalha naval cai bem para descrever essa aula. </p>
+
+                <p>Veja como ficou após selecionarmos cada <q>caixa</q>:</p>
+                <img src="images/grid-layout-definindo-grid-areas.jpeg" alt="Grid Layout - grid-areas">
+
+                <p>Agora veja a batalha naval que fizemos para delimitarmos as nossas caixas:</p>
+                <img src="images/grid-layout-definindo-grid-areas-code.jpeg" alt="Grid Layout - grid-areas">
+            </article>
+        </section>
+    </main>
+</body>
+</html>
