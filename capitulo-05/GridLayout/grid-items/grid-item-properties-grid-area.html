@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Area</title>
+    <style>
+        .container{
+            border: 01px solid red;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+
+        }
+        .caixa1{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            
+            
+            background-color: rgba(255, 0, 0, 0.603);
+            color: black;
+        }
+        .caixa2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            background-color: lightgreen;
+        }
+        .caixa3{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+
+            background-color: lightskyblue;
+
+        }
+        /* Abaixo é o exemplo utilizando os números negativos do grid-layout! */
+
+        .container2{
+            border: 01px solid red;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+        }
+        .caixa01{
+            grid-row-start: -5;
+            grid-row-end: -3;
+            grid-column-start: -5;
+            grid-column-end: -1;
+
+            background-color: red;
+        }
+        .caixa02{
+            grid-row-start: -3;
+            grid-row-end: -1;
+            grid-column-start: -5;
+            grid-column-end: -3;
+
+            background-color: green;
+        }
+        .caixa03{
+            grid-row-start: -3;
+            grid-row-end: -1;
+            grid-column-start: -3;
+            grid-column-end: -1;
+
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="caixa1">Caixa 01</div>
+                    <div class="caixa2">Caixa 02</div>
+                    <div class="caixa3">Caixa 03</div>
+                </div>
+            </article>
+        </section>
+        <aside>
+            <p>Nessa aula aprendi que por uma boa prática, é bom colocar um <code>background-color</code> para ir delimitando o <strong>grid-area</strong> que eu desejo e ao mesmo tempo ir visualizando seu tamanho/formato!</p>
+            <p>No exemplo acima, fizemos utilizando os número positivos. <br>Agora, no exemplo abaixo, iremos fazer utilizando números negativos!</p>
+        </aside>
+        <section>
+            <article>
+                <div class="container2">
+                    <div class="caixa01">Caixa 01</div>
+                    <div class="caixa02">Caixa 02</div>
+                    <div class="caixa03">Caixa 03</div>
+                </div>
+            </article>
+        </section>
+        <aside>
+            <p>Lembrando também que eu posso misturar entre valores negativos e valores positivos! <br>Veja a imagem a seguir: &downarrow;</p>
+            <img src="grid-area-negative-numbers-and-positive-numbers.jpeg" alt="Grid-Layout - grid-positivo-grid-negativo" width="100%">
+        </aside>
+    </main>
+</body>
+</html>

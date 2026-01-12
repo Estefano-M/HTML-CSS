@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthands for Grid-Area</title>
+    <style>
+        .container{
+            border: 01px solid red;
+            display: grid;
+            grid-template: repeat(3, 100px) / repeat(4, 1fr);
+        }
+        .caixa1{
+            grid-row-start: -4;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: -1;
+
+            background-color: red;
+        }
+        .caixa2{
+            grid-row-start: 2;
+            grid-row-end: -1;
+            grid-column-start: 1;
+            grid-column-end: -3;
+
+            background-color: green;
+        }
+        .caixa3{
+            grid-row-start: -3;
+            grid-row-end: 4;
+            grid-column-start: -3;
+            grid-column-end: -1;
+
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="caixa1">Caixa 01</div>
+                    <div class="caixa2">Caixa 02</div>
+                    <div class="caixa3">Caixa 03</div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
