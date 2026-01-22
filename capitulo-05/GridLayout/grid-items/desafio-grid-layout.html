@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Grid Layout</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template: 140px 70px repeat(2, 200px) 70px / repeat(4, 1fr) ;
+            gap: 03px;
+            text-align: center;
+        }
+        .topo{
+            align-content: center;
+            background-color: red;
+            
+        }
+        .menu{
+            align-content: center;
+            background-color: blue;
+            
+        }
+        .principal{
+            align-content: center;
+            background-color: green;
+            
+        }
+        .segundario{
+            align-content: center;
+            background-color: orange;
+           
+        }
+        .rodape{
+            align-content: center;
+            background-color: purple;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <div class="topo">Topo</div>
+                    <div class="menu">Menu</div>
+                    <div class="principal">Principal</div>
+                    <div class="segundario">Secundário</div>
+                    <div class="rodape">Rodapé<div>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
