@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Grid Layout - 2</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100dvw;
+            height: 100dvh;
+            display: grid;
+            /* Ao configurar o tamanho do "principal", coloquei o valor "1fr" para ele pegar o tamanho de uma fração de todo o elemento. Lembrando que só vai funcionar se colocarmos o width e o height. */
+            grid-template: 150px 50px 1fr 40px / 1fr 270px;
+            gap: 02px;
+            text-align: center;
+        }
+        .caixa{
+            border: 02px solid black;
+            background-color: lightgray;
+        }
+        #topo{
+            align-content: center;
+            grid-area: 1 / 1 / 2 / span 2;
+        }
+        #menu{
+            align-content: center;
+            grid-area: 2 / 1 / 3 / span 2;
+        }
+        #principal{
+            align-content: center;
+            grid-area: 3 / 1 / 4 / -2;
+        }
+        #secundario{
+            align-content: center;
+            grid-area: 3 / -2 / -2 / -1;
+        }
+        #rodape{
+            align-content: center;
+            grid-area: -2 / 1 / -1 / span 2;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div class="container">
+                    <header class="caixa" id="topo">
+                        Header
+                    </header>
+                    <nav class="caixa" id="menu">
+                        Nav
+                    </nav>
+                    <article class="caixa" id="principal">
+                        Article
+                    </article>
+                    <aside class="caixa" id="secundario">
+                        Aside
+                    </aside>
+                    <footer class="caixa" id="rodape">
+                        Footer
+                    </footer>
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
